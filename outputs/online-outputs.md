@@ -1,0 +1,3 @@
+# Online Outputs
+
+These outputs export single events one by one as they are processed. These outputs are good for alerting systems, triggering, real-time updates, etc...
