@@ -1,0 +1,16 @@
+{
+    "gitbook": "2.3.2",
+    "plugins": ["edit-link", "disqus", "github"],
+    "pluginsConfig": {
+            "edit-link": {
+                "base": "https://github.com/Upsolver/Documentation/edit/master/",
+                "label": "Edit This Page"
+            },
+            "disqus": {
+              "shortName": "XXXXXXX"
+            },
+            "github": {
+              "url": "https://github.com/Upsolver/Documentation/"
+            }
+    }
+}
