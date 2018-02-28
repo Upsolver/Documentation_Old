@@ -61,4 +61,4 @@
   * [Query Cluster](clusters/query-cluster.md)
 * [Connections](connections.md)
   * [Amazon Redshift Connection](connections/amazon-redshift-connection.md)
-
+* [Changelog](CHANGELOG.md)
