@@ -15,4 +15,3 @@ It's possible to add a custom connector as part of a customer's on-boarding proc
 JSON, CSV, TSV, [Apache AVRO](https://avro.apache.org/), x-www-form-urlencoded.
 
 We can also support your proprietary format. Contact [info@upsolver.com](mailto:info@upsolver.com) for details.
-

@@ -23,7 +23,4 @@ Aggregation functions require [windowing](/aggregations/windowing.md) to split a
 
 Aggregation functions can return a single value or a hash table as explained in each function.
 
-## 
-
-
-
+##

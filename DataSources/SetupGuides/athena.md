@@ -1,9 +1,9 @@
 # AWS Athena Permissions
 
 This guide is for users who choose to output their data to [Amazon Athena](https://aws.amazon.com/athena/).
-In order to enable Upsolver to create your Athena table for you, you will need to create an IAM user with Athena permissions in addition to [S3 Permissions](/DataSources/s3-permissions.md) so we can save the data.
+In order to enable Upsolver to create your Athena table for you, you will need to create an IAM user with Athena permissions in addition to [S3 Permissions](s3.md) so we can save the data.
 
-## Step 1 - Create Athena Access Policy 
+## Step 1 - Create Athena Access Policy
 
 1. Navigate to your IAM administration page using.
 2. Select “Policies” on the left menu.
@@ -65,9 +65,4 @@ In order to enable Upsolver to create your Athena table for you, you will need t
 8. Proceed to next step and review that you’ve created the user with the correct settings.
 9. Complete user creation and press "Download .csv" - This file will contain the access key and secret key for the user.
 
-**When creating your [Athena Output](/outputs/athena-output.md), you should use the access key and secret key in your downloaded csv file.**
-
-
-
-
-
+**When creating your [Athena Output](/Outputs/athena-output.md), you should use the access key and secret key in your downloaded csv file.**

@@ -7,10 +7,10 @@ In order to enable access to your Kinesis stream, you will need to create a user
 1. Navigate to your IAM administration page using
    [https://console.aws.amazon.com/iam](https://console.aws.amazon.com/iam)
 2. Select “Policies” on the left menu:  
-   ![](https://docs.upsolver.com/assets/Policies.png)
+   ![](/assets/Policies.png)
 
 3. Select “Create Policy” button on the top of the screen.  
-   ![](https://docs.upsolver.com/assets/Create Policy.png)
+   ![](/assets/Create Policy.png)
 
 4. Select “Create Your Own Policy”.
 
@@ -66,10 +66,10 @@ In order to enable access to your Kinesis stream, you will need to create a user
 ## Step 2 - Create New User {#step-2---create-new-user}
 
 1. Select “Users” on the left menu:  
-   ![](https://docs.upsolver.com/assets/Users.png)
+   ![](/assets/Users.png)
 
 2. Select “Add User” button on the top of the screen.  
-   ![](https://docs.upsolver.com/assets/Add user.png)
+   ![](/assets/Add user.png)
 
 3. Define the new user’s details:
 
@@ -77,12 +77,12 @@ In order to enable access to your Kinesis stream, you will need to create a user
 
    2. Select Programmatic Access for AWS access type
 
-      ![](https://docs.upsolver.com/assets/User details.png)
+      ![](/assets/User details.png)
 
 4. Proceed to the next step - Permissions.
 
 5. Select “Attach existing policies directly”:  
-   ![](https://docs.upsolver.com/assets/User permissions.png)
+   ![](/assets/User permissions.png)
 
 6. For Kinesis Permissions, search for the policy you created in the previous steps and check the checkbox to its left.
 
@@ -91,4 +91,3 @@ In order to enable access to your Kinesis stream, you will need to create a user
 8. Complete user creation and press "Download .csv" - This file will contain the access key and secret key for the user.
 
 **When creating a **[**Kinesis data source**](/DataSources/kinesis-input.md)**, you should use the access key and secret key in the downloaded csv file.**
-

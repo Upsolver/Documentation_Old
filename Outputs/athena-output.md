@@ -9,7 +9,7 @@
 3. If you want to aggregate your data (see [Aggregating Data](/outputs/aggregating-data.md)) check the _Aggregate Data_ checkbox.
 4. In the _Data Source_ drop down menu select the [Data Source](/DataSources.md) you would like to create this output from. If you do not yet have a Data Source you can create one from this menu.
 5. In the _Output To_ menu select _Amazon Athena_.
-6. In the _Connection_ menu select the connection info to Athena you would like Upsolver to use to create the table. If you have not yet configured a connection you can create one from this menu. Make sure the user you provide for the connection [has the correct Athena permissions](/DataSources/athena-permissions.md).
+6. In the _Connection_ menu select the connection info to Athena you would like Upsolver to use to create the table. If you have not yet configured a connection you can create one from this menu. Make sure the user you provide for the connection [has the correct Athena permissions](/DataSources/athena.md).
 7. Click Next.
 8. In the _Database_ field type the name of the Athena database you would like to export the data to.
 9. In the _Table_ field type the name of the table you would like Upsolver to export data to.

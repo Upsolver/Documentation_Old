@@ -36,13 +36,13 @@ The _Samples_ tab allows you to view some sample raw events as _JSON_. You can c
 
 ## Properties
 
-The _Properties_ tab will show you the definition of the [Data Source](/DataSources.md) along with some useful information depending on the Data Source type. For example, the Properties of the [HTTP Data Source](/DataSources/http-input.md) will include the ingest URL to be used to send data to this source.
+The _Properties_ tab will show you the definition of the [Data Source](README.md) along with some useful information depending on the Data Source type. For example, the Properties of the [HTTP Data Source](http-input.md) will include the ingest URL to be used to send data to this source.
 
 ## Data Source Statistics
 
 At the top of the screen you will be able to see some details and statistics about this data source.
 
-* Cluster - The [Compute Cluster](/clusters/compute-cluster.md) running this Data Source.
+* Cluster - The [Compute Cluster](/Clusters/compute.md) running this Data Source.
 * Total Events - How many events this data source has ingested in total.
 * Parse Errors - How many parse errors this data source had in total.
 * Ingest Rate - The current ingestion rate of data in this data source.
@@ -59,7 +59,7 @@ When you click on a field in the _Schema_ tab you will get some statistics and i
 
 ## Archive and Delete
 
-If you would like to stop your [Data Source](/DataSources.md) you can select _Archive Data Source_ from the drop down menu in the top right: 
+If you would like to stop your [Data Source](README.md) you can select _Archive Data Source_ from the drop down menu in the top right:
 
 <img src="/assets/Archive Data Source.png"/>
 

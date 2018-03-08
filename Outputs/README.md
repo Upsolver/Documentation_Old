@@ -4,7 +4,7 @@ In addition to [Materialized Views](/Materialized-views.md) Upsolver supports ex
 
 ## Output Types
 
-There are two main output types Upsolver supports. 
+There are two main output types Upsolver supports.
 
 The first are the [batch outputs](/outputs/batch-outputs.md) such as [Amazon S3 Output](/outputs/s3.md) and [Redshift Output](/outputs/redshift-output.md).
 

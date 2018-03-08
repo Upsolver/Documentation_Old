@@ -21,4 +21,3 @@ Fill in the fields as follows:
 
 To view you existing connections select the _Connections_ button from the drop down menu on the top right of the screen:  
 ![View Connections](/assets/select-connections.png)
-
