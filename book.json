@@ -1,6 +1,6 @@
 {
     "gitbook": "2.3.2",
-    "plugins": ["edit-link", "disqus", "github", "intercom"],
+    "plugins": ["edit-link", "disqus", "github", "intercom", "video"],
     "pluginsConfig": {
             "edit-link": {
                 "base": "https://github.com/Upsolver/Documentation/edit/master/",

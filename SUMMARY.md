@@ -20,6 +20,7 @@
     * [Azure Event Hub](DataSources/azure-event-hub.md)
     * [Azure Blob Storage](DataSources/azure-blob-storage.md)
   * [Setup Guides](DataSources/SetupGuides/README.md)
+    * [AWS Integration](DataSources/SetupGuides/aws-integration.md)
     * [S3 Permissions](DataSources/SetupGuides/s3.md)
     * [Kinesis Permissions](DataSources/SetupGuides/kinesis.md)
     * [Kafka Permissions](DataSources/SetupGuides/kafka.md)
