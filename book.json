@@ -15,5 +15,8 @@
             "intercom": {
               "token": "i8hdzls1"
             }
+    },
+    "styles": {
+      "website": "styles/website.css"
     }
 }
