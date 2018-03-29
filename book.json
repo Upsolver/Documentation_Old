@@ -3,7 +3,7 @@
     "plugins": ["edit-link", "disqus", "github", "intercom", "video"],
     "pluginsConfig": {
             "edit-link": {
-                "base": "https://github.com/Upsolver/Documentation/edit/master/",
+                "base": "https://github.com/Upsolver/Documentation/tree/master/",
                 "label": "Edit This Page"
             },
             "disqus": {
