@@ -2,12 +2,16 @@
 
 Returns true if all operands are true
 
-{% raw %}|inputs|result|
+{% raw %}
+
+|inputs|result|
 |------|------|
-|````false````, ````false````|````false````|
-|````false````, ````true````|````false````|
-|````true````, ````false````|````false````|
-|````true````, ````true````|````true````|{% endraw %}
+|``false``, ``false``|``false``|
+|``false``, ``true``|``false``|
+|``true``, ``false``|``false``|
+|``true``, ``true``|``true``|
+
+{% endraw %}
 
 
 # CONTAINS {#CONTAINS}
@@ -19,10 +23,14 @@ Inputs:
  * haystack
  * needle
 
-{% raw %}|haystack|needle|result|
+{% raw %}
+
+|haystack|needle|result|
 |--------|------|------|
-|```"abcde"```|```"a"```|````true````|
-|```"abcde"```|```"f"```|````false````|{% endraw %}
+|`"abcde"`|`"a"`|``true``|
+|`"abcde"`|`"f"`|``false``|
+
+{% endraw %}
 
 
 # EQUAL_TO {#EQUAL_TO}
@@ -34,23 +42,31 @@ Inputs:
  * first
  * second
 
-{% raw %}|first|second|result|
+{% raw %}
+
+|first|second|result|
 |-----|------|------|
-|```"a"```|```"a"```|````true````|
-|```"a"```|```"b"```|````false````|
-|```0```|```0```|````true````|
-|```1```|```0```|````false````|
-|```0```|```1```|````false````|{% endraw %}
+|`"a"`|`"a"`|``true``|
+|`"a"`|`"b"`|``false``|
+|`0`|`0`|``true``|
+|`1`|`0`|``false``|
+|`0`|`1`|``false``|
+
+{% endraw %}
 
 
 # EXISTS {#EXISTS}
 
 Opt in all the rows that contains the specified field
 
-{% raw %}|input|result|
+{% raw %}
+
+|input|result|
 |-----|------|
-|```"a"```|````true````|
-||`null`|{% endraw %}
+|`"a"`|``true``|
+||`null`|
+
+{% endraw %}
 
 
 # GREATER_THAN {#GREATER_THAN}
@@ -62,11 +78,15 @@ Inputs:
  * first
  * second
 
-{% raw %}|first|second|result|
+{% raw %}
+
+|first|second|result|
 |-----|------|------|
-|```0```|```0```|````false````|
-|```1```|```0```|````true````|
-|```0```|```1```|````false````|{% endraw %}
+|`0`|`0`|``false``|
+|`1`|`0`|``true``|
+|`0`|`1`|``false``|
+
+{% endraw %}
 
 
 # GREATER_THAN_OR_EQUAL_TO {#GREATER_THAN_OR_EQUAL_TO}
@@ -78,11 +98,15 @@ Inputs:
  * first
  * second
 
-{% raw %}|first|second|result|
+{% raw %}
+
+|first|second|result|
 |-----|------|------|
-|```0```|```0```|````true````|
-|```1```|```0```|````true````|
-|```0```|```1```|````false````|{% endraw %}
+|`0`|`0`|``true``|
+|`1`|`0`|``true``|
+|`0`|`1`|``false``|
+
+{% endraw %}
 
 
 # IN_SET {#IN_SET}
@@ -93,10 +117,14 @@ Properties:
 
  * Set - Values separated by line breaks
 
-{% raw %}|value|Set|result|
+{% raw %}
+
+|value|Set|result|
 |-----|---|------|
-|```"a"```|```"a```<br />```b"```|````true````|
-|```"c"```|```"a```<br />```b"```|````false````|{% endraw %}
+|`"a"`|`"a`<br />`b"`|``true``|
+|`"c"`|`"a`<br />`b"`|``false``|
+
+{% endraw %}
 
 
 # LESS_THAN {#LESS_THAN}
@@ -108,11 +136,15 @@ Inputs:
  * first
  * second
 
-{% raw %}|first|second|result|
+{% raw %}
+
+|first|second|result|
 |-----|------|------|
-|```0```|```0```|````false````|
-|```1```|```0```|````false````|
-|```0```|```1```|````true````|{% endraw %}
+|`0`|`0`|``false``|
+|`1`|`0`|``false``|
+|`0`|`1`|``true``|
+
+{% endraw %}
 
 
 # LESS_THAN_OR_EQUAL_TO {#LESS_THAN_OR_EQUAL_TO}
@@ -124,21 +156,29 @@ Inputs:
  * first
  * second
 
-{% raw %}|first|second|result|
+{% raw %}
+
+|first|second|result|
 |-----|------|------|
-|```0```|```0```|````true````|
-|```1```|```0```|````false````|
-|```0```|```1```|````true````|{% endraw %}
+|`0`|`0`|``true``|
+|`1`|`0`|``false``|
+|`0`|`1`|``true``|
+
+{% endraw %}
 
 
 # NOT {#NOT}
 
 Returns true if the value is false
 
-{% raw %}|input|result|
+{% raw %}
+
+|input|result|
 |-----|------|
-|````true````|````false````|
-|````false````|````true````|{% endraw %}
+|``true``|``false``|
+|``false``|``true``|
+
+{% endraw %}
 
 
 # NUMBER_DEDUP {#NUMBER_DEDUP}
@@ -149,21 +189,29 @@ Inputs:
 
  * value - value to deduplicate
 
-{% raw %}|value|result|
+{% raw %}
+
+|value|result|
 |-----|------|
-|```5.0```, ```6.4```, ```5.0```, ```5.0```, ```6.0```|```5.0```, ```6.4```, ```6.0```|{% endraw %}
+|`5.0`, `6.4`, `5.0`, `5.0`, `6.0`|`5.0`, `6.4`, `6.0`|
+
+{% endraw %}
 
 
 # OR {#OR}
 
 Returns true if at least one of the operands is true
 
-{% raw %}|inputs|result|
+{% raw %}
+
+|inputs|result|
 |------|------|
-|````false````, ````false````|````false````|
-|````false````, ````true````|````true````|
-|````true````, ````false````|````true````|
-|````true````, ````true````|````true````|{% endraw %}
+|``false``, ``false``|``false``|
+|``false``, ``true``|``true``|
+|``true``, ``false``|``true``|
+|``true``, ``true``|``true``|
+
+{% endraw %}
 
 
 # RANDOM {#RANDOM}
@@ -174,13 +222,17 @@ Inputs:
 
  * percent - percent of items to keep
 
-{% raw %}|percent|result|
+{% raw %}
+
+|percent|result|
 |-------|------|
-|```0.0```|````false````|
-|```0.22```|````true````|
-|```0.22```|````true````|
-|```0.22```|````false````|
-|```1.0```|````true````|{% endraw %}
+|`0.0`|``false``|
+|`0.22`|``true``|
+|`0.22`|``true``|
+|`0.22`|``false``|
+|`1.0`|``true``|
+
+{% endraw %}
 
 
 # STRING_DEDUP {#STRING_DEDUP}
@@ -191,9 +243,13 @@ Inputs:
 
  * value - value to deduplicate
 
-{% raw %}|value|result|
+{% raw %}
+
+|value|result|
 |-----|------|
-|```"foo"```, ```"bar"```, ```"foo"```|```"foo"```, ```"bar"```|{% endraw %}
+|`"foo"`, `"bar"`, `"foo"`|`"foo"`, `"bar"`|
+
+{% endraw %}
 
 
 # XOR {#XOR}
@@ -205,9 +261,13 @@ Inputs:
  * left
  * right
 
-{% raw %}|left|right|result|
+{% raw %}
+
+|left|right|result|
 |----|-----|------|
-|````false````|````false````|````false````|
-|````false````|````true````|````true````|
-|````true````|````false````|````true````|
-|````true````|````true````|````false````|{% endraw %}
+|``false``|``false``|``false``|
+|``false``|``true``|``true``|
+|``true``|``false``|``true``|
+|``true``|``true``|``false``|
+
+{% endraw %}

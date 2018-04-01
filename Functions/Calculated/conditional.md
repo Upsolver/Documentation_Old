@@ -2,12 +2,16 @@
 
 Returns the first value that is not null or missing
 
-{% raw %}|inputs|result|
+{% raw %}
+
+|inputs|result|
 |------|------|
-|```"Foo"```|```"Foo"```|
-|```"Foo"```, ```"Bar"```|```"Foo"```|
-|```null```, ```"Foo"```, ```null```, ```"Bar"```|```"Foo"```|
-|```"Foo"```, ```null```, ```"Bar"```|```"Foo"```|{% endraw %}
+|`"Foo"`|`"Foo"`|
+|`"Foo"`, `"Bar"`|`"Foo"`|
+|`null`, `"Foo"`, `null`, `"Bar"`|`"Foo"`|
+|`"Foo"`, `null`, `"Bar"`|`"Foo"`|
+
+{% endraw %}
 
 
 # IF_ELSE {#IF_ELSE}
@@ -20,8 +24,12 @@ Inputs:
  * second
  * third
 
-{% raw %}|first|second|third|result|
+{% raw %}
+
+|first|second|third|result|
 |-----|------|-----|------|
-|```"foo"```|```"bar"```|````true````|```"foo"```|
-|```"foo"```|```"bar"```|````false````|```"bar"```|
-|```"foo"```|```"bar"```||```"bar"```|{% endraw %}
+|`"foo"`|`"bar"`|``true``|`"foo"`|
+|`"foo"`|`"bar"`|``false``|`"bar"`|
+|`"foo"`|`"bar"`||`"bar"`|
+
+{% endraw %}
