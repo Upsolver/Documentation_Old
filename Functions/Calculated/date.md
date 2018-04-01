@@ -1,4 +1,4 @@
-# ADD_TIME_ZONE_OFFSET {#ADD_TIME_ZONE_OFFSET}
+# ADD_TIME_ZONE_OFFSET
 
 Add a timezone offset to a date. The timezone offset can be in any of the standard formats accepted by Java's ZoneId.of method (America/New_York, +02:00, etc.)
 
@@ -19,7 +19,7 @@ Inputs:
 {% endraw %}
 
 
-# DATE_FORMAT {#DATE_FORMAT}
+# DATE_FORMAT
 
 Convert date into string
 
@@ -39,7 +39,7 @@ Properties:
 {% endraw %}
 
 
-# PARSE_DATE {#PARSE_DATE}
+# PARSE_DATE
 
 Convert a date string in the provided format into a date. If the date is missing or not in the correct format, this feature will not return a value.
 
@@ -60,7 +60,7 @@ Properties:
 {% endraw %}
 
 
-# TO_UNIX_EPOCH_MILLIS {#TO_UNIX_EPOCH_MILLIS}
+# TO_UNIX_EPOCH_MILLIS
 
 Convert a date to it's Epoch (unix) milliseconds representation
 
@@ -73,7 +73,7 @@ Convert a date to it's Epoch (unix) milliseconds representation
 {% endraw %}
 
 
-# TO_UNIX_EPOCH_SECONDS {#TO_UNIX_EPOCH_SECONDS}
+# TO_UNIX_EPOCH_SECONDS
 
 Convert a date to it's Epoch (unix) seconds representation
 
@@ -86,7 +86,7 @@ Convert a date to it's Epoch (unix) seconds representation
 {% endraw %}
 
 
-# UNIX_EPOCH_TO_DATE {#UNIX_EPOCH_TO_DATE}
+# UNIX_EPOCH_TO_DATE
 
 Convert epoch seconds or milliseconds to a date
 

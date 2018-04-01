@@ -1,4 +1,4 @@
-# FROM_KEY_VALUE {#FROM_KEY_VALUE}
+# FROM_KEY_VALUE
 
 Maps a list of key values to a record with fields for each key
 
@@ -23,7 +23,7 @@ Properties:
 {% endraw %}
 
 
-# JSON_PATH {#JSON_PATH}
+# JSON_PATH
 
 Extracts data from JSON objects
 
@@ -44,7 +44,7 @@ Properties:
 {% endraw %}
 
 
-# MAP_WITH_INDEX {#MAP_WITH_INDEX}
+# MAP_WITH_INDEX
 
 Outputs an index and a value field. Index contains a zero based index, and value contains the value in the input field
 

@@ -1,4 +1,4 @@
-# COALESCE {#COALESCE}
+# COALESCE
 
 Returns the first value that is not null or missing
 
@@ -14,7 +14,7 @@ Returns the first value that is not null or missing
 {% endraw %}
 
 
-# IF_ELSE {#IF_ELSE}
+# IF_ELSE
 
 If there is a 'true' boolean value in the 'condition' parameter then return the first value else the second
 

@@ -1,4 +1,4 @@
-# ABS {#ABS}
+# ABS
 
 Returns the absolute value of a number.
 
@@ -13,7 +13,7 @@ Returns the absolute value of a number.
 {% endraw %}
 
 
-# ADD {#ADD}
+# ADD
 
 Adds two numbers together.
 
@@ -32,7 +32,7 @@ Inputs:
 {% endraw %}
 
 
-# CEILING {#CEILING}
+# CEILING
 
 Returns the smallest integer value that is greater than or equal to the value.
 
@@ -46,7 +46,7 @@ Returns the smallest integer value that is greater than or equal to the value.
 {% endraw %}
 
 
-# COS {#COS}
+# COS
 
 Returns the cosine of the value in radians.
 
@@ -63,7 +63,7 @@ Returns the cosine of the value in radians.
 {% endraw %}
 
 
-# DEGREES_TO_RADIANS {#DEGREES_TO_RADIANS}
+# DEGREES_TO_RADIANS
 
 Converts the specified degrees to radians
 
@@ -78,7 +78,7 @@ Converts the specified degrees to radians
 {% endraw %}
 
 
-# DIVIDE {#DIVIDE}
+# DIVIDE
 
 Divides two numbers.
 
@@ -98,7 +98,7 @@ Inputs:
 {% endraw %}
 
 
-# EXP {#EXP}
+# EXP
 
 A mathematical function that returns the exponential value of the specified number (e^x).
 
@@ -114,7 +114,7 @@ A mathematical function that returns the exponential value of the specified numb
 {% endraw %}
 
 
-# FLOOR {#FLOOR}
+# FLOOR
 
 Returns the largest integer value that is equal to or less than the value.
 
@@ -128,7 +128,7 @@ Returns the largest integer value that is equal to or less than the value.
 {% endraw %}
 
 
-# INTEGER_DIVIDE {#INTEGER_DIVIDE}
+# INTEGER_DIVIDE
 
 Divides two numbers and returns the integer part of the result.
 
@@ -151,7 +151,7 @@ Inputs:
 {% endraw %}
 
 
-# LN {#LN}
+# LN
 
 Returns the natural logarithm of n, where n is greater than 0 and its base is a number equal to approximately 2.71828183.
 
@@ -168,7 +168,7 @@ Returns the natural logarithm of n, where n is greater than 0 and its base is a 
 {% endraw %}
 
 
-# LOG {#LOG}
+# LOG
 
 Returns the logarithm of n, where n is greater than 0, with the specified base.
 
@@ -191,7 +191,7 @@ Properties:
 {% endraw %}
 
 
-# MAX {#MAX}
+# MAX
 
 Returns the maximum value of the two numbers.
 
@@ -210,7 +210,7 @@ Inputs:
 {% endraw %}
 
 
-# MIN {#MIN}
+# MIN
 
 Returns the minimum value of the two numbers.
 
@@ -229,7 +229,7 @@ Inputs:
 {% endraw %}
 
 
-# MODULO {#MODULO}
+# MODULO
 
 Returns the remainder of the first number divided by the second.
 
@@ -249,7 +249,7 @@ Inputs:
 {% endraw %}
 
 
-# MULTIPLY {#MULTIPLY}
+# MULTIPLY
 
 Multiplies two numbers.
 
@@ -268,7 +268,7 @@ Inputs:
 {% endraw %}
 
 
-# NEGATE {#NEGATE}
+# NEGATE
 
 Negates the value.
 
@@ -282,7 +282,7 @@ Negates the value.
 {% endraw %}
 
 
-# POWER {#POWER}
+# POWER
 
 A mathematical function that raises the first value to the power of the second value.
 
@@ -304,7 +304,7 @@ Inputs:
 {% endraw %}
 
 
-# RADIANS_TO_DEGREES {#RADIANS_TO_DEGREES}
+# RADIANS_TO_DEGREES
 
 Converts the specified radians to degrees
 
@@ -319,7 +319,7 @@ Converts the specified radians to degrees
 {% endraw %}
 
 
-# RECIPROCAL {#RECIPROCAL}
+# RECIPROCAL
 
 Returns the reciprocal of the value (¹/ₓ).
 
@@ -335,7 +335,7 @@ Returns the reciprocal of the value (¹/ₓ).
 {% endraw %}
 
 
-# ROUND {#ROUND}
+# ROUND
 
 Returns the value rounded to a certain number of decimal places.
 
@@ -353,7 +353,7 @@ Properties:
 {% endraw %}
 
 
-# SIGN {#SIGN}
+# SIGN
 
 Returns a value indicating the sign of the value.
 
@@ -368,7 +368,7 @@ Returns a value indicating the sign of the value.
 {% endraw %}
 
 
-# SIN {#SIN}
+# SIN
 
 Returns the sinus of the value in radians.
 
@@ -385,7 +385,7 @@ Returns the sinus of the value in radians.
 {% endraw %}
 
 
-# SQRT {#SQRT}
+# SQRT
 
 A mathematical function that returns the square root of the value.
 
@@ -399,7 +399,7 @@ A mathematical function that returns the square root of the value.
 {% endraw %}
 
 
-# SQUARE {#SQUARE}
+# SQUARE
 
 A mathematical function that returns the square of the value.
 
@@ -413,7 +413,7 @@ A mathematical function that returns the square of the value.
 {% endraw %}
 
 
-# SUBTRACT {#SUBTRACT}
+# SUBTRACT
 
 Subtracts one value from another.
 
@@ -432,7 +432,7 @@ Inputs:
 {% endraw %}
 
 
-# TAN {#TAN}
+# TAN
 
 Returns the tangent of the value in radians using Java's Math.tan method.
 
@@ -449,7 +449,7 @@ Returns the tangent of the value in radians using Java's Math.tan method.
 {% endraw %}
 
 
-# TAN_H {#TAN_H}
+# TAN_H
 
 Returns the hyperbolic tangent of the value in radians using Java's Math.tanh method.
 

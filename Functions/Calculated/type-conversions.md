@@ -1,4 +1,4 @@
-# HEX_TO_DECIMAL {#HEX_TO_DECIMAL}
+# HEX_TO_DECIMAL
 
 Converts a hexidecimal string value to it's corresponding decimal number
 
@@ -13,7 +13,7 @@ Converts a hexidecimal string value to it's corresponding decimal number
 {% endraw %}
 
 
-# TO_DOUBLE {#TO_DOUBLE}
+# TO_DOUBLE
 
 Convert a 'Number' to a 'Double'.
 
@@ -27,7 +27,7 @@ Convert a 'Number' to a 'Double'.
 {% endraw %}
 
 
-# TO_LONG {#TO_LONG}
+# TO_LONG
 
 Convert a 'Number' to a 'Long'.
 
@@ -42,7 +42,7 @@ Convert a 'Number' to a 'Long'.
 {% endraw %}
 
 
-# TO_NUMBER {#TO_NUMBER}
+# TO_NUMBER
 
 Convert to a 'Number' type.
 
@@ -58,7 +58,7 @@ Convert to a 'Number' type.
 {% endraw %}
 
 
-# TO_STRING {#TO_STRING}
+# TO_STRING
 
 Converts any value to string
 

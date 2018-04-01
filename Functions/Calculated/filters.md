@@ -1,4 +1,4 @@
-# AND {#AND}
+# AND
 
 Returns true if all operands are true
 
@@ -14,7 +14,7 @@ Returns true if all operands are true
 {% endraw %}
 
 
-# CONTAINS {#CONTAINS}
+# CONTAINS
 
 Returns true for instances where the left operand contains the right operand
 
@@ -33,7 +33,7 @@ Inputs:
 {% endraw %}
 
 
-# EQUAL_TO {#EQUAL_TO}
+# EQUAL_TO
 
 Returns true for instances where the operands are equal
 
@@ -55,7 +55,7 @@ Inputs:
 {% endraw %}
 
 
-# EXISTS {#EXISTS}
+# EXISTS
 
 Opt in all the rows that contains the specified field
 
@@ -69,7 +69,7 @@ Opt in all the rows that contains the specified field
 {% endraw %}
 
 
-# GREATER_THAN {#GREATER_THAN}
+# GREATER_THAN
 
 Returns true for instances where the left operand is greater than the right operand
 
@@ -89,7 +89,7 @@ Inputs:
 {% endraw %}
 
 
-# GREATER_THAN_OR_EQUAL_TO {#GREATER_THAN_OR_EQUAL_TO}
+# GREATER_THAN_OR_EQUAL_TO
 
 Returns true for instances where the left operand is greater than or equal to the right operand
 
@@ -109,7 +109,7 @@ Inputs:
 {% endraw %}
 
 
-# IN_SET {#IN_SET}
+# IN_SET
 
 Returns true for instance where the value is contained in the given set
 
@@ -127,7 +127,7 @@ Properties:
 {% endraw %}
 
 
-# LESS_THAN {#LESS_THAN}
+# LESS_THAN
 
 Returns true for instances where the left operand is less than the right operand
 
@@ -147,7 +147,7 @@ Inputs:
 {% endraw %}
 
 
-# LESS_THAN_OR_EQUAL_TO {#LESS_THAN_OR_EQUAL_TO}
+# LESS_THAN_OR_EQUAL_TO
 
 Returns true for instances where the left operand is less than or equal to the right operand
 
@@ -167,7 +167,7 @@ Inputs:
 {% endraw %}
 
 
-# NOT {#NOT}
+# NOT
 
 Returns true if the value is false
 
@@ -181,7 +181,7 @@ Returns true if the value is false
 {% endraw %}
 
 
-# NUMBER_DEDUP {#NUMBER_DEDUP}
+# NUMBER_DEDUP
 
 Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
 
@@ -198,7 +198,7 @@ Inputs:
 {% endraw %}
 
 
-# OR {#OR}
+# OR
 
 Returns true if at least one of the operands is true
 
@@ -214,7 +214,7 @@ Returns true if at least one of the operands is true
 {% endraw %}
 
 
-# RANDOM {#RANDOM}
+# RANDOM
 
 Returns true for a percentage of items equal to the input
 
@@ -235,7 +235,7 @@ Inputs:
 {% endraw %}
 
 
-# STRING_DEDUP {#STRING_DEDUP}
+# STRING_DEDUP
 
 Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
 
@@ -252,7 +252,7 @@ Inputs:
 {% endraw %}
 
 
-# XOR {#XOR}
+# XOR
 
 Returns true if both operands are not equal
 

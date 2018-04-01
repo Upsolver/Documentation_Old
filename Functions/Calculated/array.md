@@ -1,4 +1,4 @@
-# CONCAT {#CONCAT}
+# CONCAT
 
 Concatenates all values into a single string, separated by the separator
 
@@ -17,7 +17,7 @@ Properties:
 {% endraw %}
 
 
-# COUNT {#COUNT}
+# COUNT
 
 Returns the amount of items in a given array
 
@@ -31,7 +31,7 @@ Returns the amount of items in a given array
 {% endraw %}
 
 
-# DISTINCT {#DISTINCT}
+# DISTINCT
 
 Get all the distinct elements in the array
 
@@ -44,7 +44,7 @@ Get all the distinct elements in the array
 {% endraw %}
 
 
-# ELEMENT_AT {#ELEMENT_AT}
+# ELEMENT_AT
 
 Gets the element at the given index in the array
 
@@ -63,7 +63,7 @@ Properties:
 {% endraw %}
 
 
-# FIRST {#FIRST}
+# FIRST
 
 Gets the first element in the array
 
@@ -77,7 +77,7 @@ Gets the first element in the array
 {% endraw %}
 
 
-# LAST {#LAST}
+# LAST
 
 Gets the last element in the array
 
@@ -91,7 +91,7 @@ Gets the last element in the array
 {% endraw %}
 
 
-# SUM {#SUM}
+# SUM
 
 Sums all the values in the array
 

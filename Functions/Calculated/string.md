@@ -1,4 +1,4 @@
-# BASE64_DECODE {#BASE64_DECODE}
+# BASE64_DECODE
 
 Decode a base 64 string into a string
 
@@ -12,7 +12,7 @@ Decode a base 64 string into a string
 {% endraw %}
 
 
-# REGEX {#REGEX}
+# REGEX
 
 Matches the regular expression on the input string. Returns the escape groups if any exists or the original string if non exists.
 
@@ -29,7 +29,7 @@ Properties:
 {% endraw %}
 
 
-# REGEX_NAMED_GROUPS {#REGEX_NAMED_GROUPS}
+# REGEX_NAMED_GROUPS
 
 Matches the regular expression on the input string. Returns record with field names and group names
 
@@ -56,7 +56,7 @@ Properties:
 {% endraw %}
 
 
-# REPLACE {#REPLACE}
+# REPLACE
 
 Replace substrings within a string
 
@@ -76,7 +76,7 @@ Properties:
 {% endraw %}
 
 
-# SPLIT {#SPLIT}
+# SPLIT
 
 Returns the given string split by the provided delimiter.
 
@@ -96,7 +96,7 @@ Properties:
 {% endraw %}
 
 
-# STRING_FORMAT {#STRING_FORMAT}
+# STRING_FORMAT
 
 Format any number of strings into a string using the Java MessageFormat syntax (https://docs.oracle.com/javase/9/docs/api/java/text/MessageFormat.html)
 
@@ -120,7 +120,7 @@ Properties:
 {% endraw %}
 
 
-# STRING_LENGTH {#STRING_LENGTH}
+# STRING_LENGTH
 
 Gets the length of the string
 
@@ -134,7 +134,7 @@ Gets the length of the string
 {% endraw %}
 
 
-# STRIP_MARGIN {#STRIP_MARGIN}
+# STRIP_MARGIN
 
 For each line remove prefix of control or whitespace characters followed by the given margin char
 
@@ -151,7 +151,7 @@ Properties:
 {% endraw %}
 
 
-# STRIP_PREFIX {#STRIP_PREFIX}
+# STRIP_PREFIX
 
 Remove the given prefix string from the beggening of the string
 
@@ -169,7 +169,7 @@ Properties:
 {% endraw %}
 
 
-# STRIP_SUFFIX {#STRIP_SUFFIX}
+# STRIP_SUFFIX
 
 Remove the given suffix string from the end of the string
 
@@ -187,7 +187,7 @@ Properties:
 {% endraw %}
 
 
-# SUBSTRING {#SUBSTRING}
+# SUBSTRING
 
 Returns a string that is a substring of the given string
 
@@ -208,7 +208,7 @@ Properties:
 {% endraw %}
 
 
-# TO_LOWER {#TO_LOWER}
+# TO_LOWER
 
 Converts the string to lowercase letters
 
@@ -221,7 +221,7 @@ Converts the string to lowercase letters
 {% endraw %}
 
 
-# TO_UPPER {#TO_UPPER}
+# TO_UPPER
 
 Converts the string to uppercase letters
 
@@ -234,7 +234,7 @@ Converts the string to uppercase letters
 {% endraw %}
 
 
-# TRANSLATE {#TRANSLATE}
+# TRANSLATE
 
 Translates the given value using a given dictionary
 
@@ -259,7 +259,7 @@ Properties:
 {% endraw %}
 
 
-# TRIM {#TRIM}
+# TRIM
 
 Returns the given string without leading or trailing whitespaces
 
@@ -274,7 +274,7 @@ Returns the given string without leading or trailing whitespaces
 {% endraw %}
 
 
-# TRIM_CHARS {#TRIM_CHARS}
+# TRIM_CHARS
 
 Returns the given string without leading or trailing characters
 
@@ -297,7 +297,7 @@ Properties:
 {% endraw %}
 
 
-# URL_DECODE {#URL_DECODE}
+# URL_DECODE
 
 Decode url encoded text
 
@@ -311,7 +311,7 @@ Decode url encoded text
 {% endraw %}
 
 
-# URL_ENCODE {#URL_ENCODE}
+# URL_ENCODE
 
 Encode text to url encoded format
 

@@ -1,4 +1,4 @@
-# GEO_IP {#GEO_IP}
+# GEO_IP
 
 Use an IP Address to lookup geo information
 
@@ -26,7 +26,7 @@ Properties:
 {% endraw %}
 
 
-# USER_AGENT_PARSER {#USER_AGENT_PARSER}
+# USER_AGENT_PARSER
 
 Parse the user agent and extract a parameter from it
 
