@@ -2,14 +2,14 @@
 
 Maps a list of key values to a record with fields for each key
 
-Inputs:
+### Inputs
 
- * key
- * value
+ * __key__
+ * __value__
 
-Properties:
+### Properties
 
- * Keys
+ * __Keys__
 
 {% raw %}
 
@@ -27,13 +27,13 @@ Properties:
 
 Extracts data from JSON objects
 
-Inputs:
+### Inputs
 
- * JSON - A String that contains JSON Document
+ * __JSON__ - A String that contains JSON Document
 
-Properties:
+### Properties
 
- * Path - JSON Path Expression
+ * __Path__ - JSON Path Expression
 
 {% raw %}
 
@@ -48,9 +48,9 @@ Properties:
 
 Outputs an index and a value field. Index contains a zero based index, and value contains the value in the input field
 
-Inputs:
+### Inputs
 
- * value - The value to convert to a record
+ * __value__ - The value to convert to a record
 
 {% raw %}
 

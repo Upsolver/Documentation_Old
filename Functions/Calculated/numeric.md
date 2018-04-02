@@ -17,10 +17,10 @@ Returns the absolute value of a number.
 
 Adds two numbers together.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -82,10 +82,10 @@ Converts the specified degrees to radians
 
 Divides two numbers.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -132,10 +132,10 @@ Returns the largest integer value that is equal to or less than the value.
 
 Divides two numbers and returns the integer part of the result.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -172,9 +172,9 @@ Returns the natural logarithm of n, where n is greater than 0 and its base is a 
 
 Returns the logarithm of n, where n is greater than 0, with the specified base.
 
-Properties:
+### Properties
 
- * Base - The base to use for the logarithm.
+ * __Base__ - The base to use for the logarithm.
 
 {% raw %}
 
@@ -195,10 +195,10 @@ Properties:
 
 Returns the maximum value of the two numbers.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -214,10 +214,10 @@ Inputs:
 
 Returns the minimum value of the two numbers.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -233,10 +233,10 @@ Inputs:
 
 Returns the remainder of the first number divided by the second.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -253,10 +253,10 @@ Inputs:
 
 Multiplies two numbers.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 
@@ -286,10 +286,10 @@ Negates the value.
 
 A mathematical function that raises the first value to the power of the second value.
 
-Inputs:
+### Inputs
 
- * base
- * exponent
+ * __base__
+ * __exponent__
 
 {% raw %}
 
@@ -339,9 +339,9 @@ Returns the reciprocal of the value (¹/ₓ).
 
 Returns the value rounded to a certain number of decimal places.
 
-Properties:
+### Properties
 
- * Digits - The number of decimal places to keep.
+ * __Digits__ - The number of decimal places to keep.
 
 {% raw %}
 
@@ -417,10 +417,10 @@ A mathematical function that returns the square of the value.
 
 Subtracts one value from another.
 
-Inputs:
+### Inputs
 
- * x
- * y
+ * __x__
+ * __y__
 
 {% raw %}
 

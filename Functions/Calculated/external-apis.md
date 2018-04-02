@@ -2,9 +2,9 @@
 
 Use an IP Address to lookup geo information
 
-Properties:
+### Properties
 
- * Attribute - The attribute to extract for the given IP address
+ * __Attribute__ - The attribute to extract for the given IP address
 
 {% raw %}
 
@@ -30,13 +30,13 @@ Properties:
 
 Parse the user agent and extract a parameter from it
 
-Inputs:
+### Inputs
 
- * User Agent String - String representation of a user agent
+ * __User Agent String__ - String representation of a user agent
 
-Properties:
+### Properties
 
- * Attributes - The attributes to extract
+ * __Attributes__ - The attributes to extract
 
 {% raw %}
 

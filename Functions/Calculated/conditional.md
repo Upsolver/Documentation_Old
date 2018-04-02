@@ -18,11 +18,11 @@ Returns the first value that is not null or missing
 
 If there is a 'true' boolean value in the 'condition' parameter then return the first value else the second
 
-Inputs:
+### Inputs
 
- * first
- * second
- * third
+ * __first__
+ * __second__
+ * __third__
 
 {% raw %}
 

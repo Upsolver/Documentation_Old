@@ -2,9 +2,9 @@
 
 Concatenates all values into a single string, separated by the separator
 
-Properties:
+### Properties
 
- * Separator - String to use as a separator between elements
+ * __Separator__ - String to use as a separator between elements
 
 {% raw %}
 
@@ -48,9 +48,9 @@ Get all the distinct elements in the array
 
 Gets the element at the given index in the array
 
-Properties:
+### Properties
 
- * Index - The index of the item to return
+ * __Index__ - The index of the item to return
 
 {% raw %}
 

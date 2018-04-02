@@ -16,9 +16,9 @@ Decode a base 64 string into a string
 
 Matches the regular expression on the input string. Returns the escape groups if any exists or the original string if non exists.
 
-Properties:
+### Properties
 
- * Pattern - Regular Expression Pattern
+ * __Pattern__ - Regular Expression Pattern
 
 {% raw %}
 
@@ -33,11 +33,11 @@ Properties:
 
 Matches the regular expression on the input string. Returns record with field names and group names
 
-Properties:
+### Properties
 
- * Pattern - Regular Expression Pattern
- * All Matches - Return all the matches of the pattern, and not only the first one
- * Filter Empty - Filter out empty matches
+ * __Pattern__ - Regular Expression Pattern
+ * __All Matches__ - Return all the matches of the pattern, and not only the first one
+ * __Filter Empty__ - Filter out empty matches
 
 {% raw %}
 
@@ -60,10 +60,10 @@ Properties:
 
 Replace substrings within a string
 
-Properties:
+### Properties
 
- * Pattern - Pattern to replace (regex)
- * Replacement - Replacement string
+ * __Pattern__ - Pattern to replace (regex)
+ * __Replacement__ - Replacement string
 
 {% raw %}
 
@@ -80,9 +80,9 @@ Properties:
 
 Returns the given string split by the provided delimiter.
 
-Properties:
+### Properties
 
- * Delimiter
+ * __Delimiter__
 
 {% raw %}
 
@@ -98,24 +98,18 @@ Properties:
 
 # STRING_FORMAT
 
-Format any number of strings into a string using the Java MessageFormat syntax (https://docs.oracle.com/javase/9/docs/api/java/text/MessageFormat.html)
+Format any number of inputs into a string using the given format
 
-Properties:
+### Properties
 
- * Format String - The format string using the Java MessageFormat syntax (https://docs.oracle.com/javase/9/docs/api/java/text/MessageFormat.html). For example, the pattern '{0}.{0}.{1}' on the inputs 'a' and 'b' will result in the string 'a.a.b'
+ * __Format String__ - The format string where {n} prints the n'th input. For example, the pattern '{0}.{0}.{1}' on the inputs 'a' and 'b' will result in the string 'a.a.b'
 
 {% raw %}
 
 |inputs|Format String|result|
 |------|-------------|------|
 |`"a"`, `"b"`, `"c"`|`"{0} {1} {2}"`|`"a b c"`|
-|`0.5`|`"{0,number,percent}"`|`"50%"`|
-|`1.23`|`"{0,number,#.###}"`|`"1.235"`|
-|`1.2`|`"{0,number,#.###}"`|`"1.2"`|
-|`1.23`|`"{0,number,0.000}"`|`"1.235"`|
-|`1.2`|`"{0,number,0.000}"`|`"1.200"`|
-|`1.23E8`|`"{0,number,###,###.###}"`|`"123,456,789.012"`|
-|`1.23E8`|`"{0,number,000,000.000}"`|`"123,456,789.012"`|
+|`1.23`|`"{0}"`|`"1.23"`|
 
 {% endraw %}
 
@@ -138,9 +132,9 @@ Gets the length of the string
 
 For each line remove prefix of control or whitespace characters followed by the given margin char
 
-Properties:
+### Properties
 
- * Margin Char
+ * __Margin Char__
 
 {% raw %}
 
@@ -155,9 +149,9 @@ Properties:
 
 Remove the given prefix string from the beggening of the string
 
-Properties:
+### Properties
 
- * Prefix
+ * __Prefix__
 
 {% raw %}
 
@@ -173,9 +167,9 @@ Properties:
 
 Remove the given suffix string from the end of the string
 
-Properties:
+### Properties
 
- * Suffix
+ * __Suffix__
 
 {% raw %}
 
@@ -191,10 +185,10 @@ Properties:
 
 Returns a string that is a substring of the given string
 
-Properties:
+### Properties
 
- * Start Index - The inclusive start index. Negative values count from the end of the string
- * End Index - The exclusive end index. Negative values count inclusively from the end of the string
+ * __Start Index__ - The inclusive start index. Negative values count from the end of the string
+ * __End Index__ - The exclusive end index. Negative values count inclusively from the end of the string
 
 {% raw %}
 
@@ -238,10 +232,10 @@ Converts the string to uppercase letters
 
 Translates the given value using a given dictionary
 
-Properties:
+### Properties
 
- * Dictionary - Comma separated values with key and optional value in every line
- * Keep Values Without Translation - Whether to keep values that have no translation in the given dictionary
+ * __Dictionary__ - Comma separated values with key and optional value in every line
+ * __Keep Values Without Translation__ - Whether to keep values that have no translation in the given dictionary
 
 {% raw %}
 
@@ -278,9 +272,9 @@ Returns the given string without leading or trailing whitespaces
 
 Returns the given string without leading or trailing characters
 
-Properties:
+### Properties
 
- * Characters
+ * __Characters__
 
 {% raw %}
 

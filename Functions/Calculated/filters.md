@@ -18,10 +18,10 @@ Returns true if all operands are true
 
 Returns true for instances where the left operand contains the right operand
 
-Inputs:
+### Inputs
 
- * haystack
- * needle
+ * __haystack__
+ * __needle__
 
 {% raw %}
 
@@ -37,10 +37,10 @@ Inputs:
 
 Returns true for instances where the operands are equal
 
-Inputs:
+### Inputs
 
- * first
- * second
+ * __first__
+ * __second__
 
 {% raw %}
 
@@ -73,10 +73,10 @@ Opt in all the rows that contains the specified field
 
 Returns true for instances where the left operand is greater than the right operand
 
-Inputs:
+### Inputs
 
- * first
- * second
+ * __first__
+ * __second__
 
 {% raw %}
 
@@ -93,10 +93,10 @@ Inputs:
 
 Returns true for instances where the left operand is greater than or equal to the right operand
 
-Inputs:
+### Inputs
 
- * first
- * second
+ * __first__
+ * __second__
 
 {% raw %}
 
@@ -113,9 +113,9 @@ Inputs:
 
 Returns true for instance where the value is contained in the given set
 
-Properties:
+### Properties
 
- * Set - Values separated by line breaks
+ * __Set__ - Values separated by line breaks
 
 {% raw %}
 
@@ -131,10 +131,10 @@ Properties:
 
 Returns true for instances where the left operand is less than the right operand
 
-Inputs:
+### Inputs
 
- * first
- * second
+ * __first__
+ * __second__
 
 {% raw %}
 
@@ -151,10 +151,10 @@ Inputs:
 
 Returns true for instances where the left operand is less than or equal to the right operand
 
-Inputs:
+### Inputs
 
- * first
- * second
+ * __first__
+ * __second__
 
 {% raw %}
 
@@ -185,9 +185,9 @@ Returns true if the value is false
 
 Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
 
-Inputs:
+### Inputs
 
- * value - value to deduplicate
+ * __value__ - value to deduplicate
 
 {% raw %}
 
@@ -218,9 +218,9 @@ Returns true if at least one of the operands is true
 
 Returns true for a percentage of items equal to the input
 
-Inputs:
+### Inputs
 
- * percent - percent of items to keep
+ * __percent__ - percent of items to keep
 
 {% raw %}
 
@@ -239,9 +239,9 @@ Inputs:
 
 Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
 
-Inputs:
+### Inputs
 
- * value - value to deduplicate
+ * __value__ - value to deduplicate
 
 {% raw %}
 
@@ -256,10 +256,10 @@ Inputs:
 
 Returns true if both operands are not equal
 
-Inputs:
+### Inputs
 
- * left
- * right
+ * __left__
+ * __right__
 
 {% raw %}
 
