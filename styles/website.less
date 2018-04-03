@@ -1,0 +1,277 @@
+html, body, .book.font-family-1, .book-summary {
+  font-family: "museo-sans";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+// Links and overrides for links
+a {
+  color: #414141;
+
+  &:hover, &:active, &:focus {
+    color: #28ADE4;
+    text-decoration: none;
+  }
+}
+
+.book-summary ul.summary li {
+  &.active > a {
+    color:#28ADE4;
+  }
+
+  a {
+    color: #414141;
+
+    &:hover, &:active, &:focus {
+      color: #28ADE4;
+      text-decoration: none;
+    }
+  }
+}
+
+body {
+  background: #FAFAFA;
+}
+
+.top-bar {
+  height: 62px;
+  line-height: 44px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.25);
+  padding: 9px 0;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+
+  > .container > div:nth-child(2) {
+    text-align: right;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+  }
+
+  #book-search-input {
+    padding: 0;
+    background: 0;
+    border: 0;
+
+    input {
+      background: #fafafa;
+      border: 0;
+      height: 44px;
+      padding: 14px 18px;
+      width: 100%;
+
+      &::placeholder {
+        font-style: italic;
+        color: #6A6A6A;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  max-width: 1300px;
+  margin:0 auto;
+
+  > :nth-child(1) {
+    flex: 0 1 250px;
+    padding:0 10px;
+  }
+
+  > :nth-child(2) {
+    flex: 0 1 800px;
+    padding: 0 35px;
+    background: white;
+  }
+
+  > :nth-child(3) {
+    flex: 0 1 250px;
+    padding:0 10px;
+  }
+}
+
+.page-inner {
+  max-width: inherit;
+  padding: 20px 0;
+}
+
+.book {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.book-body table {
+  word-break: break-all;
+  font-size: 0.9em;
+}
+
+.markdown-section code {
+  padding: 0;
+}
+
+.markdown-section table td {
+  padding: 6px;
+}
+
+.book-summary, .book-body, .book-body .body-inner, .page-inner {
+  position: static;
+  overflow-y: inherit;
+  width: inherit;
+  border: 0;
+  background: 0;
+}
+
+#book-search-results {
+  display: none;
+}
+
+#disqus_thread {
+  margin-top: 50px;
+}
+
+.with-search {
+  .markdown-section, .container > .toc-container > div {
+    display: none;
+  }
+
+  #book-search-results {
+    display: block;
+  }
+
+  #disqus_thread {
+    display: none;
+  }
+}
+
+.book-header h1 {
+  display: none;
+}
+
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+  padding: 0;
+  margin: 0;
+}
+
+.book-summary ul.summary li ul {
+  padding: 0;
+}
+
+.book-summary ul.summary {
+
+  line-height: 32px;
+  margin: 30px 0;
+
+  li[data-path$='./'] > ul {
+    display: block;
+  }
+
+  ul {
+    display:none;
+  }
+
+  > li {
+    > a {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    :focus {
+      > ul {
+        display: block;
+      }
+    }
+
+    &[data-path$='./'] > a::before {
+      transform: rotate(90deg);
+    }
+
+    > a::before {
+      background:url('/assets/icon-chevron.png');
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      vertical-align: middle;
+      content: ' ';
+      transform: rotate(0deg);
+      transition: transform 0.2s;
+    }
+  }
+
+}
+
+.container > .toc-container {
+  padding-top: 45px;
+  padding-left: 40px;
+
+  > div {
+    position: fixed;
+  }
+
+  h2 {
+    color: #9E9E9E;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .toc {
+    line-height: 18px;
+    font-size: 14px;
+
+    a {
+      padding-left: 10px;
+      color: #414141;
+
+      &:hover {
+        color: #28ADE4;
+      }
+
+      &:active, &:focus {
+        padding-left: 7px;
+        border-left: 3px solid #28ADE4;
+      }
+    }
+
+    li.active > a {
+      padding-left: 7px;
+      border-left: 3px solid #28ADE4;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      ul {
+        padding-left: 10px;
+      }
+    }
+
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+
+#book-search-results {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+}

@@ -22,5 +22,3 @@ Unlike databases, Upsolver runs [continuous queries](/continuous-queries.md) and
 Aggregation functions require [windowing](/aggregations/windowing.md) to split a stream into buckets of data that can be aggregated.
 
 Aggregation functions can return a single value or a hash table as explained in each function.
-
-##

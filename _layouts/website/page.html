@@ -1,0 +1,98 @@
+{% extends template.self %}
+
+{% block body %}
+    <div class="top-bar">
+        <div class="container">
+          <div>
+            <a href="https://www.upsolver.com">
+                <img class="logo" src="{{ '/assets/logo.svg'|resolveFile }}" alt="Upsolver" />
+            </a>
+          </div>
+          <div>
+            <a href="https://app.upsolver.com">Back to app</a>
+          </div>
+          <div id="book-search-input" role="search">
+              <input type="text" placeholder="Type to search">
+          </div>
+        </div>
+    </div>
+    <div class="book container">
+        <div class="book-summary">
+            {% block book_sidebar %}
+                {% block book_summary %}
+                    <nav role="navigation">
+                    {% include "website/summary.html" %}
+                    </nav>
+                {% endblock %}
+            {% endblock %}
+        </div>
+
+        <div class="book-body">
+            {% block book_body %}
+                <div class="body-inner">
+                    {% block book_inner %}
+                        {% include "website/header.html" %}
+
+                        <div class="page-wrapper" tabindex="-1" role="main">
+                            <div class="page-inner">
+                                {% block search_results %}
+                                    <div id="book-search-results">
+                                        <h1>Search results</h1>
+                                        <ul class="search-results-list"></ul>
+                                    </div>
+                                    <section class="normal markdown-section">
+                                    {% block page %}
+                                    {{ page.content|safe }}
+                                    {% endblock %}
+                                    </section>
+                                {% endblock %}
+                            </div>
+                        </div>
+                    {% endblock %}
+                </div>
+
+            {% endblock %}
+        </div>
+
+        <div class="toc-container">
+            <div>
+                <h2>Contents</h2>
+
+                <div class="toc">
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({{ template.getJSContext()|dump|safe }});
+            });
+        </script>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ super () }}
+    <script src="https://use.typekit.net/kdn2rgm.js"></script>
+    <script>try { Typekit.load({async: true}); } catch (e) {} </script>
+    {### Google Analytics ###}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114749005-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114749005-1');
+        window.gtag = gtag;
+    </script>
+    <script>
+        (function (b, c, e, f, g) {
+            f = b.createElement(c), g = b.getElementsByTagName(c)[0], f.async = 1, f.src = 'https://www.overlayBI.com/snippet/' + e + '.js', g.parentNode.insertBefore(f, g)
+        })(document, 'script', '114749005');
+    </script>
+{% endblock %}

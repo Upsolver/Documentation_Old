@@ -1,23 +1,37 @@
 {
-    "gitbook": "2.3.2",
-    "plugins": ["edit-link", "disqus", "github", "intercom", "video"],
-    "pluginsConfig": {
-            "edit-link": {
-                "base": "https://github.com/Upsolver/Documentation/tree/master/",
-                "label": "Edit This Page"
-            },
-            "disqus": {
-              "shortName": "upsolver-1"
-            },
-            "github": {
-              "url": "https://github.com/Upsolver/Documentation/"
-            },
-            "intercom": {
-              "token": "i8hdzls1"
-            }
+  "gitbook": "2.3.2",
+  "plugins": [
+    "edit-link",
+    "disqus",
+    "github",
+    "intercom",
+    "video",
+    "styles-less",
+    "scripts"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/Upsolver/Documentation/tree/master/",
+      "label": "Edit This Page"
     },
-    "styles": {
-      "website": "styles/website.css"
+    "disqus": {
+      "shortName": "upsolver-1"
     },
-    "title": "Upsolver"
+    "github": {
+      "url": "https://github.com/Upsolver/Documentation/"
+    },
+    "intercom": {
+      "token": "i8hdzls1"
+    },
+    "scripts": {
+      "files": [
+        "./assets/scrollspy.js",
+        "./assets/toc.js"
+      ]
+    }
+  },
+  "styles": {
+    "website": "styles/website.less"
+  },
+  "title": "Upsolver"
 }
