@@ -1,24 +1,15 @@
 {
   "gitbook": "2.3.2",
   "plugins": [
-    "edit-link",
     "disqus",
-    "github",
     "intercom",
     "youtube",
     "styles-less",
     "scripts"
   ],
   "pluginsConfig": {
-    "edit-link": {
-      "base": "https://github.com/Upsolver/Documentation/tree/master/",
-      "label": "Edit This Page"
-    },
     "disqus": {
       "shortName": "upsolver-1"
-    },
-    "github": {
-      "url": "https://github.com/Upsolver/Documentation/"
     },
     "intercom": {
       "token": "i8hdzls1"

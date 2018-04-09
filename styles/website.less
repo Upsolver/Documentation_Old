@@ -209,6 +209,13 @@ body {
       transform: rotate(0deg);
       transition: transform 0.2s;
     }
+
+    > a.gitbook-link {
+      &::before {
+        background: none;
+      }
+      font-weight: normal;
+    }
   }
 
 }
@@ -282,4 +289,32 @@ body {
 .book.font-size-4 .book-body .page-inner section,
 .book.font-size-5 .book-body .page-inner section {
   font-size: 1em;
+}
+
+.markdown-section h1:nth-child(2) {
+  margin-top:0;
+}
+
+.markdown-section a.edit-on-github {
+  float: right;
+  position: relative;
+  top: 1em;
+  border: 1px solid #eaeaea;
+  padding: 3px 10px;
+  border-radius: 4px;
+  padding-left: 31px;
+  box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
+  color: black;
+  font-weight: bolder;
+  font-size: 0.9em;
+
+  transition: background-color 0.2s, border-color 0.2s;
+  background: url('/assets/GitHub-Mark-32px.png') no-repeat 6px 5px;
+  background-size: 20px;
+
+  &:hover, &:active, &:focus {
+    background-color: #fafafa;
+    border-color: #e5e5e5;
+    text-decoration: none;
+  }
 }

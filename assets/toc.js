@@ -1,9 +1,13 @@
 require(['gitbook'], function (gitbook) {
 
     const selector = '.markdown-section h1, .markdown-section h2, .markdown-section h3:not(#properties,#inputs), .markdown-section h4';
+    const githubBase = 'https://github.com/Upsolver/Documentation/blob/master/';
 
     gitbook.events.bind('page.change', function () {
+        // Change the edit on github link
+        document.querySelector('a.edit-on-github').href = githubBase + gitbook.state.filepath;
 
+        // Add navigation items
         const addNavItem = function (ul, href, text) {
             const listItem = document.createElement('li');
             const anchorItem = document.createElement('a');
@@ -57,7 +61,6 @@ require(['gitbook'], function (gitbook) {
             toc.appendChild(nav);
             $(nav).scrollspy({offset: 50});
         }
-
     })
 
 });
