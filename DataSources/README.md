@@ -4,9 +4,9 @@ A Data Source is an object for getting data into Upsolver Streams.
 
 Upsolver offers various stream and batch connectors:
 
-Currently supported: [Amazon S3](/DataSources/s3.md), [Amazon Kinesis](/DataSources/kinesis-input.md), [Apache Kafka](/DataSources/kafka-input.md), [HTTP](/DataSources/http-input.md) file upload.
+Currently supported: [Amazon S3](/DataSources/Connectors/s3.md), [Amazon Kinesis](/DataSources/Connectors/kinesis.md), [Apache Kafka](/DataSources/Connectors/kafka.md), [HTTP](/DataSources/Connectors/http.md) file upload.
 
-Coming soon - HDFS, [Azure Blob Storage](/DataSources/azure-blob-storage.md), [Azure Event Hub](/DataSources/azure-event-hub.md).
+Coming soon - HDFS, [Azure Blob Storage](/DataSources/Connectors/azure-blob-storage.md), [Azure Event Hub](/DataSources/Connectors/azure-event-hub.md).
 
 It's possible to add a custom connector as part of a customer's on-boarding process. Please email [info@upsolver.com](mailto:info@upsolver.com) for more details.
 

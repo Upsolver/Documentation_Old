@@ -4,7 +4,7 @@ The _HTTP Data Source_ is a fully managed [Data Source](README.md) provided by U
 
 ## Creating A New HTTP Data Source
 
-1. On the [Data Sources](README.md) page click _Add New Data Source._
+1. On the [Data Sources](/DataSources/README.md) page click _Add New Data Source._
 2. Select HTTP from the list of available Data Sources.
 3. Give your Data Source a name in the _Name_ field.
 4. In the _Content Type_ drop down menu select the type of events you are going to be sending to this input. This can be JSON or x-www-url-encoded form data.
@@ -14,7 +14,7 @@ The _HTTP Data Source_ is a fully managed [Data Source](README.md) provided by U
 
 ## Ingest And Test URLs
 
-Once you create your data source you will be taken to the [Data Source Discovery](data-source-discovery.md) page. Select the _Properties_ tab and you will see the following information:
+Once you create your data source you will be taken to the [Data Source Discovery](/DataSources/data-source-discovery.md) page. Select the _Properties_ tab and you will see the following information:
 
 ![](/assets/HTTP Input Properties.png)
 There are two URLs listed here, the first is the _Ingest URL_, which is the URL you will use to send data to this input from your sources. The second is the _Test URL_, which is the URL you can use to test that you are sending data correctly and that Upsolver is parsing the data as expected.
@@ -74,4 +74,4 @@ Note: the headers of the HTTP request you made and the time of the request will 
 
 ## Sending Data To Your HTTP Data Source
 
-Once you have [tested your data source](#testing-your-http-data-source) you can start ingesting data from your actual sources by sending data in the same format you used when testing to the _Ingest URL_ described in [Ingest And Test URLs](#ingest-and-test-urls).  Once you start sending data to the _Ingest URL_ you can go to the [**Schema** tab in the Data Source Discovery](data-source-discovery.md) page for your input to inspect the data being ingested.
+Once you have [tested your data source](#testing-your-http-data-source) you can start ingesting data from your actual sources by sending data in the same format you used when testing to the _Ingest URL_ described in [Ingest And Test URLs](#ingest-and-test-urls).  Once you start sending data to the _Ingest URL_ you can go to the [**Schema** tab in the Data Source Discovery](/DataSources/data-source-discovery.md) page for your input to inspect the data being ingested.

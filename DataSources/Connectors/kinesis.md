@@ -4,7 +4,7 @@ The _Amazon Kinesis Data Source_ is a streaming data source which will ingest da
 
 ## Creating A New Amazon Kinesis Data Source
 
-1. On the [Data Sources](README.md) page click _Add New Data Source_.
+1. On the [Data Sources](/DataSources/README.md) page click _Add New Data Source_.
 2. Select _Amazon Kinesis_ from the list.
 3. Fill in a name for your Data Source.
 4. In the _Content Format_ drop down menu select the format of the messages inside the Kinesis stream.
@@ -17,4 +17,4 @@ The _Amazon Kinesis Data Source_ is a streaming data source which will ingest da
 10. You can choose to change where the ingested data from this source will be saved by changing the _Storage_ field in the _Advanced_ section.
 11. Click _Create_ to finish creating your data source.
 
-When you are done creating your input you will be taken to the Schema tab of the [Data Source Discovery](data-source-discovery.md) page. Here you are able to inspect the data that was ingested from your Kinesis stream.
+When you are done creating your input you will be taken to the Schema tab of the [Data Source Discovery](/DataSources/data-source-discovery.md) page. Here you are able to inspect the data that was ingested from your Kinesis stream.

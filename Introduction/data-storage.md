@@ -12,7 +12,7 @@ It's possible to use an existing cloud storage bucket/container within your Amaz
 
 Currently [Amazon S3](https://aws.amazon.com/s3/).
 
-Coming soon - HDFS and [Azure Blob Storage](/DataSources/azure-blob-storage.md).
+Coming soon - HDFS and [Azure Blob Storage](/DataSources/Connectors/azure-blob-storage.md).
 
 ## What data is stored
 

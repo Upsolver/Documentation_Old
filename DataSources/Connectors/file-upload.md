@@ -14,7 +14,7 @@ The "File Upload" [Data Source](README.md) is mainly intended to be used as a to
 
 4. Give your Data Source a name by filling in the _Name_ text-box, you can also optionally provide a description for this Data Source in the _Description_ text-box.
 
-5. Click _Create_ and you will be taken to the [Data Source Discovery](data-source-discovery.md) page for the new Data Source you just created. Within a few seconds you should see the data from the files you just uploaded.
+5. Click _Create_ and you will be taken to the [Data Source Discovery](/DataSources/data-source-discovery.md) page for the new Data Source you just created. Within a few seconds you should see the data from the files you just uploaded.
 
 ## CSV
 
