@@ -4,6 +4,10 @@ require(['gitbook'], function (gitbook) {
     const githubBase = 'https://github.com/Upsolver/Documentation/blob/master/';
 
     gitbook.events.bind('page.change', function () {
+        // Add .child-active to parents of .active
+        $('ul.summary li li.child-active:not(:contains(li.active))').removeClass('child-active');
+        $('ul.summary li li.active').parents('li').addClass('child-active');
+
         // Change the edit on github link
         document.querySelector('a.edit-on-github').href = githubBase + gitbook.state.filepath;
 
