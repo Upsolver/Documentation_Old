@@ -9,7 +9,7 @@ Upsolver's schema:
 * Maintains the data's hierarchical format.
 * Contains the event's content under "data" and the event's headers under "headers".
 * Includes an Upsolver  processing time - "time" field.
-* Can be enriched using [Calculated Fields](/calculated-fields.md) or [Materialized View Lookup](/materialized-view-lookup.md).
+* Can be enriched using [Calculated Fields](/Functions/Calculated/README.md) or [Materialized View Lookup](/Functions/materialized-view-lookup.md).
 
 ## Determining data types
 

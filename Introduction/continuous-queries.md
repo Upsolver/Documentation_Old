@@ -18,7 +18,7 @@ Upsolver's user interface acts as a query builder directly on raw file formats l
 
 There are 2 options:
 
-* [Query API](/indexed-views/query-api.md) to get the most current query results.
+* [Query API](/MaterializedViews/query-api.md) to get the most current query results.
 * Incrementally sending the query results to an [Output](/outputs.md).
 
 ## Retroactive queries with Amazon S3

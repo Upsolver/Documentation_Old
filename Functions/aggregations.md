@@ -2,9 +2,9 @@
 
 Aggregations are functions for grouping multiple events together to form a more significant result.
 
-Unlike databases, Upsolver runs [continuous queries](/continuous-queries.md) and not ad-hoc queries. Therefore, aggregation results are incrementally updated with every incoming event.
+Unlike databases, Upsolver runs [continuous queries](/Introduction/continuous-queries.md) and not ad-hoc queries. Therefore, aggregation results are incrementally updated with every incoming event.
 
-Aggregation functions require [windowing](/aggregations/windowing.md) to split a stream into buckets of data that can be aggregated.
+Aggregation functions require [windowing](/Introduction/windowing.md) to split a stream into buckets of data that can be aggregated.
 
 Aggregation functions can return a single value or a hash table as explained in each function.COUNT\_ALL\(hash\_result\_key optional\)
 

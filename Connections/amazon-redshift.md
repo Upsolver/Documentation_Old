@@ -4,7 +4,7 @@ This connection is used to send and/or read data from Amazon Redshift.
 
 ## Creating an Amazon Redshift Connection {#create-new-amazon-redshift-connection}
 
-When you click "Create new Redshift connection" from the _Connection_ drop down menu during the [Redshift Output Creation wizard](/outputs/redshift-output.md). You will see the following page:
+When you click "Create new Redshift connection" from the _Connection_ drop down menu during the [Redshift Output Creation wizard](/Outputs/redshift-output.md). You will see the following page:
 
 ![Redshift Connection Creation Page](/assets/redshift-connection-creation.png)
 

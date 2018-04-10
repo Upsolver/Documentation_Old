@@ -6,7 +6,7 @@ Real-time aggregations and real-time analytics with no data engineering.
 
 Developers who need aggregations have to wait weeks or even months for data engineers to write code for ingesting streams, preparing aggregations using tools like Spark Streaming and storing the results in serving DBs like Redis.
 
-In Upsolver Streams, you can do it yourself in 5 minutes, since aggregations are defined using a [continuous query](/continuous-queries.md) instead of code. The serving DB is replaced with Upsolver’s [serving API](/indexed-views/query-api.md) that returns the current state of a [continuous query](/continuous-queries.md).
+In Upsolver Streams, you can do it yourself in 5 minutes, since aggregations are defined using a [continuous query](/Introduction/continuous-queries.md) instead of code. The serving DB is replaced with Upsolver’s [serving API](/MaterializedViews/query-api.md) that returns the current state of a [continuous query](/Introduction/continuous-queries.md).
 
 ## **I’m a data analyst/BI developer. How can Upsolver help me?**
 

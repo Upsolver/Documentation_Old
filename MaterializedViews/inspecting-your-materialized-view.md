@@ -1,10 +1,10 @@
 # Inspecting Your Materialized View
 
-Here you can see the definition of your [Materialized View](/indexed-views.md), data samples of your view and experience the API query via the _Api Playground_.
+Here you can see the definition of your [Materialized View](/MaterializedViews/README.md), data samples of your view and experience the API query via the _Api Playground_.
 
 ## Schema
 
-In the _Schema_ tab you will see your materialized view's definition as you [created it](/indexed-views/create.md).
+In the _Schema_ tab you will see your materialized view's definition as you [created it](/MaterializedViews/create.md).
 
 ## Data Sample
 
@@ -21,4 +21,4 @@ To run a query:
 2. Click _Send_ and you will see the result of the query in the Response text-box.
 3. If you don't have a particular key in mind you can click _I'm Feeling Lucky_ and you will get a random row from your materialized view in the Response text-box.
 
-For more advanced querying please see the [Serving API](/indexed-views/query-api.md) documentation.
+For more advanced querying please see the [Serving API](/MaterializedViews/query-api.md) documentation.

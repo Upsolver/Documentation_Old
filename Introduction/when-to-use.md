@@ -6,15 +6,15 @@ Many companies choose to analyze all their data in a data warehouse. They enable
 
 When dealing with big data streams, this approach doesn't work. Data warehouses like Amazon Redshift aren't built to handle so much data. They become big, expensive, slow to query and hard to maintain.
 
-Upsolver solves this problem by [continuously querying](/continuous-queries.md) the data streams and [incrementally storing the result in the data warehouse](/outputs.md). As a result, the data warehouse is smaller, cheaper, faster and easier to maintain.
+Upsolver solves this problem by [continuously querying](/Introduction/continuous-queries.md) the data streams and [incrementally storing the result in the data warehouse](/outputs.md). As a result, the data warehouse is smaller, cheaper, faster and easier to maintain.
 
 ![](/assets/Accelerate Data Warehouse.png)
 
 ## Big data engineering bottleneck
 
-For storing big data, companies prefer to use [data lakes](https://www.gitbook.com/book/orir/upsolver-documentation/edit#) like [Amazon S3](https://aws.amazon.com/s3/). Data lakes are designed for low cost storage but using them requires expert coding skills. That's why companies employ big data engineers who support data scientists, data analysts and developers. Big data engineers quickly become a bottleneck for data projects.
+For storing big data, companies prefer to use data lakes like [Amazon S3](https://aws.amazon.com/s3/). Data lakes are designed for low cost storage but using them requires expert coding skills. That's why companies employ big data engineers who support data scientists, data analysts and developers. Big data engineers quickly become a bottleneck for data projects.
 
-Upsolver Streams is offered as a [self-service platform for data scientists, data analysts and developers](/who-should-use.md). It replaces ETL code and data engineering projects with [continuous queries](/continuous-queries.md), defined in a few minutes over streams of raw data like JSON and CSV files.
+Upsolver Streams is offered as a [self-service platform for data scientists, data analysts and developers](/Introduction/who-should-use.md). It replaces ETL code and data engineering projects with [continuous queries](/Introduction/continuous-queries.md), defined in a few minutes over streams of raw data like JSON and CSV files.
 
 ![](/assets/Replace Data Engineer.png)
 
@@ -26,7 +26,7 @@ For Upsolver, everything is a stream. Even batch inputs are processed as a strea
 
 Upsolver's end to end latency can be milliseconds for real-time use cases, while supporting any size stream of data.
 
-Upsolver also offers [Indexed Views](/indexed-views.md) for storing aggregations. These views replace both ETL code and serving DBs like Cassandra, MongoDB, Redis, DynamoDB or DocumentDB. They can be queried millions of time per second at milliseconds latency.
+Upsolver also offers [Materialized Views](/MaterializedViews/README.md) for storing aggregations. These views replace both ETL code and serving DBs like Cassandra, MongoDB, Redis, DynamoDB or DocumentDB. They can be queried millions of time per second at milliseconds latency.
 
 ![](/assets/Real-time Analytics.png)
 
@@ -39,4 +39,3 @@ Data scientists train models using datasets they created in a batch process, usi
 Upsolver Streams enables data scientists to build their dataset directly from the stream, eliminating the overhead of 2 code paths and improving production model performance.
 
 ![](/assets/Streaming Machine Learning8.png)
-

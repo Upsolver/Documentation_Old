@@ -12,7 +12,7 @@ Unlike [Kinesis Analytics](https://aws.amazon.com/kinesis/analytics/), Upsolver 
 
 * Does not require coding, scripting or devops.
 
-* Combines recent and historical data - Kinesis Analytics is limited to recent data as it runs SQL statements on data that can reside in-memory. Upsolver combines both recent data and historical data using [Materialized Views](/indexed-views.md) over S3, [long window aggregations](/aggregations/sliding-time-windows.md), [retroactive queries from S3](/continuous-queries.md) and [join between streams](/calculated-fields/index-lookup.md).
+* Combines recent and historical data - Kinesis Analytics is limited to recent data as it runs SQL statements on data that can reside in-memory. Upsolver combines both recent data and historical data using [Materialized Views](/MaterializedViews/README.md) over S3, [long window aggregations](/aggregations/sliding-time-windows.md), [retroactive queries from S3](/Introduction/continuous-queries.md) and [join between streams](/calculated-fields/index-lookup.md).
 
 * Use S3 for cheap events storage.
 
@@ -28,7 +28,7 @@ Unlike [Spark Streaming](https://spark.apache.org/streaming/), Upsolver Streams:
 
 * Does not require coding or devops. Spark Streaming offers low level APIs for data engineers. Creating a DB integration is usually critical for keeping state.
 
-* Combines recent and historical data - Spark Streaming is limited to recent data as it runs on data that can reside in-memory. Upsolver combines both recent data and historical data using [Materialized Views](/indexed-views.md) over S3, [long window aggregations](/aggregations/sliding-time-windows.md), [retroactive queries from S3](/continuous-queries.md) and [join between streams](/calculated-fields/index-lookup.md).
+* Combines recent and historical data - Spark Streaming is limited to recent data as it runs on data that can reside in-memory. Upsolver combines both recent data and historical data using [Materialized Views](/MaterializedViews/README.md) over S3, [long window aggregations](/aggregations/sliding-time-windows.md), [retroactive queries from S3](/Introduction/continuous-queries.md) and [join between streams](/calculated-fields/index-lookup.md).
 
 * Use S3 for cheap events storage.
 
