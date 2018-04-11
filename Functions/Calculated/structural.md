@@ -40,6 +40,9 @@ Extracts data from JSON objects
 |JSON|Path|result|
 |----|----|------|
 |`"[{`<br />` "name": "The Great Gatsby",`<br />` "author": {`<br />`  "name": "F. Scott Fitzgerald"`<br />` }`<br />`},`<br />`{`<br />` "name": "Nineteen Eighty-Four",`<br />` "author": {`<br />`   "name": "George Orwell"`<br />` }`<br />`}]"`|`"$[*].author.name"`|`"F. Scott Fitzgerald"`, `"George Orwell"`|
+|`"{ "net_id": 41 }"`|`"net_id"`|`"41"`|
+|`"{ "net_id": [41, 42] }"`|`"net_id"`|`"[41, 42]"`|
+|`"{ "net_id": [41, 42] }"`|`"net_id[*]"`|`"41"`, `"42"`|
 
 {% endraw %}
 

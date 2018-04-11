@@ -140,7 +140,7 @@ For each line remove prefix of control or whitespace characters followed by the 
 
 |input|Margin Char|result|
 |-----|-----------|------|
-|`"Hello`<br />`        ∣ World"`|`"∣"`|`"Hello`<br />` World"`|
+|`"Hello`<br />`          ∣ World"`|`"∣"`|`"Hello`<br />` World"`|
 
 {% endraw %}
 
