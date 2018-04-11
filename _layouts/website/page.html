@@ -4,6 +4,11 @@
     <div class="top-bar">
         <div class="container">
           <div>
+            <button class="hamburger hamburger--spin" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
             <a href="https://www.upsolver.com">
                 <img class="logo" src="{{ '/assets/logo.svg'|resolveFile }}" alt="Upsolver" />
             </a>
@@ -16,6 +21,7 @@
           </div>
         </div>
     </div>
+    <div class="overlay"></div>
     <div class="book container">
         <div class="book-summary">
             {% block book_sidebar %}

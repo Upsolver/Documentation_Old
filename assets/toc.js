@@ -3,6 +3,20 @@ require(['gitbook'], function (gitbook) {
     const selector = '.markdown-section h1, .markdown-section h2, .markdown-section h3:not(#properties,#inputs), .markdown-section h4';
     const githubBase = 'https://github.com/Upsolver/Documentation/blob/master/';
 
+    const body = $('body');
+    const hamburger = $('.hamburger');
+
+    $(document).bind('touchmove', function(e) {
+      if (body.hasClass('menu-open')) {
+        e.preventDefault();
+      }
+    });
+
+    hamburger.click(function() {
+      hamburger.toggleClass('is-active');
+      body.toggleClass('menu-open');
+    });
+
     gitbook.events.bind('page.change', function () {
         // Add .child-active to parents of .active
         $('ul.summary li li.child-active:not(:contains(li.active))').removeClass('child-active');

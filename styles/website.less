@@ -1,14 +1,21 @@
-html, body, .book.font-family-1, .book-summary {
+@smartphones: ~"only screen and (max-width: 812px)";
+
+.book-summary,
+.book.font-family-1,
+body,
+html {
   font-family: "museo-sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 14px;
 }
-
 // Links and overrides for links
+
 a {
   color: #414141;
 
-  &:hover, &:active, &:focus {
+  &:active,
+  &:focus,
+  &:hover {
     color: #28ADE4;
     text-decoration: none;
   }
@@ -16,13 +23,15 @@ a {
 
 .book-summary ul.summary li {
   &.active > a {
-    color:#28ADE4;
+    color: #28ADE4;
   }
 
   a {
     color: #414141;
 
-    &:hover, &:active, &:focus {
+    &:active,
+    &:focus,
+    &:hover {
       color: #28ADE4;
       text-decoration: none;
     }
@@ -34,11 +43,33 @@ body {
 }
 
 .top-bar {
+  .hamburger {
+    display: none;
+  }
+
+  .container {
+    padding: 9px 0;
+    flex-direction: row;
+    background: #fff;
+  }
+
+  @media @smartphones {
+    > .container > div:nth-child(2) {
+      display: none;
+    }
+
+    > .container > div:nth-child(1) {
+      flex: 1 0 auto;
+    }
+
+    > .container > div:nth-child(3) {
+      flex: 1 1 auto;
+    }
+  }
+
   height: 62px;
   line-height: 44px;
-  background: white;
-  box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.25);
-  padding: 9px 0;
+  box-shadow: 0 4px 4px rgba(181, 181, 181, 0.25);
   font-size: 14px;
   position: relative;
   z-index: 1;
@@ -61,6 +92,7 @@ body {
     padding: 0;
     background: 0;
     border: 0;
+    margin: 0;
 
     input {
       background: #fafafa;
@@ -68,6 +100,7 @@ body {
       height: 44px;
       padding: 14px 18px;
       width: 100%;
+      margin: 0;
 
       &::placeholder {
         font-style: italic;
@@ -77,14 +110,102 @@ body {
   }
 }
 
+.overlay {
+  display: none;
+}
+
+@media @smartphones {
+  .overlay {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top:0; left:0; bottom:0; right: 0;
+    opacity: 0;
+    background: #000;
+    transition: opacity 0.2s;
+  }
+
+  body .book-summary {
+    position: fixed;
+    top:0;
+    left:0;
+    right:63px;
+    bottom: 0;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in;
+
+    ul.summary {
+      margin: 15px 0;
+    }
+  }
+
+  body > .container {
+    padding-top: 63px;
+  }
+
+  body .top-bar {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: transform 0.2s ease-in;
+
+    > .container {
+      transition: transform 0.2s ease-in;
+    }
+
+    .hamburger {
+      display: inline-block;
+    }
+  }
+
+  body.menu-open {
+
+    .overlay {
+      display: block;
+      overflow-y:scroll;
+      opacity: 0.6;
+    }
+
+    .book-summary {
+      transform: none;
+      overflow-y: scroll;
+    }
+
+    .top-bar {
+      transform: translateX(100%);
+      margin-left:-63px;
+
+      > .container {
+        transform: translateX(-63px);
+      }
+    }
+  }
+
+  body .book.container > * {
+    flex: 1 0 auto;
+
+    &:nth-child(3) {
+      flex-order: 0;
+    }
+  }
+
+}
+
 .container {
+
+  @media @smartphones {
+    flex-direction: column;
+  }
+
   display: flex;
   max-width: 1300px;
-  margin:0 auto;
+  margin: 0 auto;
 
   > :nth-child(1) {
     flex: 0 1 250px;
-    padding:0 10px;
+    padding: 0 10px;
   }
 
   > :nth-child(2) {
@@ -95,7 +216,7 @@ body {
 
   > :nth-child(3) {
     flex: 0 1 250px;
-    padding:0 10px;
+    padding: 0 10px;
   }
 }
 
@@ -123,7 +244,10 @@ body {
   padding: 6px;
 }
 
-.book-summary, .book-body, .book-body .body-inner, .page-inner {
+.book-body,
+.book-body .body-inner,
+.book-summary,
+.page-inner {
   position: static;
   overflow-y: inherit;
   width: inherit;
@@ -140,7 +264,8 @@ body {
 }
 
 .with-search {
-  .markdown-section, .container > .toc-container > div {
+  .container > .toc-container > div,
+  .markdown-section {
     display: none;
   }
 
@@ -157,7 +282,8 @@ body {
   display: none;
 }
 
-.book-summary ul.summary li a, .book-summary ul.summary li span {
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
   padding: 0;
   margin: 0;
 }
@@ -167,16 +293,16 @@ body {
 }
 
 .book-summary ul.summary {
-
   line-height: 32px;
   margin: 30px 0;
 
-  li.child-active > ul, li.active > ul {
+  li.active > ul,
+  li.child-active > ul {
     display: block;
   }
 
   ul {
-    display:none;
+    display: none;
   }
 
   > li {
@@ -195,12 +321,13 @@ body {
       }
     }
 
-    &.child-active > a::before, &.active > a::before {
+    &.active > a::before,
+    &.child-active > a::before {
       transform: rotate(90deg);
     }
 
     > a::before {
-      background:url('/assets/icon-chevron.png');
+      background: url("/assets/icon-chevron.png");
       display: inline-block;
       height: 16px;
       width: 16px;
@@ -215,7 +342,6 @@ body {
       font-weight: normal;
     }
   }
-
 }
 
 .container > .toc-container {
@@ -224,6 +350,12 @@ body {
 
   > div {
     position: fixed;
+  }
+
+  @media @smartphones {
+    order: -1;
+    padding-top: 20px;
+    > div { position: static; }
   }
 
   h2 {
@@ -245,7 +377,8 @@ body {
         color: #28ADE4;
       }
 
-      &:active, &:focus {
+      &:active,
+      &:focus {
         outline: none;
       }
     }
@@ -276,8 +409,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
-
 }
 
 .book.font-size-1 .book-body .page-inner section,
@@ -289,7 +420,7 @@ body {
 }
 
 .markdown-section h1:nth-child(2) {
-  margin-top:0;
+  margin-top: 0;
 }
 
 .markdown-section {
@@ -308,14 +439,107 @@ body {
   color: black;
   font-weight: bolder;
   font-size: 0.9em;
-
   transition: background-color 0.2s, border-color 0.2s;
-  background: url('/assets/GitHub-Mark-32px.png') no-repeat 6px 5px;
+  background: url("/assets/GitHub-Mark-32px.png") no-repeat 6px 5px;
   background-size: 20px;
 
-  &:hover, &:active, &:focus {
+  &:active,
+  &:focus,
+  &:hover {
     background-color: #fafafa;
     border-color: #e5e5e5;
     text-decoration: none;
   }
+}
+
+.hamburger {
+  height:37px;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger-box {
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  width: 24px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::after,
+.hamburger-inner::before {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -5px;
+}
+
+.hamburger-inner::after {
+  bottom: -5px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
