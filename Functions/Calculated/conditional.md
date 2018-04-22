@@ -20,16 +20,16 @@ If there is a 'true' boolean value in the 'condition' parameter then return the 
 
 ### Inputs
 
- * __first__
- * __second__
- * __third__
+ * __condition__
+ * __true_value__
+ * __false_value__
 
 {% raw %}
 
-|first|second|third|result|
-|-----|------|-----|------|
-|`"foo"`|`"bar"`|``true``|`"foo"`|
-|`"foo"`|`"bar"`|``false``|`"bar"`|
-|`"foo"`|`"bar"`||`"bar"`|
+|condition|true_value|false_value|result|
+|---------|----------|-----------|------|
+|``true``|`"foo"`|`"bar"`|`"foo"`|
+|``false``|`"foo"`|`"bar"`|`"bar"`|
+||`"foo"`|`"bar"`|`"bar"`|
 
 {% endraw %}

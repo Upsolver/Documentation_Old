@@ -64,7 +64,7 @@ Opt in all the rows that contains the specified field
 |input|result|
 |-----|------|
 |`"a"`|``true``|
-||`null`|
+||``false``|
 
 {% endraw %}
 
