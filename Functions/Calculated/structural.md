@@ -62,3 +62,16 @@ Outputs an index and a value field. Index contains a zero based index, and value
 |`"a"`, `"b"`, `"c"`|`{"index": 0, "value": "a"}`, `{"index": 1, "value": "b"}`, `{"index": 2, "value": "c"}`|
 
 {% endraw %}
+
+
+# TO_ARRAY
+
+Outputs all the values from all the inputs as an array
+
+{% raw %}
+
+|inputs|result|
+|------|------|
+|`["a", "c"]`, `["b"]`|`"a"`, `"c"`, `"b"`|
+
+{% endraw %}

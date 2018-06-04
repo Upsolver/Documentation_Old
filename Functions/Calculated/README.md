@@ -13,6 +13,7 @@
 
  *  [COALESCE](conditional.md#coalesce)
  *  [IF_ELSE](conditional.md#ifelse)
+ *  [NULL_IF](conditional.md#nullif)
 
 
 # Date Functions
@@ -84,9 +85,11 @@
 # String Functions
 
  *  [BASE64_DECODE](string.md#base64decode)
+ *  [MD5](string.md#md5)
  *  [REGEX](string.md#regex)
  *  [REGEX_NAMED_GROUPS](string.md#regexnamedgroups)
  *  [REPLACE](string.md#replace)
+ *  [SHA1](string.md#sha1)
  *  [SPLIT](string.md#split)
  *  [STRING_FORMAT](string.md#stringformat)
  *  [STRING_LENGTH](string.md#stringlength)
@@ -108,6 +111,7 @@
  *  [FROM_KEY_VALUE](structural.md#fromkeyvalue)
  *  [JSON_PATH](structural.md#jsonpath)
  *  [MAP_WITH_INDEX](structural.md#mapwithindex)
+ *  [TO_ARRAY](structural.md#toarray)
 
 
 # Type Conversions Functions

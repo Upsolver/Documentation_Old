@@ -25,7 +25,7 @@ Convert date into string
 
 ### Properties
 
- * __Format__ - The date format to output. The format uses the Java DateTimeFormatter format (https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). For example, yyyy-MM-dd HH:mm:ss will output strings in the format 2017-07-23 14:33:54. yyyy-MM-dd'T'HH:mm:ss.SSS'Z' will output strings in the format 2017-07-23T14:33:54.756Z.
+ * __Format__ - The date format to output. The format uses the [Java DateTimeFormatter format](https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). For example, yyyy-MM-dd HH:mm:ss will output strings in the format 2017-07-23 14:33:54. yyyy-MM-dd'T'HH:mm:ss.SSS'Z' will output strings in the format 2017-07-23T14:33:54.756Z.
 
 {% raw %}
 
@@ -45,7 +45,7 @@ Convert a date string in the provided format into a date. If the date is missing
 
 ### Properties
 
- * __Format__ - The format to use on the date string. The format uses the Java DateTimeFormatter format (https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). For example, yyyy-MM-dd HH:mm:ss will parse strings of the format 2017-07-23 14:33:54. yyyy-MM-dd'T'HH:mm:ss.SSS'Z' will parse strings in the format 2017-07-23T14:33:54.756Z.
+ * __Format__ - The format to use on the date string. The format uses the [Java DateTimeFormatter format](https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). For example, yyyy-MM-dd HH:mm:ss will parse strings of the format 2017-07-23 14:33:54. yyyy-MM-dd'T'HH:mm:ss.SSS'Z' will parse strings in the format 2017-07-23T14:33:54.756Z.
 
 {% raw %}
 

@@ -12,6 +12,19 @@ Decode a base 64 string into a string
 {% endraw %}
 
 
+# MD5
+
+Hashes the input using MD5
+
+{% raw %}
+
+|input|result|
+|-----|------|
+|`"hello world"`|`"5eb63bbbe01eeed093cb22bb8f5acdc3"`|
+
+{% endraw %}
+
+
 # REGEX
 
 Matches the regular expression on the input string. Returns the escape groups if any exists or the original string if non exists.
@@ -72,6 +85,19 @@ Replace substrings within a string
 |`"Hello World"`|`"Hello"`|`null`|`" World"`|
 |`"Hello World"`|`"Hello"`|`"foo"`|`"foo World"`|
 |`"World"`|`"Hello"`|`"foo"`|`"World"`|
+
+{% endraw %}
+
+
+# SHA1
+
+Hashes the input using SHA-1
+
+{% raw %}
+
+|input|result|
+|-----|------|
+|`"hello world"`|`"2aae6c35c94fcfb415dbe95f408b9ce91ee846ed"`|
 
 {% endraw %}
 

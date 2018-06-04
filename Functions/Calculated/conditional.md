@@ -33,3 +33,23 @@ If there is a 'true' boolean value in the 'condition' parameter then return the 
 ||`"foo"`|`"bar"`|`"bar"`|
 
 {% endraw %}
+
+
+# NULL_IF
+
+If there is a 'true' boolean value in the 'condition' parameter, then return null. Otherwise, return the value
+
+### Inputs
+
+ * __condition__
+ * __value__
+
+{% raw %}
+
+|condition|value|result|
+|---------|-----|------|
+|``true``|`"foo"`|`null`|
+|``false``|`"foo"`|`"foo"`|
+||`"foo"`|`"foo"`|
+
+{% endraw %}
