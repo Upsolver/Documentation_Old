@@ -58,6 +58,7 @@
 * [Clusters](Clusters/README.md)
   * [Compute Cluster](Clusters/compute.md)
   * [Query Cluster](Clusters/query.md)
+  * [Real Time Cluster](Clusters/realtime.md)
 * [Connections](Connections/README.md)
   * [Amazon Redshift Connection](Connections/amazon-redshift.md)
 * [Changelog](CHANGELOG.md)
