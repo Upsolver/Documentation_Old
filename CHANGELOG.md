@@ -1,5 +1,13 @@
 # Changelog
 
+## 2018/06/17
+
+* Compute Cluster: Allow to spin up "Replay" Cluster when needed
+* Outputs: Edit S3 and Upsolver Outputs
+* Filters: Improved UX (Whitelist and Blacklist Filters)
+* Materialized Views: Time Series Aggregations are shown as graphs in the Data
+  Sample tab
+
 ## 2018/03/01
 
 * Materialized Views: Added an API to iterate the MVs
@@ -9,7 +17,7 @@
 * Users can now create readonly S3 Connections
 * Athena Output now supports setting of event time which is used for partitioning
 * Elasticsearch Output now supports retention
-* Various performance improvements to UI 
+* Various performance improvements to UI
 * Support filtering on time range in Data Source inspection page
 * Support for editing lookup enrichments
 * Monitoring now shows Materialized Views that are used in Lookup enrichments
