@@ -1,5 +1,9 @@
 # Changelog
 
+## 2018/06/18
+
+* Aggregated Output: Added option to add calculated fields over aggregations
+
 ## 2018/06/17
 
 * Compute Cluster: Allow to spin up "Replay" Cluster when needed
