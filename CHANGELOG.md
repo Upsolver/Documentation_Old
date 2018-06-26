@@ -1,5 +1,10 @@
 # Changelog
 
+## 2018/06/26
+
+* Output / Materialized Views: Added ability to edit the Data Sources from
+  the properties tab (Only if the object isn't deployed yet)
+
 ## 2018/06/18
 
 * Aggregated Output: Added option to add calculated fields over aggregations
