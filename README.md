@@ -1,3 +1,7 @@
+---
+description: Upsolver Documentation
+---
+
 # Upsolver Introduction
 
 Upsolver is a streaming aggregation engine for [Amazon S3](https://aws.amazon.com/s3/).  
