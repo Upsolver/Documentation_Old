@@ -26,7 +26,7 @@ curl --request POST \
         "name": "Data Sources Bot API Token",
         "description": "API Token used by the bot to create Data Sources"
     }
-}
+}'
 ```
 
 Fill your email and password in the headers.
@@ -57,5 +57,5 @@ Then every request should have a header "Authorization" with your token, for exa
 ```bash
 curl --request GET 
  --url https://api.upsolver.com/inputs/ 
- --header 'authorization: abe96c6e70b84347be6aa36c0c8a04b6'
+ --header 'authorization: abc12345678901234567890123456789'
 ```
