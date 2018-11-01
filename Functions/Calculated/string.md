@@ -12,6 +12,32 @@ Decode a base 64 string into a string
 {% endraw %}
 
 
+# BYTES_SUBSTRING
+
+Returns a substring of the input, using the offsets in bytes of the UTF-8 encoded byte representation. Partial characters and invalid UTF-8 code points are removed from the result.
+
+### Inputs
+
+ * __value__ - Value to substring
+
+### Properties
+
+ * __Start Index__ - The inclusive start index in bytes
+ * __End Index__ - The exclusive end index in bytes
+
+{% raw %}
+
+|value|Start Index|End Index|result|
+|-----|-----------|---------|------|
+|`"Hello World"`|`0`|`10`|`"Hello Worl"`|
+|`"Hello World"`|`1`|`10`|`"ello Worl"`|
+|`"⻤Hello Wor⻤"`|`1`|`10`|`"Hello W"`|
+|`"⻤Hello Wor⻤"`|`0`|`10`|`"⻤Hello W"`|
+|`"Hello"`|`0`|`10`|`"Hello"`|
+
+{% endraw %}
+
+
 # MD5
 
 Hashes the input using MD5
@@ -102,6 +128,19 @@ Hashes the input using SHA-1
 {% endraw %}
 
 
+# SHA256
+
+Hashes the input using SHA-256
+
+{% raw %}
+
+|input|result|
+|-----|------|
+|`"Hello SHA"`|`"4ea3b17f15346417f4c9b2ff94a1bfe82de99fdb0bbd30dc4dca031ab920d5e4"`|
+
+{% endraw %}
+
+
 # SPLIT
 
 Returns the given string split by the provided delimiter.
@@ -122,6 +161,27 @@ Returns the given string split by the provided delimiter.
 {% endraw %}
 
 
+# SPLIT_TO_RECORD
+
+Returns the given string split by the provided delimiter.
+
+### Properties
+
+ * __Field Names__
+ * __Delimiter__
+ * __Filter Empty Values__
+
+{% raw %}
+
+|value|Field Names|Delimiter|Filter Empty Values|result|
+|-----|-----------|---------|-------------------|------|
+|`"1,2,3,4"`|`"a,b,c"`|`","`|``false``|`{"a": "1", "b": "2", "c": "3"}`|
+|`"1,2"`|`"a,b,c"`|`","`|``false``|`{"a": "1", "b": "2", "c": ""}`|
+|`"1,,3"`|`"a,b,c"`|`","`|``true``|`{"a": "1", "c": "3"}`|
+
+{% endraw %}
+
+
 # STRING_FORMAT
 
 Format any number of inputs into a string using the given format
@@ -136,6 +196,13 @@ Format any number of inputs into a string using the given format
 |------|-------------|------|
 |`"a"`, `"b"`, `"c"`|`"{0} {1} {2}"`|`"a b c"`|
 |`1.23`|`"{0}"`|`"1.23"`|
+|`0.5`|`"{0,number,percent}"`|`"50%"`|
+|`1.23`|`"{0,number,#.###}"`|`"1.235"`|
+|`1.2`|`"{0,number,#.###}"`|`"1.2"`|
+|`1.23`|`"{0,number,0.000}"`|`"1.235"`|
+|`1.2`|`"{0,number,0.000}"`|`"1.200"`|
+|`1.23E8`|`"{0,number,###,###.###}"`|`"123,456,789.012"`|
+|`1.23E8`|`"{0,number,000,000.000}"`|`"123,456,789.012"`|
 
 {% endraw %}
 
@@ -211,19 +278,21 @@ Remove the given suffix string from the end of the string
 
 Returns a string that is a substring of the given string
 
-### Properties
+### Inputs
 
- * __Start Index__ - The inclusive start index. Negative values count from the end of the string
- * __End Index__ - The exclusive end index. Negative values count inclusively from the end of the string
+ * __value__
+ * __startPosition__
+ * __endPosition__
 
 {% raw %}
 
-|input|Start Index|End Index|result|
-|-----|-----------|---------|------|
+|value|startPosition|endPosition|result|
+|-----|-------------|-----------|------|
+|`"Hello World"`|`0`|`5`|`"Hello"`|
 |`"Hello"`|`0`|`-1`|`"Hello"`|
-|`"Hello"`|`1`|`-1`|`"ello"`|
+|`"Hello"`|`1`|`3`|`"el"`|
 |`"Hello"`|`6`|`-1`|`""`|
-|`"Hello"`|`-3`|`-1`|`"llo"`|
+|`"Hello"`|`-3`|`-2`|`"ll"`|
 
 {% endraw %}
 
@@ -260,21 +329,57 @@ Translates the given value using a given dictionary
 
 ### Properties
 
- * __Dictionary__ - Comma separated values with key and optional value in every line
- * __Keep Values Without Translation__ - Whether to keep values that have no translation in the given dictionary
+ * __Dictionary__
+ * __Keep Values Without Translation__ - Whether to keep values that have that are not mapped to a value in the feature
+ * __Empty As Null__ - If set, empty values will be treated as null
 
 {% raw %}
 
-|input|Dictionary|Keep Values Without Translation|result|
-|-----|----------|-------------------------------|------|
-|`1`|`"1,foo`<br />`2,bar"`|``false``|`"foo"`|
-|`2.0`|`"1,foo`<br />`2,bar"`|``false``|`"bar"`|
-|`3`|`"1,foo`<br />`2,bar"`|``false``|`null`|
-|`3`|`"1,foo`<br />`2,bar"`|``true``|`"3"`|
-|`"a"`|`"a,Antman`<br />`b,Batman"`|``false``|`"Antman"`|
-|`"b"`|`"a,Antman`<br />`b,Batman"`|``false``|`"Batman"`|
-|`"c"`|`"a,Antman`<br />`b,Batman"`|``false``|`null`|
-|`"c"`|`"a,Antman`<br />`b,Batman"`|``true``|`"c"`|
+|input|Dictionary|Keep Values Without Translation|Empty As Null|result|
+|-----|----------|-------------------------------|-------------|------|
+|`"a"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``false``|``false``|`"Antman"`|
+|`"b"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``false``|``false``|`"Batman"`|
+|`"c"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``false``|``false``|`null`|
+|`"c"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``true``|``false``|`"c"`|
+|`"d"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``true``|``true``|`null`|
+|`"d"`|`"a,Antman`<br />`b,Batman`<br />`d,"`|``true``|``false``|`""`|
+|`1234`|`"1234.0,good"`|``false``|``false``|`"good"`|
+|`1234`|`"1234.0,good"`|``false``|``false``|`"good"`|
+|`0`|`"0.0,good"`|``false``|``false``|`"good"`|
+|`0`|`"-0.0,good"`|``false``|``false``|`"good"`|
+|`0`|`"-0.0,good"`|``false``|``false``|`"good"`|
+|`123456000000000000`|`"1.23456e17,good"`|``false``|``false``|`"good"`|
+|`6`|`"6.000000000000001,good"`|``false``|``false``|`null`|
+
+{% endraw %}
+
+
+# TRANSLATE_FROM_CSV_FILE
+
+Translates the given value using a dictionary in a CSV file in cloud storage
+
+### Inputs
+
+ * __input__ - the value to look up in the mapping
+
+### Properties
+
+ * __Connection__ - The connection to use to find the file
+ * __File Path__ - The path to the CSV file within the cloud storage connection
+ * __Key Column__ - Comma separated list of key columns for the lookup. These can be either zero based numbers or names from the header. The actual key should be ~ separated string with all the key columns' values in order
+ * __Value Column__ - The value column. This can be either a zero based number or the name from the header.
+ * __Filters__ - Filters on the data. This should be a CSV with the first column being the column name/index in the CSV file, and the second column the accepted value.
+ * __Keep Values Without Translation__ - Whether to keep values that have no translation in the given dictionary
+ * __Allow Missing File__ - Whether to fail the transformation if no file is found
+
+{% raw %}
+
+|input|Connection|File Path|Key Column|Value Column|Filters|Keep Values Without Translation|Allow Missing File|result|
+|-----|----------|---------|----------|------------|-------|-------------------------------|------------------|------|
+|`"a"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
+|`"b"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`"Batman"`|
+|`"c"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
+|`"d"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
 
 {% endraw %}
 

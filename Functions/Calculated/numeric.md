@@ -71,7 +71,7 @@ Converts the specified degrees to radians
 
 |value|result|
 |-----|------|
-|`0`|`0.0`|
+|`0`|`0`|
 |`180`|`3.14`|
 |`360`|`6.28`|
 
@@ -92,8 +92,8 @@ Divides two numbers.
 |x|y|result|
 |-|-|------|
 |`5.1`|`2.5`|`2.04`|
-|`5`|`2.5`|`2.0`|
-|`5`|`0.0`|`null`|
+|`5`|`2.5`|`2`|
+|`5`|`0`|`null`|
 
 {% endraw %}
 
@@ -106,9 +106,9 @@ A mathematical function that returns the exponential value of the specified numb
 
 |input|result|
 |-----|------|
-|`1.0`|`2.72`|
-|`2.0`|`7.39`|
-|`3.0`|`20.1`|
+|`1`|`2.72`|
+|`2`|`7.39`|
+|`3`|`20.1`|
 |``NaN``|``NaN``|
 
 {% endraw %}
@@ -141,12 +141,12 @@ Divides two numbers and returns the integer part of the result.
 
 |x|y|result|
 |-|-|------|
-|`5.1`|`2.5`|`2.0`|
-|`5`|`2.5`|`2.0`|
-|`-5.1`|`2.5`|`-2.0`|
-|`3.0`|`0.0`|`null`|
-|`0.0`|`0.0`|`null`|
-|`0.0`|`3.0`|`0.0`|
+|`5.1`|`2.5`|`2`|
+|`5`|`2.5`|`2`|
+|`-5.1`|`2.5`|`-2`|
+|`3`|`0`|`null`|
+|`0`|`0`|`null`|
+|`0`|`3`|`0`|
 
 {% endraw %}
 
@@ -160,10 +160,10 @@ Returns the natural logarithm of n, where n is greater than 0 and its base is a 
 |input|result|
 |-----|------|
 |`0.5`|`-0.693`|
-|`1.0`|`0.0`|
-|`2.0`|`0.693`|
-|`0.0`|`null`|
-|`-1.0`|`null`|
+|`1`|`0`|
+|`2`|`0.693`|
+|`0`|`null`|
+|`-1`|`null`|
 
 {% endraw %}
 
@@ -180,13 +180,13 @@ Returns the logarithm of n, where n is greater than 0, with the specified base.
 
 |input|Base|result|
 |-----|----|------|
-|`2.0`|`2.0`|`1.0`|
-|`4.0`|`2.0`|`2.0`|
-|`8.0`|`2.0`|`3.0`|
-|`1.0`|`10.0`|`0.0`|
-|`10.0`|`10.0`|`1.0`|
-|`100.0`|`10.0`|`2.0`|
-|`-2.0`|`2.0`|`null`|
+|`2`|`2.0`|`1`|
+|`4`|`2.0`|`2`|
+|`8`|`2.0`|`3`|
+|`1`|`10.0`|`0`|
+|`10`|`10.0`|`1`|
+|`100`|`10.0`|`2`|
+|`-2`|`2.0`|`null`|
 
 {% endraw %}
 
@@ -205,7 +205,7 @@ Returns the maximum value of the two numbers.
 |x|y|result|
 |-|-|------|
 |`2.5`|`5.1`|`5.1`|
-|`2.5`|`5`|`5.0`|
+|`2.5`|`5`|`5`|
 
 {% endraw %}
 
@@ -295,11 +295,11 @@ A mathematical function that raises the first value to the power of the second v
 
 |base|exponent|result|
 |----|--------|------|
-|`2.0`|`0.0`|`1.0`|
-|`2.0`|`1.0`|`2.0`|
-|`2.0`|`2.0`|`4.0`|
-|`2.0`|`3.0`|`8.0`|
-|`2.0`|`4.0`|`16.0`|
+|`2`|`0`|`1`|
+|`2`|`1`|`2`|
+|`2`|`2`|`4`|
+|`2`|`3`|`8`|
+|`2`|`4`|`16`|
 
 {% endraw %}
 
@@ -312,9 +312,9 @@ Converts the specified radians to degrees
 
 |value|result|
 |-----|------|
-|`0`|`0.0`|
-|`3.14`|`180.0`|
-|`6.28`|`360.0`|
+|`0`|`0`|
+|`3.14`|`180`|
+|`6.28`|`360`|
 
 {% endraw %}
 
@@ -329,7 +329,7 @@ Returns the reciprocal of the value (¹/ₓ).
 |-|------|
 |`2`|`0.5`|
 |`4`|`0.25`|
-|`1`|`1.0`|
+|`1`|`1`|
 |`0`|`null`|
 
 {% endraw %}
@@ -393,7 +393,7 @@ A mathematical function that returns the square root of the value.
 
 |input|result|
 |-----|------|
-|`4`|`2.0`|
+|`4`|`2`|
 |`-2`|`null`|
 
 {% endraw %}

@@ -17,10 +17,19 @@ Maps a list of key values to a record with fields for each key
 |---|-----|----|------|
 |`"foo"`, `"hello"`|`"bar"`, `"world"`|`"foo, hello"`|`{"foo": "bar", "hello": "world"}`|
 |`"foo"`, `"hoo"`|`"bar"`, `"zoo"`|`"foo, hello"`|`{"foo": "bar"}`|
-|`"foo"`, `"hello"`|`100`, `500`|`"foo, hello"`|`{"foo": 100, "hello": 500}`|
-|`"foo"`, `"hoo"`|`100`, `500`|`"foo, hello"`|`{"foo": 100}`|
 
 {% endraw %}
+
+
+# ITEM_INDEX
+
+Gets the index of the item
+
+### Properties
+
+ * __Global Index__ - Use the global index in the event instead of the index in the containing array
+ * __Count Nulls__
+
 
 
 # JSON_PATH
@@ -43,6 +52,7 @@ Extracts data from JSON objects
 |`"{ "net_id": 41 }"`|`"net_id"`|`"41"`|
 |`"{ "net_id": [41, 42] }"`|`"net_id"`|`"[41, 42]"`|
 |`"{ "net_id": [41, 42] }"`|`"net_id[*]"`|`"41"`, `"42"`|
+|`"{ "net_id": [41, 42] }"`|`"net_id.parent"`|`null`|
 
 {% endraw %}
 

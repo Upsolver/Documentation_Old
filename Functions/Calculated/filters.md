@@ -33,6 +33,21 @@ Returns true for instances where the left operand contains the right operand
 {% endraw %}
 
 
+# Deduplicate
+
+True if it's the first time we see the input value in the data in the specified window size.
+
+### Inputs
+
+ * __value__ - value to deduplicate
+
+### Properties
+
+ * __Connection__ - The storage to use to save state data
+ * __Window Size__ - Deduplication window size in minutes
+
+
+
 # EQUAL_TO
 
 Returns true for instances where the operands are equal
@@ -181,19 +196,24 @@ Returns true if the value is false
 {% endraw %}
 
 
-# NUMBER_DEDUP
+# NOT_EQUAL_TO
 
-Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
+Returns true for instances where the operands are not equal
 
 ### Inputs
 
- * __value__ - value to deduplicate
+ * __first__
+ * __second__
 
 {% raw %}
 
-|value|result|
-|-----|------|
-|`5.0`, `6.4`, `5.0`, `5.0`, `6.0`|`5.0`, `6.4`, `6.0`|
+|first|second|result|
+|-----|------|------|
+|`0`|`0`|``false``|
+|`1`|`0`|``true``|
+|`0`|`1`|``true``|
+|`"a"`|`"a"`|``false``|
+|`"a"`|`"b"`|``true``|
 
 {% endraw %}
 
@@ -231,23 +251,6 @@ Returns true for a percentage of items equal to the input
 |`0.22`|``true``|
 |`0.22`|``false``|
 |`1.0`|``true``|
-
-{% endraw %}
-
-
-# STRING_DEDUP
-
-Outputs the input value only if it's the first time we see that value in the current minute. Use DISTINCT if you want to DEDUP in the context of an array of items.
-
-### Inputs
-
- * __value__ - value to deduplicate
-
-{% raw %}
-
-|value|result|
-|-----|------|
-|`"foo"`, `"bar"`, `"foo"`|`"foo"`, `"bar"`|
 
 {% endraw %}
 

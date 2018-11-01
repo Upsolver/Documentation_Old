@@ -36,6 +36,7 @@
 
  *  [AND](filters.md#and)
  *  [CONTAINS](filters.md#contains)
+ *  [Deduplicate](filters.md#deduplicate)
  *  [EQUAL_TO](filters.md#equalto)
  *  [EXISTS](filters.md#exists)
  *  [GREATER_THAN](filters.md#greaterthan)
@@ -44,10 +45,9 @@
  *  [LESS_THAN](filters.md#lessthan)
  *  [LESS_THAN_OR_EQUAL_TO](filters.md#lessthanorequalto)
  *  [NOT](filters.md#not)
- *  [NUMBER_DEDUP](filters.md#numberdedup)
+ *  [NOT_EQUAL_TO](filters.md#notequalto)
  *  [OR](filters.md#or)
  *  [RANDOM](filters.md#random)
- *  [STRING_DEDUP](filters.md#stringdedup)
  *  [XOR](filters.md#xor)
 
 
@@ -85,12 +85,15 @@
 # String Functions
 
  *  [BASE64_DECODE](string.md#base64decode)
+ *  [BYTES_SUBSTRING](string.md#bytessubstring)
  *  [MD5](string.md#md5)
  *  [REGEX](string.md#regex)
  *  [REGEX_NAMED_GROUPS](string.md#regexnamedgroups)
  *  [REPLACE](string.md#replace)
  *  [SHA1](string.md#sha1)
+ *  [SHA256](string.md#sha256)
  *  [SPLIT](string.md#split)
+ *  [SPLIT_TO_RECORD](string.md#splittorecord)
  *  [STRING_FORMAT](string.md#stringformat)
  *  [STRING_LENGTH](string.md#stringlength)
  *  [STRIP_MARGIN](string.md#stripmargin)
@@ -100,6 +103,7 @@
  *  [TO_LOWER](string.md#tolower)
  *  [TO_UPPER](string.md#toupper)
  *  [TRANSLATE](string.md#translate)
+ *  [TRANSLATE_FROM_CSV_FILE](string.md#translatefromcsvfile)
  *  [TRIM](string.md#trim)
  *  [TRIM_CHARS](string.md#trimchars)
  *  [URL_DECODE](string.md#urldecode)
@@ -109,6 +113,7 @@
 # Structural Functions
 
  *  [FROM_KEY_VALUE](structural.md#fromkeyvalue)
+ *  [ITEM_INDEX](structural.md#itemindex)
  *  [JSON_PATH](structural.md#jsonpath)
  *  [MAP_WITH_INDEX](structural.md#mapwithindex)
  *  [TO_ARRAY](structural.md#toarray)
