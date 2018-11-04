@@ -1,9 +1,9 @@
 # Create Data Source
-Create a new [Data Source](/DataSources/README.md). All API calls require an [authorization token](../authorization.md)
+Create a new [Data Source](/DataSources/README.md). All API calls require an [Authentication Token](../authentication.md)
 
 Signature
 ```
-POST ${apiHost + path}
+POST https://api.upsolver.com/api/v1/data-source/
 ```
 
 ## Amazon S3
@@ -15,14 +15,14 @@ A prerequisite for defining a cloud storage data source is providing Upsolver wi
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
 sourceStorage | S3 Connection | String | Please select the cloud storage which you wish to ingest files from. | 
 datePattern | Date Pattern | String | Please specify the date pattern in the file name / folder structure. For example: yyyy/MM/dd/HH/mm. Date format specification should be according to [Java DateTimeFormatter format](https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). | 
 fileMatchPattern | File Name Pattern | FileNameMatcher | Please select the file name pattern for the files you'd like to ingest. If all the files in specified folders are relevant, please select All. The pattern given is matched against the file path starting from the FULL PATH field above. | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String |  | 
 destinationStorage | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 compression | Compression | Compression |  | 
@@ -43,7 +43,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Amazon S3 Data Source",
     "description" : "Description of first Amazon S3 data source"
   },
-  "sourceStorage" : "1d884fc6-9ad3-48cd-9125-847c6718935f",
+  "sourceStorage" : "7c7c7898-a7e9-40ca-af21-133c4fe3ae4c",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -51,8 +51,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "c1b50205-59fe-4f80-9aa7-b2298c807699",
-  "destinationStorage" : "01c34603-029f-4534-b764-409a3a32cbd7",
+  "computeEnvironment" : "4a7e42ff-c540-4383-94fd-cfd250730d14",
+  "destinationStorage" : "99919a88-851a-40a2-89c3-d2cb1454b1e8",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -68,12 +68,12 @@ You'll need to configure SQS Notifications from your S3 Bucket and to open permi
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
 sourceStorage | Source Storage | String | Please select the cloud storage which you wish to ingest files from. | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String |  | 
 destinationStorage | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 compression | Compression | Compression |  | 
@@ -92,12 +92,12 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First S3 Over SQS Data Source",
     "description" : "Description of first S3 Over SQS data source"
   },
-  "sourceStorage" : "8bc57511-9cf6-4f96-8461-4d539c511cf8",
+  "sourceStorage" : "b74c10b9-b81a-4d7c-9dc4-ad5978ff5f6d",
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "1cc4a132-728e-4a06-b30b-1b97a030996c",
-  "destinationStorage" : "65df8d01-9a4a-4b69-9ccc-1d4a32316fe2",
+  "computeEnvironment" : "ef3c4d83-290c-4659-9f26-9a3203ed3d5c",
+  "destinationStorage" : "5a7ec5d0-ca38-4579-9972-cd0b5102b38b",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   }
@@ -113,7 +113,7 @@ A prerequisite for defining a Kafka stream connection is providing Upsolver with
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
@@ -121,7 +121,7 @@ kafkaVersion | Kafka Version | KafkaVersion | The Version of the Kafka Servers. 
 kafkaHosts | Kafka Hosts | String | Kafka hosts separated with commas. For example: foo:9092,bar:9092 | 
 topicName | Kafka Topic | String | The Kafka topic to ingest the data from | 
 readFromStart | Read From Start | Boolean | Whether to read the data from the start of the topic or to begin from the end | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String | The compute cluster used to run the data source. | 
 connectionPointer | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 shards | Shards | Int | Determines how many readers should be used in parallel to read the stream. A recommended value would be to increase it by 1 for every 70 MB/s in sent to your topic. | 
@@ -148,8 +148,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "aed59ae2-0f7e-4e06-99a1-88d0b4216801",
-  "connectionPointer" : "d59c5a5d-4b83-4d69-8427-891ae41852be",
+  "computeEnvironment" : "53423dbb-b1f8-4562-8f1f-58838a21c777",
+  "connectionPointer" : "e286392b-fd4d-4238-b6e8-133376bb91c3",
   "shards" : 1,
   "parallelism" : 1,
   "isOnline" : true,
@@ -166,11 +166,11 @@ A prerequisite for defining an Amazon Kinesis stream connection is providing Ups
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 kinesisConnection | Kinesis Connection | String | The AWS credentials to connect to Kinesis | 
 streamName | Stream | String | Please enter the name of the relevant Kinesis stream. | 
 readFromStart | Read From Start | Boolean | Configure the time which you would like to have data ingested from. Messages which are before this time will be ignored. If you leave this field empty all messages will be ingested. | 
@@ -196,11 +196,11 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "kinesisConnection" : "75be90ad-1973-4674-93df-6829d675a984",
+  "kinesisConnection" : "2a7ee169-4004-497c-9fa6-bb5522aecdeb",
   "streamName" : "streamName",
   "readFromStart" : true,
-  "computeEnvironment" : "ae9958b8-b4d4-4477-b0e2-ff09b8e968bb",
-  "connectionPointer" : "148cec02-3b92-4888-aa0d-512f1a889606",
+  "computeEnvironment" : "a8cba917-9bdf-413f-b14f-274ffbff6733",
+  "connectionPointer" : "b3d1ef85-7ef7-47c2-aa75-31e8770ca7e7",
   "isOnline" : true,
   "shards" : 1,
   "parallelism" : 1,
@@ -219,14 +219,14 @@ A prerequisite for defining a cloud storage data source is providing Upsolver wi
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
 sourceStorage | Azure Blob Storage Connection | String | Please select the cloud storage which you wish to ingest files from. | 
 datePattern | Date Pattern | String | Please specify the date pattern in the file name / folder structure. For example: yyyy/MM/dd/HH/mm. Date format specification should be according to [Java DateTimeFormatter format](https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). | 
 fileMatchPattern | File Name Pattern | FileNameMatcher | Please select the file name pattern for the files you'd like to ingest. If all the files in specified folders are relevant, please select All. The pattern given is matched against the file path starting from the FULL PATH field above. | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String |  | 
 destinationStorage | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 compression | Compression | Compression |  | 
@@ -247,7 +247,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Azure Blob Storage Data Source",
     "description" : "Description of first Azure Blob Storage data source"
   },
-  "sourceStorage" : "7bc4d9fc-76e3-433b-81fe-ce4b0ee9a33b",
+  "sourceStorage" : "02b82e6d-65b7-4c08-9852-60afa54ea41e",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -255,8 +255,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "64f7a44e-4767-438f-bbcf-9e120c4beed6",
-  "destinationStorage" : "e5de9b62-0aa0-4f13-aa3d-c007743229e3",
+  "computeEnvironment" : "f5cd0555-fc90-46a7-b921-3be87a1b6f15",
+  "destinationStorage" : "2e78b2be-e19c-46a6-a97a-a451fe518008",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -273,14 +273,14 @@ A prerequisite for defining a cloud storage data source is providing Upsolver wi
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
 sourceStorage | Google Storage Connection | String | Please select the cloud storage which you wish to ingest files from. | 
 datePattern | Date Pattern | String | Please specify the date pattern in the file name / folder structure. For example: yyyy/MM/dd/HH/mm. Date format specification should be according to [Java DateTimeFormatter format](https://docs.oracle.com/javase/9/docs/api/java/time/format/DateTimeFormatter.html). | 
 fileMatchPattern | File Name Pattern | FileNameMatcher | Please select the file name pattern for the files you'd like to ingest. If all the files in specified folders are relevant, please select All. The pattern given is matched against the file path starting from the FULL PATH field above. | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String |  | 
 destinationStorage | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 compression | Compression | Compression |  | 
@@ -301,7 +301,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Google Cloud Storage Data Source",
     "description" : "Description of first Google Cloud Storage data source"
   },
-  "sourceStorage" : "44b13576-c977-4b5d-b858-5e0b5eb90324",
+  "sourceStorage" : "d43820e5-0b58-4bd6-b075-f1e9227286ee",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -309,8 +309,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "b10ef948-dab0-49cb-ad0a-9c16b4d92526",
-  "destinationStorage" : "d1adb7af-33de-4edf-97a7-f4ba212b7a89",
+  "computeEnvironment" : "bc666d9e-4607-4e88-93fd-619a2bf6c14f",
+  "destinationStorage" : "c42db6e1-1ba5-4fea-98ad-560c99219358",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -328,11 +328,11 @@ Once you create the connection, you will be provided with an HTTP endpoint.
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 displayData.name | Name | String | Data Source Name | 
 displayData.description | Description | String | Data Source Description | 
-contentType | Content Format | [ContentType](content-types.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
+contentType | Content Format | [ContentType](content-type.md) | Please select the format of the messages. Supported formats are: JSON, AVRO, CSV, TSV, ORC, Protobuf and x-www-form-urlencoded. For self-describing formats like JSON, the schema will be auto-detected. The body should contain of the message should contain the message itself, which should not be url-encoded. Messages can be compressed, Upsolver will automatically detect the compression type. Supported compression types are: Zip, GZip, Snappy and None. | 
 computeEnvironment | Compute Cluster | String |  | 
 connectionPointer | Target Storage | String | The data and metadata files for this Data Source will be stored in this storage | 
 retention | Retention | Int (Minutes) | A retention period for the data. After this amount of time elapsed the data will be deleted forever. | X
@@ -351,8 +351,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "905c31a3-43c8-40cc-b37e-16f50d80c62c",
-  "connectionPointer" : "9ce13c7c-c2fe-4658-985a-623e3af8a1e1"
+  "computeEnvironment" : "1ce87d8f-e3b5-4153-9fcc-94c3d9c8e17c",
+  "connectionPointer" : "46c77849-2491-45ce-8402-4ea0dfadbb2c"
 }' "https://api.upsolver.com/api/v1/data-source/"
 ```
  

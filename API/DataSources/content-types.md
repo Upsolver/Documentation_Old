@@ -53,7 +53,7 @@ JSON data. Multiple JSONs can be read from a single file/record by appending the
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 nestedJsonPaths | Nested Json Paths | [][] | Paths to string fields that contain a 'stringified' JSON that should be parsed into the schema. Each such path is represented as an array of the path parts. | X
 splitRootArray | Split Root Array | Boolean | If the root object is an array, it can either be parsed as separate events, or as a single event which contains only an array. | X
@@ -75,7 +75,7 @@ keepOriginalNestedJsonString | Keep Original Nested Json String | Boolean | When
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 inferTypes | Infer Types | Boolean |  | 
 header | Header | String |  | 
@@ -100,7 +100,7 @@ nullValue | Null Value | String |  | X
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 inferTypes | Infer Types | Boolean |  | 
 header | Header | String |  | 
@@ -123,7 +123,7 @@ header | Header | String |  |
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 inferTypes | Infer Types | Boolean |  | 
 
@@ -144,7 +144,7 @@ inferTypes | Infer Types | Boolean |  |
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 schemaFiles | Schema Files | SchemaFile[] |  | 
 mainFile | Main File | String |  | 
@@ -174,7 +174,7 @@ Individual AVRO records without the framing or schema.
 
 #### Fields
 
-Field | Name | Type | Description | Optional
+Field | Name | Type | Description | Optional 
 --- | --- | --- | ---
 schema | Schema | String | The AVRO schema used to decode the messages. Note that the behavior is undefined if the schema does not match the data. | 
 bytesParsers | Bytes Parsers | BytesParser[] | BytesParsers can be used to define special parsing behavior for 'bytes' fields in the schema. | X
