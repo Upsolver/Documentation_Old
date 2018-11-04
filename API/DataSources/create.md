@@ -1,11 +1,12 @@
 # Create Data Source
 Create a new [Data Source](/DataSources/README.md). All API calls require an [Authentication Token](../authentication.md)
 
+
 Signature
+
 ```
 POST https://api.upsolver.com/api/v1/data-source/
 ```
-
 ## Amazon S3
 
 Connect to your AWS S3 Bucket. Files should be partitioned by date and time.
@@ -43,7 +44,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Amazon S3 Data Source",
     "description" : "Description of first Amazon S3 data source"
   },
-  "sourceStorage" : "7c7c7898-a7e9-40ca-af21-133c4fe3ae4c",
+  "sourceStorage" : "aa302f0a-e6ee-44aa-aa38-e28f1ff455f7",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -51,8 +52,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "4a7e42ff-c540-4383-94fd-cfd250730d14",
-  "destinationStorage" : "99919a88-851a-40a2-89c3-d2cb1454b1e8",
+  "computeEnvironment" : "53b314af-ffab-419a-9c2c-56032c6ef4c0",
+  "destinationStorage" : "e019c0fe-bb80-4cf1-bc7b-aee579d8672e",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -92,12 +93,12 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First S3 Over SQS Data Source",
     "description" : "Description of first S3 Over SQS data source"
   },
-  "sourceStorage" : "b74c10b9-b81a-4d7c-9dc4-ad5978ff5f6d",
+  "sourceStorage" : "d0252b13-5912-4184-9c59-43fd0b23047b",
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "ef3c4d83-290c-4659-9f26-9a3203ed3d5c",
-  "destinationStorage" : "5a7ec5d0-ca38-4579-9972-cd0b5102b38b",
+  "computeEnvironment" : "8c82ac0d-ca0b-4d0a-8e6a-6f252ea1fee4",
+  "destinationStorage" : "ebf17bb4-4b7b-41dd-a557-9b06873a0739",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   }
@@ -148,8 +149,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "53423dbb-b1f8-4562-8f1f-58838a21c777",
-  "connectionPointer" : "e286392b-fd4d-4238-b6e8-133376bb91c3",
+  "computeEnvironment" : "736ab6e1-cd96-4a50-ab65-3db37855855d",
+  "connectionPointer" : "951c6c9b-165e-447a-abf6-d4fa1d0b5398",
   "shards" : 1,
   "parallelism" : 1,
   "isOnline" : true,
@@ -196,11 +197,11 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "kinesisConnection" : "2a7ee169-4004-497c-9fa6-bb5522aecdeb",
+  "kinesisConnection" : "dcfc39c1-c458-4ec5-87f1-0c7f437ea17e",
   "streamName" : "streamName",
   "readFromStart" : true,
-  "computeEnvironment" : "a8cba917-9bdf-413f-b14f-274ffbff6733",
-  "connectionPointer" : "b3d1ef85-7ef7-47c2-aa75-31e8770ca7e7",
+  "computeEnvironment" : "fc2a356d-c3ae-4756-a4a3-1b15158df5e7",
+  "connectionPointer" : "4e3787cd-daac-42ea-8dd4-642c516a4a31",
   "isOnline" : true,
   "shards" : 1,
   "parallelism" : 1,
@@ -247,7 +248,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Azure Blob Storage Data Source",
     "description" : "Description of first Azure Blob Storage data source"
   },
-  "sourceStorage" : "02b82e6d-65b7-4c08-9852-60afa54ea41e",
+  "sourceStorage" : "a7bd1d9d-b3f2-47fd-bfbb-e976becfe813",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -255,8 +256,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "1232acc8-2f50-4edb-b987-88711ef8d296",
-  "destinationStorage" : "55a98ad8-63a3-496c-851b-dfb937c6feb0",
+  "computeEnvironment" : "39880dc7-9cf2-408c-839b-dbfc6d5808e8",
+  "destinationStorage" : "abc7d74f-ff4f-4693-b415-0068d7f72012",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -301,7 +302,7 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
     "name" : "First Google Cloud Storage Data Source",
     "description" : "Description of first Google Cloud Storage data source"
   },
-  "sourceStorage" : "d43820e5-0b58-4bd6-b075-f1e9227286ee",
+  "sourceStorage" : "90caf1ec-ccdf-490d-8189-8a5d5fbe9c1c",
   "datePattern" : "yyyy/MM/dd/HH/mm",
   "fileMatchPattern" : {
     "clazz" : "AllMatcher"
@@ -309,8 +310,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "bc666d9e-4607-4e88-93fd-619a2bf6c14f",
-  "destinationStorage" : "c42db6e1-1ba5-4fea-98ad-560c99219358",
+  "computeEnvironment" : "4ea1921a-4470-4064-a853-12352d4254d3",
+  "destinationStorage" : "f40dbd11-e5fd-41ff-911f-fc70811d1186",
   "compression" : {
     "clazz" : "AutoDetectCompression"
   },
@@ -351,8 +352,8 @@ curl -X POST -H "content-type: application/json" -H "Authorization: YOUR_TOKEN" 
   "contentType" : {
     "type" : "JsonContentType"
   },
-  "computeEnvironment" : "1ce87d8f-e3b5-4153-9fcc-94c3d9c8e17c",
-  "connectionPointer" : "46c77849-2491-45ce-8402-4ea0dfadbb2c"
+  "computeEnvironment" : "090af16a-f8a9-45e5-a708-cd26c289f75c",
+  "connectionPointer" : "96c8c092-fe24-468f-87af-e98e9f66936f"
 }' "https://api.upsolver.com/api/v1/data-source/"
 ```
  
