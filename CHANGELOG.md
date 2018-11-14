@@ -1,5 +1,24 @@
 # Changelog
 
+## 2018/11/14
+
+* Translate Calculated Function: Show CSV Editor for the dictionary field
+* Cluster Details Page: show the elastic IPs of the Cluster
+* Outputs: Qubole Output
+* Outputs: Usability Improvements in Creation/Deploy flow
+* Upsolver Language: `"data.str":string in ('a','b','c')` syntax
+* Upsolver Language: supports coalesce operator: 
+
+```sql
+"data.str":string? # COALESCE("data.str":string, '')
+"data.str":string?'default-value' # COALESCE("data.str":string, 'default-value')
+"data.bool":boolean? # COALESCE("data.bool":boolean, false)
+"data.bool":boolean?true # COALESCE("data.bool":boolean, true)
+"data.number":number? # COALESCE("data.number":number, 0)
+"data.number":number?2.5 # COALESCE("data.number":number, 2.5)
+```
+
+
 ## 2018/06/26
 
 * Output / Materialized Views: Added ability to edit the Data Sources from
