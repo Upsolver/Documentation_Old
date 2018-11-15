@@ -1,5 +1,9 @@
 # Changelog
 
+## 2018/11/15
+
+* Data Sources / Materialized Views / Outputs: Toggle between card view and table view
+
 ## 2018/11/14
 
 * Translate Calculated Function: Show CSV Editor for the dictionary field
