@@ -17,7 +17,6 @@
     * [Azure Blob Storage](DataSources/Connectors/azure-blob-storage.md)
     * [Azure Event Hub](DataSources/Connectors/azure-event-hub.md)
     * [File upload](DataSources/Connectors/file-upload.md)
-    * [HTTP](DataSources/Connectors/http.md)    
     * [Kafka](DataSources/Connectors/kafka.md)
   * [Setup Guides](DataSources/SetupGuides/README.md)
     * [AWS Integration](DataSources/SetupGuides/aws-integration.md)
