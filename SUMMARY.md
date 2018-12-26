@@ -70,6 +70,8 @@
   * [On Premises](Deployments/OnPremises/README.md)
 * [Connections](Connections/README.md)
   * [Amazon Redshift Connection](Connections/amazon-redshift.md)
+* [Integrations](Integrations/README.md)
+  * [Git](Integrations/git.md)
 * [API Reference](API/README.md)
   * [Authentication](API/authentication.md)
   * [Data Sources](API/DataSources/README.md)
