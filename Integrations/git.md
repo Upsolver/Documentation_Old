@@ -4,9 +4,9 @@ Git Integration writes all entities created in Upsolver to a Git repository for 
 
 If you're not hosting your repository in [GitHub](https://www.github.com) or [GitLab](https://www.gitlab.com), please contact us by clicking on the Intercom widget in the bottom right corner of this page.
 
-## Adding SSH Key to a GitHub Repository
+## Adding an SSH Key to a GitHub Repository
 
-To add SSH Key to a GitHub Repository:
+To add an SSH Key to a GitHub Repository:
 
 1. Navigate to your repository in [GitHub](https://www.github.com)
 2. Click on "Settings"
@@ -19,6 +19,6 @@ To add SSH Key to a GitHub Repository:
 6. Submit the form
 
 
-## Adding SSH Key to GitLab Repository
+## Adding an SSH Key to GitLab Repository
 
 [See more information in GitLab Documentation](https://docs.gitlab.com/ce/ssh/README.html#per-repository-deploy-keys).
