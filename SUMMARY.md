@@ -63,6 +63,7 @@
     * [Private VPC](Deployments/AWS/private-vpc.md)
     * [Upsolver VPC](Deployments/AWS/upsolver-vpc.md)
     * [Permissions](Deployments/AWS/role-permissions.md)
+    * [VPC Peering](Deployments/AWS/private-vpc-peering.md)
     * [Troubleshooting](Deployments/AWS/troubleshooting.md)
   * [GCP](Deployments/GCP/README.md)
   * [Azure](Deployments/Azure/README.md)
