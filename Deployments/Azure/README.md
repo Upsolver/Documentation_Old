@@ -1,3 +1,3 @@
 # Microsoft Azure Deployment
 
-This option is comming soon.
+This option is coming soon.
