@@ -73,8 +73,26 @@
 
         <script>
             var gitbook = gitbook || [];
+
+            new function() {
+                var _hsq = window._hsq = window._hsq || [];
+                _hsq.push(['setPath', window.location.pathname]);
+            }();
+
             gitbook.push(function() {
                 gitbook.page.hasChanged({{ template.getJSContext()|dump|safe }});
+
+                // Hubspot track page view events.
+                var lastPathname = window.location.pathname;
+                gitbook.events.bind('page.change', function hubspotOnPageChange() {
+                    var _hsq = window._hsq = window._hsq || [];
+                    var currentPathname = window.location.pathname;
+                    if (currentPathname !== lastPathname) {
+                        lastPathname = currentPathname;
+                        _hsq.push(['setPath', window.location.pathname]);
+                        _hsq.push(['trackPageView']);
+                    }
+                });
             });
         </script>
     </div>
