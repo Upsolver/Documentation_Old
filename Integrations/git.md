@@ -1,8 +1,18 @@
 # Git Integration
 
-Git Integration writes all entities created in Upsolver to a Git repository for tracking and visibility.
+WIth one click, you can integrate Upsolver with your Git repository. All Upsolver configurations, objects and metadata will be synced to your repository in real-time.
 
 If you're not hosting your repository in [GitHub](https://www.github.com) or [GitLab](https://www.gitlab.com), please contact us by clicking on the Intercom widget in the bottom right corner of this page.
+
+## Integrating Upsolver with Git
+
+1. Click on your user name to open the menu and click on Git Integration
+   
+   ![Git Integration in User Menu](assets/git-integration-user-menu.png)
+2. Follow the instructions in the page
+   
+   ![Git Integration Page](assets/git-integration.png)
+
 
 ## Adding an SSH Key to a GitHub Repository
 
