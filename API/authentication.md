@@ -1,6 +1,8 @@
 # Authentication
 
-The API Supports two authentication methods: the first one is to authenticate using your user credentials (used by the UI, not recommended for programmatic use of the API) and the second one uses Authentication Tokens that can be created and revoked for any reason.
+The API Supports two authentication methods: the first one is to authenticate using your user credentials (used by the
+UI, not recommended for programmatic use of the API) and the second one uses Authentication Tokens that can be created
+and revoked for any reason.
 
 ## Authenticating using user credentials
 
@@ -13,7 +15,12 @@ Note that authenticating using this method is not recommended due to security re
 
 ## Creating an Authentication Token
 
-To create an Authentication Token, send a POST request to `/api-tokens` with the name and description of the Api Token, for example: 
+To create an Authentication Token, login and click on your user name to open the user menu, then choose
+"Api Tokens" from the menu. Click on Generate to create a new Authentication Token. After generating a new token, you'll
+receive the token, which you'll need to save as a secret somewhere and use it for API calls to Upsolver.
+You will not be able to receive the token again.
+
+Alternatively, send a POST request to `/api-tokens` with the name and description of the Api Token, for example:
 
 ```bash
 curl --request POST \
