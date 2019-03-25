@@ -1,6 +1,6 @@
 # Permissions Overview
 
-Upsolver supports IAM (Identity Access Management) style permissions. This means you can create users, groups, policies and relationships between them to define the authorized operations allowed for each user.
+Upsolver supports IAM (Identity & Access Management) style permissions. This means you can create users, groups, policies and relationships between them to define the authorized operations allowed for each user.
 
 ## Users
 
