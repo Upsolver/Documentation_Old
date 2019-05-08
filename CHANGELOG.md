@@ -1,5 +1,40 @@
 # Changelog
 
+## 2019/05/06
+
+* Qubole Client - set hive.on.master and use database for all queries
+* Performance improvements for retention
+* Elasticsearch Output - Better retry mechanism
+
+## 2019/04/22
+
+* Athena - Switch to using Glue API for all DDL statements
+* Monitoring Tab - fix bug that would display some rows twice
+* Outputs page - Correct the range of some of the graphs
+* Add timeout to copy/read S3 requests to prevent processing delays
+* Data Source - show a preview of data immediately upon creation
+* Improve UI performance related to connections page
+
+## 2019/04/08
+
+* Dry run environment support
+* Monitoring - added written items and written bytes 
+* Monitoring - added original-task-name tag to all metrics  
+* Qubole - set hive.on.master=false
+* Permissions - added policy editor
+* Athena - reduce spam of Athena history
+* Athena - drop table when deleting an output if the option is selected
+* Kafka - support changing the number of shards in the UI
+* Some performance improvements
+* UI - Added multi-unmap fields (for Avishai)
+
+## 2019/04/01
+
+* Increase Kafka consumer version to 2.1.1
+* Monitor delay in managing partitions
+* Bug fix - add connection timeout to ElasticSearch connections
+* Remove dependency on Upsolver DynamoDB for servers starting up
+
 ## 2018/11/15
 
 * Data Sources / Materialized Views / Outputs: Toggle between card view and table view
