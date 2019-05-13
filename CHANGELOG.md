@@ -1,5 +1,7 @@
 # Changelog
 
+* Replay Cluster - Fixes some cases where the replay cluster might not shut down
+
 ## 2019/05/06
 
 * Qubole Client - set hive.on.master and use database for all queries
