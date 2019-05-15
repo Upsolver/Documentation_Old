@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019/05/14
+
+* Data Source - Simplified creation of Kafka, Kinesis and AWS S3 Data Sources
+
+## 2019/05/13
+
 * Replay Cluster - Fixes some cases where the replay cluster might not shut down
 
 ## 2019/05/06
