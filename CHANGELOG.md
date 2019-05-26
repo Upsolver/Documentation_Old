@@ -1,5 +1,14 @@
 # Changelog
 
+## 2019/05/19
+
+* Ingestion - Added “index” header to all messages (useful when ingesting multiple events in one message)
+* Hive Metastore Outputs now drops duplicate logical partitions
+* API - list Output / Materialized Views returns faster
+* GDPR - Materialized Views now supports deleting rows
+* Physical Deletion runs much faster with fewer operations on the underlying Cloud Storage
+* Retention is now set on Materialized Views created by DEDUP features
+
 ## 2019/05/14
 
 * Data Source - Simplified creation of Kafka, Kinesis and AWS S3 Data Sources
