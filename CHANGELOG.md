@@ -1,5 +1,10 @@
 # Changelog
 
+## 2019/05/26
+
+* _Experimental_: updating / deleting rows in output to Athena, you can try it
+  out by using the “Upsert Key” and “Is Delete Field” special fields
+
 ## 2019/05/19
 
 * Ingestion - Added “index” header to all messages (useful when ingesting multiple events in one message)
