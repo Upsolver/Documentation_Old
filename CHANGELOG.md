@@ -1,5 +1,12 @@
 # Changelog
 
+## 2019/06/03
+
+* Various Performance Improvements in UI
+* Show connection errors when creating/editing MySQL/Redshift Output
+* Fixed intermittent recoverable errors in tasks
+* Fixed delay when using the same connection for multiple Redshift/Elasticsearch Outputs
+
 ## 2019/05/26
 
 * _Experimental_: updating / deleting rows in output to Athena, you can try it
