@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019/06/17
+
+* Calculated Functions: Added numeric in feature (e.g. `“data.a”:number in (1,2,3)`)
+* Parse Avro data using Confluent Schema Registry
+* Notebook (Beta): A new way to create enrichments in Outputs
+
 ## 2019/06/03
 
 * Various Performance Improvements in UI
