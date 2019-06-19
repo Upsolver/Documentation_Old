@@ -8,7 +8,7 @@ Examples: extracting city from IP, running a regular expression or performing a 
 
 Please note:
 
-* Calculated Fields do not create any physical storage - they are executed at run-time if they are needed in a deployed [Materialized View](/MaterializedViews/README.md), [Output](/outputs.md) or [Pipeline](/pipelines-coming-soon.md).
+* Calculated Fields do not create any physical storage - they are executed at run-time if they are needed in a deployed [Materialized View](/MaterializedViews/README.md) or [Output](/outputs.md).
 * Functions input parameters - limited to fields in the incoming event, constant values and other Calculated Fields. It's possible to use fields from various hierarchical locations.
 * Functions output parameter - a single value or an array that can be placed at any hierarchical location within the event.
 * Functions are built to handle both single values and arrays so be sure to check each one in the documentation.
