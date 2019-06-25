@@ -1,10 +1,17 @@
 # Changelog
 
+## 2019/06/24
+
+* Lookup Tables / API Playground
+  * Support querying multiple rows
+  * Auto complete for keys
+  * Querying on specific time range
+* Notebook 📒 (Beta): a better way to create enrichments
+
 ## 2019/06/17
 
 * Calculated Functions: Added numeric in feature (e.g. `“data.a”:number in (1,2,3)`)
 * Parse Avro data using Confluent Schema Registry
-* Notebook (Beta): A new way to create enrichments in Outputs
 
 ## 2019/06/03
 
