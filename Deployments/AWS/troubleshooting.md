@@ -171,20 +171,20 @@ Below is a list of prerequisites for AWS deployments
 
 | Item | Required | Default Limit | Comments |
 | ---- | --------- | ------------ | - |
-| CloudFormation Stack | 1 per integration (at least one) | 200 | |
-| IAM Role | 1 | 1000 | |
-| S3 Bucket | 1 | 100 | |
+| CloudFormation Stack | 1 per integration (at least one) | 200 | - |
+| IAM Role | 1 | 1000 | - |
+| S3 Bucket | 1 | 100 | - |
 
 ### Private VPC
 
 | Item | Required | Default Limit | Comments |
 | ---- | --------- | ------------ | - |
-| CloudFormation Stack | 1 per integration (at least one) | 200 | |
-| IAM Role | 1 | 1000 | |
-| IAM Instance Profile | 1 | 1000 | |
-| S3 Bucket | 1 | 100 | | 
-| VPC | 1 | 5 | |
-| Internet Gateway | 1 | 5 | |
-| EC2 Elastic IPs | 2 | 5 | | 
+| CloudFormation Stack | 1 per integration (at least one) | 200 | - |
+| IAM Role | 1 | 1000 | - |
+| IAM Instance Profile | 1 | 1000 | - |
+| S3 Bucket | 1 | 100 | - |
+| VPC | 1 | 5 | - |
+| Internet Gateway | 1 | 5 | - |
+| EC2 Elastic IPs | 2 | 5 | - |
 | EC2 Spot Instances | 2 | Dynamic | Instance Types : r4.large, m5.2xlarge, m5d.2xlarge, m5a.2xlarge |
 | Kinesis Stream Shard | 1 | 200 | Upsolver uses Kinesis Streams to balance workload between servers |
