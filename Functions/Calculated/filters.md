@@ -33,21 +33,6 @@ Returns true for instances where the left operand contains the right operand
 {% endraw %}
 
 
-# Deduplicate
-
-True if it's the first time we see the input value in the data in the specified window size.
-
-### Inputs
-
- * __value__ - value to deduplicate
-
-### Properties
-
- * __Connection__ - The storage to use to save state data
- * __Window Size__ - Deduplication window size in minutes
-
-
-
 # EQUAL_TO
 
 Returns true for instances where the operands are equal
@@ -61,11 +46,11 @@ Returns true for instances where the operands are equal
 
 |first|second|result|
 |-----|------|------|
-|`"a"`|`"a"`|``true``|
-|`"a"`|`"b"`|``false``|
 |`0`|`0`|``true``|
 |`1`|`0`|``false``|
 |`0`|`1`|``false``|
+|`"a"`|`"a"`|``true``|
+|`"a"`|`"b"`|``false``|
 
 {% endraw %}
 
@@ -134,12 +119,32 @@ Returns true for instance where the value is contained in the given set
 
 {% raw %}
 
-|value|Set|result|
+|input|Set|result|
 |-----|---|------|
 |`"a"`|`"a`<br />`b"`|``true``|
 |`"c"`|`"a`<br />`b"`|``false``|
+|`1`|`"1`<br />`2`<br />`3.14"`|``true``|
+|`2`|`"1`<br />`2`<br />`3.14"`|``true``|
+|`3`|`"1`<br />`2`<br />`3.14"`|``false``|
+|`3.14`|`"1`<br />`2`<br />`3.14"`|``true``|
 
 {% endraw %}
+
+
+# IS_DUPLICATE
+
+True if it's not the first time we see the input value in the data in the specified window size.
+
+### Inputs
+
+ * __value__ - value to deduplicate
+
+### Properties
+
+ * __Window Size__ - Deduplication window size in minutes
+ * __Dedup Id__
+ * __Original Pipeline Id__
+
 
 
 # LESS_THAN
@@ -178,6 +183,24 @@ Returns true for instances where the left operand is less than or equal to the r
 |`0`|`0`|``true``|
 |`1`|`0`|``false``|
 |`0`|`1`|``true``|
+
+{% endraw %}
+
+
+# LIKE
+
+Returns true for strings that matches the pattern
+
+### Properties
+
+ * __Pattern__
+
+{% raw %}
+
+|input|Pattern|result|
+|-----|-------|------|
+|`"abc"`|`"a__%"`|``true``|
+|`"ab"`|`"a__%"`|``false``|
 
 {% endraw %}
 

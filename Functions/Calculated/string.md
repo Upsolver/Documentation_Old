@@ -68,6 +68,21 @@ Matches the regular expression on the input string. Returns the escape groups if
 {% endraw %}
 
 
+# REGEX_MATCH_POSITION
+
+Matches the regular expression on the input string, and returns the index of the first match.
+
+### Inputs
+
+ * __value__
+ * __startPosition__
+
+### Properties
+
+ * __Pattern__ - Pattern to search for
+
+
+
 # REGEX_NAMED_GROUPS
 
 Matches the regular expression on the input string. Returns record with field names and group names
@@ -297,6 +312,21 @@ Returns a string that is a substring of the given string
 {% endraw %}
 
 
+# TOP_PRIVATE_DOMAIN
+
+Get the top private domain from a domain name. For example, for www.example.com will return example.com
+
+{% raw %}
+
+|value|result|
+|-----|------|
+|`"www.example.com"`|`"example.com"`|
+|`"www.example.co.uk"`|`"example.co.uk"`|
+|`"www.example.uk.com"`|`"example.uk.com"`|
+
+{% endraw %}
+
+
 # TO_LOWER
 
 Converts the string to lowercase letters
@@ -446,5 +476,22 @@ Encode text to url encoded format
 |-----|------|
 |`"The quick brown fox"`|`"The+quick+brown+fox"`|
 |`"Comment #5"`|`"Comment+%235"`|
+
+{% endraw %}
+
+
+# URL_PARSER
+
+Parses the URI/URL into its component parts
+
+{% raw %}
+
+|value|result|
+|-----|------|
+|`"https://www.domain.com/page.html"`|`{"scheme": "https", "authority": "www.domain.com", "host": "www.domain.com", "path": "/page.html"}`|
+|`"https://user:pass@www.domain.com:80/page.html?query#fragment"`|`{"scheme": "https", "user_info": "user:pass", "authority": "user:pass@www.domain.com:80", "host": "www.domain.com", "port": 80, "path": "/page.html", "query": "query", "fragment": "fragment"}`|
+|`"user:pass@www.domain.com/page.html?query"`|`{"user_info": "user:pass", "authority": "user:pass@www.domain.com", "host": "www.domain.com", "path": "/page.html", "query": "query"}`|
+|`"www.domain.com/page.html#fragment"`|`{"authority": "www.domain.com", "host": "www.domain.com", "path": "/page.html", "fragment": "fragment"}`|
+|`"/www.domain.com"`|`{"path": "/www.domain.com"}`|
 
 {% endraw %}

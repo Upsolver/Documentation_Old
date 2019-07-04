@@ -31,6 +31,20 @@ Returns the amount of items in a given array
 {% endraw %}
 
 
+# COUNT_IF
+
+Returns the amount of `true` values in a given array
+
+{% raw %}
+
+|input|result|
+|-----|------|
+||`0`|
+|``true``, ``false``, ``true``|`2`|
+
+{% endraw %}
+
+
 # DISTINCT
 
 Get all the distinct elements in the array

@@ -27,6 +27,36 @@ Convert a 'Number' to a 'Double'.
 {% endraw %}
 
 
+# TO_FLOAT
+
+Convert a 'Number' to a 'Float'.
+
+{% raw %}
+
+|value|result|
+|-----|------|
+|`3`|`3.0`|
+|`3.5`|`3.5`|
+|`-3.5`|`-3.5`|
+
+{% endraw %}
+
+
+# TO_INT
+
+Convert a 'Number' to an 'Int'.
+
+{% raw %}
+
+|value|result|
+|-----|------|
+|`3`|`3`|
+|`3.5`|`3`|
+|`-3.5`|`-3`|
+
+{% endraw %}
+
+
 # TO_LONG
 
 Convert a 'Number' to a 'Long'.

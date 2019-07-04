@@ -2,6 +2,7 @@
 
  *  [CONCAT](array.md#concat)
  *  [COUNT](array.md#count)
+ *  [COUNT_IF](array.md#countif)
  *  [DISTINCT](array.md#distinct)
  *  [ELEMENT_AT](array.md#elementat)
  *  [FIRST](array.md#first)
@@ -36,14 +37,15 @@
 
  *  [AND](filters.md#and)
  *  [CONTAINS](filters.md#contains)
- *  [Deduplicate](filters.md#deduplicate)
  *  [EQUAL_TO](filters.md#equalto)
  *  [EXISTS](filters.md#exists)
  *  [GREATER_THAN](filters.md#greaterthan)
  *  [GREATER_THAN_OR_EQUAL_TO](filters.md#greaterthanorequalto)
  *  [IN_SET](filters.md#inset)
+ *  [IS_DUPLICATE](filters.md#isduplicate)
  *  [LESS_THAN](filters.md#lessthan)
  *  [LESS_THAN_OR_EQUAL_TO](filters.md#lessthanorequalto)
+ *  [LIKE](filters.md#like)
  *  [NOT](filters.md#not)
  *  [NOT_EQUAL_TO](filters.md#notequalto)
  *  [OR](filters.md#or)
@@ -82,12 +84,21 @@
  *  [TAN_H](numeric.md#tanh)
 
 
+# Spatial Functions
+
+ *  [WKT_SPATIAL_CONTAINS](spatial.md#wktspatialcontains)
+ *  [WKT_SPATIAL_INTERSECT](spatial.md#wktspatialintersect)
+
+
 # String Functions
 
  *  [BASE64_DECODE](string.md#base64decode)
  *  [BYTES_SUBSTRING](string.md#bytessubstring)
  *  [MD5](string.md#md5)
+ *  [PIPE](string.md#pipe)
+ *  [P_DECRYPT](string.md#pdecrypt)
  *  [REGEX](string.md#regex)
+ *  [REGEX_MATCH_POSITION](string.md#regexmatchposition)
  *  [REGEX_NAMED_GROUPS](string.md#regexnamedgroups)
  *  [REPLACE](string.md#replace)
  *  [SHA1](string.md#sha1)
@@ -100,6 +111,7 @@
  *  [STRIP_PREFIX](string.md#stripprefix)
  *  [STRIP_SUFFIX](string.md#stripsuffix)
  *  [SUBSTRING](string.md#substring)
+ *  [TOP_PRIVATE_DOMAIN](string.md#topprivatedomain)
  *  [TO_LOWER](string.md#tolower)
  *  [TO_UPPER](string.md#toupper)
  *  [TRANSLATE](string.md#translate)
@@ -108,6 +120,7 @@
  *  [TRIM_CHARS](string.md#trimchars)
  *  [URL_DECODE](string.md#urldecode)
  *  [URL_ENCODE](string.md#urlencode)
+ *  [URL_PARSER](string.md#urlparser)
 
 
 # Structural Functions
@@ -115,14 +128,18 @@
  *  [FROM_KEY_VALUE](structural.md#fromkeyvalue)
  *  [ITEM_INDEX](structural.md#itemindex)
  *  [JSON_PATH](structural.md#jsonpath)
+ *  [JSON_TO_RECORD](structural.md#jsontorecord)
  *  [MAP_WITH_INDEX](structural.md#mapwithindex)
  *  [TO_ARRAY](structural.md#toarray)
+ *  [ZIP](structural.md#zip)
 
 
 # Type Conversions Functions
 
  *  [HEX_TO_DECIMAL](type-conversions.md#hextodecimal)
  *  [TO_DOUBLE](type-conversions.md#todouble)
+ *  [TO_FLOAT](type-conversions.md#tofloat)
+ *  [TO_INT](type-conversions.md#toint)
  *  [TO_LONG](type-conversions.md#tolong)
  *  [TO_NUMBER](type-conversions.md#tonumber)
  *  [TO_STRING](type-conversions.md#tostring)

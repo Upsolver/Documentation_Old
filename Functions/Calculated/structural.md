@@ -53,6 +53,26 @@ Extracts data from JSON objects
 |`"{ "net_id": [41, 42] }"`|`"net_id"`|`"[41, 42]"`|
 |`"{ "net_id": [41, 42] }"`|`"net_id[*]"`|`"41"`, `"42"`|
 |`"{ "net_id": [41, 42] }"`|`"net_id.parent"`|`null`|
+|`"[1,2,3]"`|`"$[*]"`|`"1"`, `"2"`, `"3"`|
+
+{% endraw %}
+
+
+# JSON_TO_RECORD
+
+Extracts data from JSON objects
+
+### Properties
+
+ * __Mappings__ - JSON to field mappings
+ * __Output Array__ - If the string contains multiple JSON records use this to allow outputing all of them
+
+{% raw %}
+
+|value|Mappings|Output Array|result|
+|-----|--------|------------|------|
+|`"{ "a": "Hello" }"`|`"a,a,string"`|``true``|`{"a": "Hello"}`|
+|`"{ "a": { "value": "Hello" }, "b" : { "value": "World" } }"`|`"a.value,a.value,string`<br />`b.value,b.value,string"`|``true``|`{"a.value": "Hello", "b.value": "World"}`|
 
 {% endraw %}
 
@@ -85,3 +105,9 @@ Outputs all the values from all the inputs as an array
 |`["a", "c"]`, `["b"]`|`"a"`, `"c"`, `"b"`|
 
 {% endraw %}
+
+
+# ZIP
+
+Combines multiple arrays by index into records
+
