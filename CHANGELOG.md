@@ -1,5 +1,16 @@
 # Changelog
 
+## 2019/07/08
+
+* Various Performance Improvements in UI
+* Added ZIP Calculated Function to ZIP between multiple arrays
+* MySQL Output: Row is replaced if duplicate key is found
+* Notebook 📒 (Beta)
+    * like / not like syntax (e.g. “name” like ‘a__%’)
+    * not in syntax (e.g. “status” not in (“failed”, “canceled”))
+    * = as equality operator syntax (e.g. “status” = ‘ok’ instead of “status” == ‘ok’)
+    * Better error messages
+
 ## 2019/06/24
 
 * Lookup Tables / API Playground
