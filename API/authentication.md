@@ -15,7 +15,7 @@ Note that authenticating using this method is not recommended due to security re
 
 ## Creating an Authentication Token
 
-To create an Authentication Token, login and click on your user name to open the user menu, then choose
+To create an Authentication Token, login and click on settings in the top right of the screen, then choose
 "Api Tokens" from the menu. Click on Generate to create a new Authentication Token. After generating a new token, you'll
 receive the token, which you'll need to save as a secret somewhere and use it for API calls to Upsolver.
 You will not be able to receive the token again.
