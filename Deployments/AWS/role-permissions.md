@@ -20,6 +20,18 @@ This is the role that Upsolver's servers running in your VPC will use to access 
 ### Upsolver Management Role
 
 This is the role that Upsolver will use to manage/create/destroy your servers with. The permssions given to this role are:
+* ec2:DescribeSpotInstanceRequests
+* ec2:DescribeAddresses
+* ec2:DescribeInstances
+* ec2:DescribeSecurityGroups
+* ec2:DescribeInstanceStatus
+* ec2:DescribeTags
+* ec2:DescribeImages
+* ec2:DescribeImageAttribute
+* ec2:RequestSpotInstances
+* ec2:CancelSpotInstanceRequests
+* ec2:CreateTags
+* ec2:RunInstances
 
 #### AWS Account Permissions
 * ManagedPolicy: arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess - This permission is required for Upsolver to identify when the initial and potential follow up integrations have completed successfully.
@@ -60,3 +72,161 @@ These permissions are **not** taken when using [Upsolver VPC](upsolver-vpc.md).
 * cloudwatch:GetMetricStatistics
 * cloudwatch:ListMetrics
 * cloudwatch:PutMetricData
+
+
+## Policy Documents
+
+The resulting policy documents will look like this:
+
+### Management Role
+Managed Roles: AWSCloudFormationReadOnlyAccessA
+
+```
+{
+    "Statement": [
+        {
+            "Action": [
+                "ec2:DescribeSpotInstanceRequests",
+                "ec2:DescribeAddresses",
+                "ec2:DescribeInstances",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeTags",
+                "ec2:DescribeImages",
+                "ec2:DescribeImageAttribute",
+                "cloudwatch:PutMetricData",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:ListMetrics",
+                "cloudwatch:DescribeAlarmHistory",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "cloudwatch:DescribeAlarms",
+                "iam:ListPolicies",
+                "iam:GetPolicyVersion",
+                "iam:GetPolicy",
+                "iam:ListRoles",
+                "iam:ListInstanceProfiles",
+                "iam:AddRoleToInstanceProfile",
+                "iam:ListInstanceProfilesForRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListAccountAliases",
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "ec2:RequestSpotInstances",
+                "ec2:CancelSpotInstanceRequests",
+                "ec2:CreateTags",
+                "ec2:AssociateAddress",
+                "ec2:DisassociateAddress",
+                "ec2:AllocateAddress",
+                "ec2:ReleaseAddress"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Condition": {
+                "StringLike": {
+                    "aws:RequestTag/Name": "*upsolver*"
+                }
+            },
+            "Action": [
+                "ec2:CreateVolume",
+                "ec2:RunInstances"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/Name": "*upsolver*"
+                }
+            },
+            "Action": [
+                "ec2:TerminateInstances",
+                "ec2:StartInstances",
+                "ec2:AttachVolume",
+                "ec2:DeleteVolume",
+                "ec2:RunInstances"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:network-interface/*",
+                "arn:aws:ec2:*:*:subnet/*",
+                "arn:aws:ec2:*::image/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
+
+#### Server Role
+Managed Roles: AmazonAthenaFullAccess, AWSCloudFormationReadOnlyAccess
+
+```
+{
+    "Statement": [
+        {
+            "Sid": "upsolverBucketAccess",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::us-east-1-upsolver-staging-UPSOLVER_ORG_ID",
+                "arn:aws:s3:::us-east-1-upsolver-staging-UPSOLVER_ORG_ID/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Sid": "listStreams",
+            "Action": [
+                "kinesis:ListStreams"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Sid": "upsolverManagedStream",
+            "Action": [
+                "kinesis:*"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:*:*:stream/upsolver_*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Sid": "sendScalingMetrics",
+            "Action": [
+                "cloudwatch:PutMetricData"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
+
