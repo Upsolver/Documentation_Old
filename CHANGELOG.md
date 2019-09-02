@@ -1,5 +1,17 @@
 # Changelog
 
+## 2019/09/02
+
+* Allow changing default organization connection
+* Added decimal support to Athena Outputs
+* Allow turning off/on compactions in Athena Outputs
+* Better support for Data Sources with large amounts of fields
+* Notebook 📒 (Beta)
+  * JOIN
+  * GROUP BY
+  * HAVING
+  * and many more features and bug fixes
+
 ## 2019/07/08
 
 * Various Performance Improvements in UI
