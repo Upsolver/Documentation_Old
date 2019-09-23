@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019/09/23
+
+* UI improvements
+* Fixed bug on lookup to COLLECT_SET_EACH column
+* Stability improvements
+
 ## 2019/09/02
 
 * Allow changing default organization connection
