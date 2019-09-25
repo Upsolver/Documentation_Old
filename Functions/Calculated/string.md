@@ -384,36 +384,6 @@ Translates the given value using a given dictionary
 {% endraw %}
 
 
-# TRANSLATE_FROM_CSV_FILE
-
-Translates the given value using a dictionary in a CSV file in cloud storage
-
-### Inputs
-
- * __input__ - the value to look up in the mapping
-
-### Properties
-
- * __Connection__ - The connection to use to find the file
- * __File Path__ - The path to the CSV file within the cloud storage connection
- * __Key Column__ - Comma separated list of key columns for the lookup. These can be either zero based numbers or names from the header. The actual key should be ~ separated string with all the key columns' values in order
- * __Value Column__ - The value column. This can be either a zero based number or the name from the header.
- * __Filters__ - Filters on the data. This should be a CSV with the first column being the column name/index in the CSV file, and the second column the accepted value.
- * __Keep Values Without Translation__ - Whether to keep values that have no translation in the given dictionary
- * __Allow Missing File__ - Whether to fail the transformation if no file is found
-
-{% raw %}
-
-|input|Connection|File Path|Key Column|Value Column|Filters|Keep Values Without Translation|Allow Missing File|result|
-|-----|----------|---------|----------|------------|-------|-------------------------------|------------------|------|
-|`"a"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
-|`"b"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`"Batman"`|
-|`"c"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
-|`"d"`|`"stub"`|`"file.csv"`|`"key"`|`"value"`|`"value,Batman\nkey,b\nkey,a"`|``false``|``false``|`null`|
-
-{% endraw %}
-
-
 # TRIM
 
 Returns the given string without leading or trailing whitespaces

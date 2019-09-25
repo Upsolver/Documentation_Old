@@ -40,8 +40,8 @@ Returns the smallest integer value that is greater than or equal to the value.
 
 |input|result|
 |-----|------|
-|`5.9`|`6.0`|
-|`-5.9`|`-5.0`|
+|`5.9`|`6`|
+|`-5.9`|`-5`|
 
 {% endraw %}
 
@@ -63,17 +63,17 @@ Returns the cosine of the value in radians.
 {% endraw %}
 
 
-# DEGREES_TO_RADIANS
+# DEGREES
 
-Converts the specified degrees to radians
+Converts the specified radians to degrees
 
 {% raw %}
 
 |value|result|
 |-----|------|
 |`0`|`0`|
-|`180`|`3.14`|
-|`360`|`6.28`|
+|`3.14`|`180`|
+|`6.28`|`360`|
 
 {% endraw %}
 
@@ -122,8 +122,31 @@ Returns the largest integer value that is equal to or less than the value.
 
 |input|result|
 |-----|------|
-|`5.9`|`5.0`|
-|`-5.9`|`-6.0`|
+|`5.9`|`5`|
+|`-5.9`|`-6`|
+
+{% endraw %}
+
+
+# GET_PROCESSING_TIME
+
+gets the task time
+
+### Inputs
+
+ * __time__ - Must be the time field from the data.
+
+
+
+# GREATEST
+
+Return the maximum value
+
+{% raw %}
+
+|inputs|result|
+|------|------|
+|`[1, 0.2]`, `[30]`|`30`|
 
 {% endraw %}
 
@@ -191,45 +214,7 @@ Returns the logarithm of n, where n is greater than 0, with the specified base.
 {% endraw %}
 
 
-# MAX
-
-Returns the maximum value of the two numbers.
-
-### Inputs
-
- * __x__
- * __y__
-
-{% raw %}
-
-|x|y|result|
-|-|-|------|
-|`2.5`|`5.1`|`5.1`|
-|`2.5`|`5`|`5`|
-
-{% endraw %}
-
-
-# MIN
-
-Returns the minimum value of the two numbers.
-
-### Inputs
-
- * __x__
- * __y__
-
-{% raw %}
-
-|x|y|result|
-|-|-|------|
-|`2.5`|`5.1`|`2.5`|
-|`2.5`|`5`|`2.5`|
-
-{% endraw %}
-
-
-# MODULO
+# MOD
 
 Returns the remainder of the first number divided by the second.
 
@@ -304,17 +289,17 @@ A mathematical function that raises the first value to the power of the second v
 {% endraw %}
 
 
-# RADIANS_TO_DEGREES
+# RADIANS
 
-Converts the specified radians to degrees
+Converts the specified degrees to radians
 
 {% raw %}
 
 |value|result|
 |-----|------|
 |`0`|`0`|
-|`3.14`|`180`|
-|`6.28`|`360`|
+|`180`|`3.14`|
+|`360`|`6.28`|
 
 {% endraw %}
 

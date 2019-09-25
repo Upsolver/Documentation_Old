@@ -14,6 +14,18 @@ Returns true if all operands are true
 {% endraw %}
 
 
+# BETWEEN
+
+Checks if a number is between two numbers
+
+### Inputs
+
+ * __value__
+ * __lowerBound__
+ * __upperBound__
+
+
+
 # CONTAINS
 
 Returns true for instances where the left operand contains the right operand
@@ -141,9 +153,8 @@ True if it's not the first time we see the input value in the data in the specif
 
 ### Properties
 
- * __Window Size__ - Deduplication window size in minutes
  * __Dedup Id__
- * __Original Pipeline Id__
+ * __Window Size__ - Deduplication window size in minutes
 
 
 
@@ -183,24 +194,6 @@ Returns true for instances where the left operand is less than or equal to the r
 |`0`|`0`|``true``|
 |`1`|`0`|``false``|
 |`0`|`1`|``true``|
-
-{% endraw %}
-
-
-# LIKE
-
-Returns true for strings that matches the pattern
-
-### Properties
-
- * __Pattern__
-
-{% raw %}
-
-|input|Pattern|result|
-|-----|-------|------|
-|`"abc"`|`"a__%"`|``true``|
-|`"ab"`|`"a__%"`|``false``|
 
 {% endraw %}
 
@@ -265,17 +258,6 @@ Returns true for a percentage of items equal to the input
 
  * __percent__ - percent of items to keep
 
-{% raw %}
-
-|percent|result|
-|-------|------|
-|`0.0`|``false``|
-|`0.22`|``true``|
-|`0.22`|``true``|
-|`0.22`|``false``|
-|`1.0`|``true``|
-
-{% endraw %}
 
 
 # XOR

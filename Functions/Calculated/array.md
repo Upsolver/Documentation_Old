@@ -1,3 +1,15 @@
+# ARRAY_MAX
+
+Return the maximum value in an array
+
+
+
+# ARRAY_MIN
+
+Return the minimum value in an array
+
+
+
 # CONCAT
 
 Concatenates all values into a single string, separated by the separator
@@ -17,7 +29,7 @@ Concatenates all values into a single string, separated by the separator
 {% endraw %}
 
 
-# COUNT
+# COUNT_VALUES
 
 Returns the amount of items in a given array
 
@@ -31,7 +43,7 @@ Returns the amount of items in a given array
 {% endraw %}
 
 
-# COUNT_IF
+# COUNT_VALUES_IF
 
 Returns the amount of `true` values in a given array
 
@@ -101,6 +113,19 @@ Gets the last element in the array
 |-----|------|
 ||`null`|
 |`"a"`, `"b"`, `"c"`|`"c"`|
+
+{% endraw %}
+
+
+# LEAST
+
+Return the minimum value
+
+{% raw %}
+
+|inputs|result|
+|------|------|
+|`[1, 0.2]`, `[30]`|`0.2`|
 
 {% endraw %}
 

@@ -19,6 +19,18 @@ Add a timezone offset to a date. The timezone offset can be in any of the standa
 {% endraw %}
 
 
+# BETWEEN
+
+Checks if a date is between two dates
+
+### Inputs
+
+ * __value__
+ * __lowerBound__
+ * __upperBound__
+
+
+
 # DATE_FORMAT
 
 Convert date into string
@@ -62,7 +74,7 @@ Convert a date string in the provided format into a date. If the date is missing
 
 # TO_UNIX_EPOCH_MILLIS
 
-Convert a date to it's Epoch (unix) milliseconds representation
+Convert a date to it's Epoch (unix) seconds representation
 
 {% raw %}
 
