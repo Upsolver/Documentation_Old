@@ -73,15 +73,50 @@ These permissions are **not** taken when using [Upsolver VPC](upsolver-vpc.md).
 * cloudwatch:ListMetrics
 * cloudwatch:PutMetricData
 
-
 ## Policy Documents
 
 The resulting policy documents will look like this:
 
 ### Management Role
-Managed Roles: AWSCloudFormationReadOnlyAccessA
 
-```
+Managed Policies:
+
+* `AWSCloudFormationReadOnlyAccess` - This permission is required for Upsolver to identify when the initial integration have completed successfully
+
+Custom Policy:
+
+* `ec2:RunInstances`, `ec2:StartInstances`, `ec2:TerminateInstances`, 
+  `ec2:RequestSpotInstances`, 
+  `ec2:CancelSpotInstanceRequests`, 
+  `ec2:CreateVolume`, `ec2:AttachVolume`, `ec2:DeleteVolume`, 
+  Allows running and stopping Upsolver EC2 instances
+* `ec2:DescribeInstances`, `ec2:DescribeSpotInstanceRequests`, 
+  `ec2:DescribeInstanceStatus`, `ec2:CreateTags`, `ec2:DescribeTags` - Allows monitoring Upsolver EC2 clusters
+* `ec2:DescribeSecurityGroups`, `ec2:DescribeImages`, 
+  `ec2:DescribeImageAttribute` - Required for Spotinst for validation
+* `ec2:AssociateAddress`,
+  `ec2:DisassociateAddress`,
+  `ec2:AllocateAddress`,
+  `ec2:ReleaseAddress`,
+  `ec2:DescribeAddresses` - Allows Upsolver to use static IPs for discoverability
+* `cloudwatch:PutMetricData`,
+  `cloudwatch:GetMetricStatistics`,
+  `cloudwatch:ListMetrics`,
+  `cloudwatch:DescribeAlarmHistory`,
+  `cloudwatch:DescribeAlarmsForMetric`,
+  `cloudwatch:DescribeAlarms` - Auto Scaling against CloudWatch statistics and alarms
+* `iam:ListPolicies`,
+  `iam:GetPolicyVersion`,
+  `iam:GetPolicy`,
+  `iam:ListRoles`,
+  `iam:ListInstanceProfiles`,
+  `iam:AddRoleToInstanceProfile`,
+  `iam:ListInstanceProfilesForRole`,
+  `iam:ListAttachedRolePolicies`,
+  `iam:ListAccountAliases`,
+  `iam:PassRole` - Required for Spotinst for policy validation
+
+```json
 {
     "Statement": [
         {
@@ -180,9 +215,15 @@ Managed Roles: AWSCloudFormationReadOnlyAccessA
 ```
 
 #### Server Role
-Managed Roles: AmazonAthenaFullAccess, AWSCloudFormationReadOnlyAccess
 
-```
+Managed Policies:
+
+* `AmazonAthenaFullAccess` - This allows the servers to manage your Athena tables for you. Notice Athena does not allow partial permissions so we require full access, in order to configure fine grained permissions, use AWS Lake Formation
+* `AWSCloudFormationReadOnlyAccess` - This permission is required for Upsolver to identify when potential follow up integrations have completed successfully
+
+Custom Policy:
+
+```json
 {
     "Statement": [
         {
@@ -191,8 +232,8 @@ Managed Roles: AmazonAthenaFullAccess, AWSCloudFormationReadOnlyAccess
                 "s3:*"
             ],
             "Resource": [
-                "arn:aws:s3:::us-east-1-upsolver-staging-UPSOLVER_ORG_ID",
-                "arn:aws:s3:::us-east-1-upsolver-staging-UPSOLVER_ORG_ID/*"
+                "arn:aws:s3:::us-east-1-upsolver-UPSOLVER_ORG_ID",
+                "arn:aws:s3:::us-east-1-upsolver-UPSOLVER_ORG_ID/*"
             ],
             "Effect": "Allow"
         },
