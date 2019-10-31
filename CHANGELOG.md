@@ -1,5 +1,12 @@
 # Changelog
 
+## 2019/10/31
+
+* When deploying an output, "Now" is resolved when submitting the form
+* Connections and Clusters can be attached to Workspaces
+* IAM: Lists of Data Sources, Outputs, Lookup Tables, Connections and Clusters
+  are filtered by the user "list" permission
+
 ## 2019/09/23
 
 * UI improvements
