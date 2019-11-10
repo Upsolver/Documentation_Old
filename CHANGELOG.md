@@ -1,5 +1,14 @@
 # Changelog
 
+## 2019/11/10
+
+* Athena Upserts: Update and delete existing data in your Data Lake
+* UpSQL
+  * Support having statement in Aggregated Outputs
+  * Support DECIMAL types
+  * Support Athena Upserts
+* S3 Output: JSON files will end with one "\n" instead of two "\n" (as stated in [jsonlines.org](http://jsonlines.org))
+
 ## 2019/10/31
 
 * When deploying an output, "Now" is resolved when submitting the form
