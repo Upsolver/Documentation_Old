@@ -1,5 +1,13 @@
 # Changelog
 
+## 2019/11/17
+
+* Outputs: 
+  * Allow switching between raw and aggragated modes.
+  * Added QUERY_STRING_TO_RECORD calculated function for query string extractions.
+* UpSQL
+  * Unify SQL blocks into a single block.
+
 ## 2019/11/10
 
 * Athena Upserts: Update and delete existing data in your Data Lake
