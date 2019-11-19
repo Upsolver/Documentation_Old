@@ -11,14 +11,36 @@ Maps a list of key values to a record with fields for each key
 
  * __Keys__
 
-{% raw %}
+### Example
 
-|key|value|Keys|result|
-|---|-----|----|------|
-|`"foo"`, `"hello"`|`"bar"`, `"world"`|`"foo, hello"`|`{"foo": "bar", "hello": "world"}`|
-|`"foo"`, `"hoo"`|`"bar"`, `"zoo"`|`"foo, hello"`|`{"foo": "bar"}`|
+#### Input 
 
-{% endraw %}
+```json 
+{
+  "data": [
+    { "key": "a", "value": 1 },
+    { "key": "b", "value": 2 }
+  ]
+}
+```
+
+#### UpSQL
+
+```sql
+SET result = FROM_KEY_VALUE('a,b', data[].key, data[].value)
+```
+
+#### Result
+
+```json
+{
+  "result": {
+    "a": 1,
+    "b": 2
+  }
+}
+```
+
 
 
 # ITEM_INDEX
@@ -92,6 +114,16 @@ Outputs an index and a value field. Index contains a zero based index, and value
 |`"a"`, `"b"`, `"c"`|`{"index": 0, "value": "a"}`, `{"index": 1, "value": "b"}`, `{"index": 2, "value": "c"}`|
 
 {% endraw %}
+
+
+# QUERY_STRING_TO_RECORD
+
+Extracts data from query string
+
+### Properties
+
+ * __Mappings__ - Field names
+
 
 
 # TO_ARRAY

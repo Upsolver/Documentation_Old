@@ -10,6 +10,19 @@ Return the minimum value in an array
 
 
 
+# ARRAY_SUM
+
+Sums all the values in the array
+
+{% raw %}
+
+|value|result|
+|-----|------|
+|`1`, `0.2`, `30`|`31.2`|
+
+{% endraw %}
+
+
 # CONCAT
 
 Concatenates all values into a single string, separated by the separator
@@ -89,7 +102,7 @@ Gets the element at the given index in the array
 {% endraw %}
 
 
-# FIRST
+# FIRST_ELEMENT
 
 Gets the first element in the array
 
@@ -103,7 +116,7 @@ Gets the first element in the array
 {% endraw %}
 
 
-# LAST
+# LAST_ELEMENT
 
 Gets the last element in the array
 
@@ -126,18 +139,5 @@ Return the minimum value
 |inputs|result|
 |------|------|
 |`[1, 0.2]`, `[30]`|`0.2`|
-
-{% endraw %}
-
-
-# SUM
-
-Sums all the values in the array
-
-{% raw %}
-
-|value|result|
-|-----|------|
-|`1`, `0.2`, `30`|`31.2`|
 
 {% endraw %}

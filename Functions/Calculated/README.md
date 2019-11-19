@@ -2,15 +2,15 @@
 
  *  [ARRAY_MAX](array.md#arraymax)
  *  [ARRAY_MIN](array.md#arraymin)
+ *  [ARRAY_SUM](array.md#arraysum)
  *  [CONCAT](array.md#concat)
  *  [COUNT_VALUES](array.md#countvalues)
  *  [COUNT_VALUES_IF](array.md#countvaluesif)
  *  [DISTINCT](array.md#distinct)
  *  [ELEMENT_AT](array.md#elementat)
- *  [FIRST](array.md#first)
- *  [LAST](array.md#last)
+ *  [FIRST_ELEMENT](array.md#firstelement)
+ *  [LAST_ELEMENT](array.md#lastelement)
  *  [LEAST](array.md#least)
- *  [SUM](array.md#sum)
 
 
 # Conditional Functions
@@ -131,6 +131,7 @@
  *  [JSON_PATH](structural.md#jsonpath)
  *  [JSON_TO_RECORD](structural.md#jsontorecord)
  *  [MAP_WITH_INDEX](structural.md#mapwithindex)
+ *  [QUERY_STRING_TO_RECORD](structural.md#querystringtorecord)
  *  [TO_ARRAY](structural.md#toarray)
  *  [ZIP](structural.md#zip)
 
