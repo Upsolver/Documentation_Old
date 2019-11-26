@@ -68,6 +68,7 @@
     * [Private VPC](Deployments/AWS/private-vpc.md)
     * [Upsolver VPC](Deployments/AWS/upsolver-vpc.md)
     * [Permissions](Deployments/AWS/role-permissions.md)
+    * [Redshift Spectrum](Deployments/AWS/redshift-spectrum.md)
     * [VPC Peering](Deployments/AWS/private-vpc-peering.md)
     * [Security & DR](Deployments/AWS/non-functional.md)
     * [Troubleshooting](Deployments/AWS/troubleshooting.md)
