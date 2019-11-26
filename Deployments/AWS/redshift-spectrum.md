@@ -83,13 +83,8 @@
 ```
 2. Open the Lake Formation console at [https://console.aws.amazon.com/lakeformation](https://console.aws.amazon.com/lakeformation) 
 3. In the navigation pane, choose **Permissions**, and then choose **Data permissions**
-4. Provide the following information:
-    *   For **IAM role**, choose the IAM role you created, _redshiftSpectrumRole_. When you run the Amazon Redshift Query Editor, it uses this IAM role for permission to the data. <br /><br />
-    **Note** <br />
-    To grant SELECT permission on the table in a Lake Formation–enabled Data Catalog to query, do the following:
-        *   Register the path for the data in Lake Formation. 
-        *   Grant users permission to that path in Lake Formation. 
-        *   Created tables can be found in the path registered in Lake Formation. <br /><br />
+4. Provide the following information (for additional details - please go to https://docs.aws.amazon.com/redshift/latest/dg/c-getting-started-using-spectrum-create-role.html):
+    *   For **IAM role**, choose the IAM role you created, _redshiftSpectrumRole_. When you run the Amazon Redshift Query Editor, it uses this IAM role for permission to the data.
     *   For **Database**, choose your Lake Formation database. 
     *   For **Table**, choose a table within the database to query.
     *   For **Columns**, choose All Columns.
