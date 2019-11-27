@@ -10,12 +10,9 @@ With UpSQL there is no need to write code in any programming language such as Ja
 
 Join event streams can be done in these ways:
 
-
-
 *   Join several streams 
 *   Join stream to historical aggregation(s).
 *   Join stream to Reference data
-
 
 # JOIN clause
 
@@ -27,7 +24,6 @@ UpSQL join clause uses the following syntax:
     { table_name | ( query_expr ) } [ [ AS ] alias ] [ WAIT integer { MINUTE[S] | HOUR[S] | DAY[S] } [ ALIGNED ] ]
 
     { ON bool_expression | USING ( field_name [, ...] ) }
-
 ```
 
 For the following example, we will assume we have the following events structure in _clicks_ data source over time:
@@ -58,7 +54,6 @@ FROM clicks JOIN (SELECT COUNT_DISTINCT(*) as user_orders,
 
 **We will have the following table as output:**
 
-
 <table>
   <tr>
    <td>user_id
@@ -85,8 +80,6 @@ FROM clicks JOIN (SELECT COUNT_DISTINCT(*) as user_orders,
    </td>
   </tr>
 </table>
-
-
 
 # Join requirements
 

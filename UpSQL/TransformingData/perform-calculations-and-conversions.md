@@ -13,13 +13,11 @@ Both built-in functions and UDFs can be applied on either flat or hierarchical d
 1.  Three events stream into the data source `heartbeat` over time:
 
 ```
-
 { "user_id": 1, “device_id”: 1234, “epoch” : 1520672112456, “heart_rate” : 81}
 
 { "user_id": 2, “device_id”: 5567, “epoch” : 1520672112456, “heart_rate” : 79}
 
 { "user_id": 1, “device_id”: 1234, “epoch” : 1520672113456, “heart_rate” : 102}
-
 ```
 
 
@@ -27,13 +25,11 @@ Both built-in functions and UDFs can be applied on either flat or hierarchical d
 2. Three events stream into data source `location` over time:
 
 ```
-
 {“user_id”: 1, “epoch” : 1573034761, “latitude” : 28.545926, “longitude” : 31.577451}
 
 {“user_id”: 2, “epoch” : 1573034761, “latitude” : 44.032321, “longitude” : 1.356295}
 
 {“user_id”: 1, “epoch” : 1573035761, “latitude” : 28.545926, “longitude” : 31.577451}
-
 ```
 
 We will use the built-in function UNIX_EPOCH_TO_DATE which converts unix epoch date to a date as follows:
@@ -45,7 +41,6 @@ SELECT user_id, device_id, UNIX_EPOCH_TO_DATA(epoch) as date
 FROM heartbeat
 ```
 The result of the query will be the following output:
-
 
 <table>
   <tr>
@@ -82,10 +77,7 @@ The result of the query will be the following output:
   </tr>
 </table>
 
-
 The following query creates an output which is based on a stream transformation using UNIX_EPOCH_TO_DATA in two steps:
-
-
 
 1. Calculate the transformation:
 

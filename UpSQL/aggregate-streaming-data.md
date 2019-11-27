@@ -12,7 +12,6 @@ For the following examples, we will assume _events_ stream contains several even
 {“user_id” : Integer, “event_time”: epoch seconds, “action_type” : String}
 ```
 
-
 ## Aggregate Results in Upsolver Output using UpSql
 
 Aggregations are being performed using GROUP BY statement.
@@ -20,7 +19,6 @@ Aggregations are being performed using GROUP BY statement.
 Synopsis:
 
 ```
-
 GROUP BY { expression | 
 
     { ROLLUP | CUBE | GROUPING SETS } ( { expression | ( expression [, ...] ) } [, ...] ) } [, ...]
@@ -28,7 +26,6 @@ GROUP BY { expression |
     [ { WINDOW | MAX DELAY } integer { MINUTE[S] | HOUR[S] | DAY[S] } ]
 
     [ APPEND ON DUPLICATE ]
-
 ```
 
 
@@ -46,7 +43,7 @@ SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), COUNT_DISTINCT(*) events
 
 Note that when performing the above query (and any aggregation), Upsolver's default behavior is to replace an existing row in the table when its aggregation is updated.
 
-We can avoid such situation using the following UpSQL feature APPEND ON DUPLICATE.
+We can avoid such situation using UpSQL's APPEND ON DUPLICATE feature.
 
 
 ### **APPEND ON DUPLICATE**
@@ -81,7 +78,6 @@ SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), count(*) events
  GROUP BY user_id, UNIX_EPOCH_TO_DATE(event_time)
    WINDOW 30 days
 ```
-
 
 ### **Aggregate Records Using MAX DELAY**
 

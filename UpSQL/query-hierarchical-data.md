@@ -88,27 +88,27 @@ Results in the following output:
 
 ```
 { 
-"purchase_id": 1, "customer_id": 1, **“number_of_purchased_products”: 7**, 
-
-"products": 
-[ 
-    { "name": "Orange", "quantity": 3, "unit_price": 0.25, **“total_cost”: 0.75** }, 
-    { "name": "Banana", "quantity": 4, "price": 0.1, **“total_cost”: 0.4** } 
+    "purchase_id": 1, "customer_id": 1, “number_of_purchased_products”: 7, 
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": 3, "unit_price": 0.25, “total_cost”: 0.75 }, 
+        { "name": "Banana", "quantity": 4, "price": 0.1, “total_cost”: 0.4 } 
+    ]
+}
+{ 
+    "purchase_id": 2, "customer_id": 1, “number_of_purchased_products”:1, 
+    "products": 
+    [ 
+        { "name": "Apple", "quantity": 1, "unit_price": 0.5, “total_cost”: 0.5 } 
     ]
  }
 { 
-"purchase_id": 2, "customer_id": 1, **“number_of_purchased_products”:1, **"products": 
-[ 
-    { "name": "Apple", "quantity": 1, "unit_price": 0.5, **“total_cost”: 0.5** } 
-    ]
- }
-{ 
-"purchase_id": 1, "customer_id": 1, **“number_of_purchased_products”: -2,** "products": 
-[ 
-    { "name": "Orange", "quantity": -2, "unit_price": 0.25, **“total_cost”: -0.5** } 
+    "purchase_id": 1, "customer_id": 1, “number_of_purchased_products”: -2, 
+    "products": 
+    [    
+        { "name": "Orange", "quantity": -2, "unit_price": 0.25, “total_cost”: -0.5 } 
     ] 
 }
-
 ```
 
 Note that `total_cost` resulted in an array but `number_of_purchased_products` didn't. 
@@ -127,38 +127,38 @@ Results in the following data:
 
 ```
 { 
-"purchase_id": 1, "customer_id": 1, 
-**“product_indexes”**: 
-[ 
-    {**“index”: 0**, "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
-    { **“index”: 1, **"name": "Banana", "quantity": 4, "price": 0.1} 
+    "purchase_id": 1, "customer_id": 1, 
+    “product_indexes”: 
+    [ 
+        {“index”: 0, "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
+        {“index”: 1, "name": "Banana", "quantity": 4, "price": 0.1} 
     ],
-"products": 
-[ 
-    { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
-    { "name": "Banana", "quantity": 4, "price": 0.1} 
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
+        { "name": "Banana", "quantity": 4, "price": 0.1} 
     ]
- }
+}
 { 
-"purchase_id": 2, "customer_id": 1,
-**“product_indexes”**: 
-[
-    {**“index” : 0**, "name": "Apple", "quantity": 1, "unit_price": 0.5} 
-],
-** **"products": 
-[ 
-    { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+    "purchase_id": 2, "customer_id": 1,
+    “product_indexes”: 
+    [
+        “index” : 0, "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+    ],
+    "products": 
+    [ 
+        { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
     ]
- }
+}
 { 
-"purchase_id": 1, "customer_id": 1,
-**“product_indexes”**: 
-[
-    {**“index” : 0**, "name": "Orange", "quantity": -2, "unit_price": 0.25} 
-],
- "products": 
-[ 
-    { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+    "purchase_id": 1, "customer_id": 1,
+    “product_indexes”: 
+    [
+        {“index” : 0, "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+    ],
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
     ] 
 }
 ```
@@ -175,42 +175,40 @@ Results in the following data:
 
 ```
 { 
-"purchase_id": 1, "customer_id": 1, 
-"products": 
-[ 
-    { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
-    { "name": "Banana", "quantity": 4, "price": 0.1} 
+    "purchase_id": 1, "customer_id": 1, 
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
+        { "name": "Banana", "quantity": 4, "price": 0.1} 
     ],
-    **“products_quantity”**: 
+    “products_quantity”: 
     [
-    	{“Orange”: 3},
-    	{“Banana”: 4}
+        {“Orange”: 3},
+        {“Banana”: 4}
     ]
- }
+}
 { 
-"purchase_id": 2, "customer_id": 1**, **
-"products": 
-[ 
-    { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+    "purchase_id": 2, "customer_id": 1,
+    "products": 
+    [ 
+        { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
     ],
-    **“products_quantity”**:
+    “products_quantity”
     [
     	{“Apple”: 1}
     ]
- }
-
+}
 { 
-"purchase_id": 1, "customer_id": 1**,** 
-"products": 
-[ 
-    { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+    "purchase_id": 1, "customer_id": 1,
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
     ],
-    **“products_quantity”**:
+    “products_quantity”:
     [
     	{“Orange”: -2}
     ] 
 }
-
 ```
 
 **Example 4:**
@@ -218,59 +216,56 @@ Results in the following data:
 The following query:
 
 ```SQL
-
 SET indexed_products = ZIP(products);
-
 ```
-
 Results in the following data:
 
 ```
-
 { 
-
-"purchase_id": 1, "customer_id": 1, 
-
-"products": 
-
-[ 
-    { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
-    { "name": "Banana", "quantity": 4, "price": 0.1} 
+    "purchase_id": 1, "customer_id": 1, 
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": 3, "unit_price": 0.25}, 
+        { "name": "Banana", "quantity": 4, "price": 0.1} 
     ],
-    **“indexed_products”: **
+    “indexed_products”:
     [
-    {
-        “index”: 0, 
-        “field_1”: { "name": "Orange", "quantity": 3, "unit_price": 0.25}
-    }, 
-    {	
-    	“index”: 1,
-        “field_1”: { "name": "Banana", "quantity": 4, "price": 0.1} 
-    }
+        {
+            “index”: 0, 
+            “field_1”: { "name": "Orange", "quantity": 3, "unit_price": 0.25}
+        }, 
+        {	
+            “index”: 1,
+            “field_1”: { "name": "Banana", "quantity": 4, "price": 0.1} 
+        }
     ]
- }
+}
 { 
 "purchase_id": 2, "customer_id": 1**, **
 "products": 
-[ 
-    { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+    [ 
+        { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
     ],
-    **“indexed_products”: **
+    “indexed_products”:
     [
-    	“index”: 0,
-    	“field_1”: { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+        {
+            “index”: 0,
+    	    “field_1”: { "name": "Apple", "quantity": 1, "unit_price": 0.5} 
+        }
     ]
- }
+}
 { 
-"purchase_id": 1, "customer_id": 1**,** 
-"products": 
-[ 
-    { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+    "purchase_id": 1, "customer_id": 1**,** 
+    "products": 
+    [ 
+        { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
     ],
-    **“Indexed_products”:**
-     [
-    	“index”: 0,
-    	“field_1”: { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+    “Indexed_products”:
+    [
+        {
+            “index”: 0,
+            “field_1”: { "name": "Orange", "quantity": -2, "unit_price": 0.25} 
+        }
     ]
 }
 ```
