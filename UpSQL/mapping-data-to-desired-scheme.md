@@ -1,6 +1,6 @@
 # Mapping Data To a Desired Schema
 
-UpSQL enabled to map your data into your desired schema. The process of such mapping in Upsolver is being done in two simple steps:
+UpSQL enables to map your data into a desired schema. The process of such mapping in Upsolver is being done in two simple steps:
 
 1. Ingest your raw data to the Data Lake - this process is being done by configuring a Data Source in Upsolver.
 2. Map your data to a desired schema - this process is being done by configuring an Output using UpSql.

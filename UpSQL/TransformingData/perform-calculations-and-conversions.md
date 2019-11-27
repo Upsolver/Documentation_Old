@@ -4,11 +4,9 @@ UpSQL enables you to improve the quality of your data and ensure it follows stan
 
 Upsolver contains all the functions that exist in SQL as [built-in functions](https://docs.upsolver.com/Functions/Calculated/), including special enrichment functions (e.g. IP2GEO, user agent parser) and you can add your own User Defined Functions (UDFs) in Python. 
 
-Both built-in functions and UDFs can be applied on either flat or hierarchical data. 
+Both built-in functions and UDFs can be applied on either flat or [hierarchical data](https://docs.upsolver.com/UpSQL/query-hierarchical-data.html). 
 
 **For the following examples, we will assume that:**
-
-
 
 1.  Three events stream into the data source `heartbeat` over time:
 
@@ -19,8 +17,6 @@ Both built-in functions and UDFs can be applied on either flat or hierarchical d
 
 { "user_id": 1, “device_id”: 1234, “epoch” : 1520672113456, “heart_rate” : 102}
 ```
-
-
 
 2. Three events stream into data source `location` over time:
 
@@ -82,12 +78,12 @@ The following query creates an output which is based on a stream transformation 
 1. Calculate the transformation:
 
     ```SQL
-    SET date = UNIX_EPOCH_TO_DATA(epoch);
+    SET human_readable_date = UNIX_EPOCH_TO_DATA(epoch);
     ```
 
-2. Using the calculated transformation in the query:
+2. Use the calculated transformation in the query:
 
     ```SQL
-    SELECT user_id, device_id, date
+    SELECT user_id, device_id, human_readable_date
     FROM heartbeat
     ```
