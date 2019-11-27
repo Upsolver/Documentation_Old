@@ -193,17 +193,13 @@ The resulting table will reflect the conversion:
 If we define a table as:
 ```SQL
 SELECT customer_id, purchase_id, product_name, 
-
       quantity:BIGINT * unit_price as total_cost:BIGINT
-
 FROM Purchases
 ```
 In the above query a calculated field is added to the table scheme.<br/><br/>
 **It is also possible to first calculate the field and then just use it in the query:**
  ```SQL
 SET total_cost = quantity:BIGINT * unit_price:BIGINT;
-
 SELECT customer_id, purchase_id, product_name, total_cost
-
 FROM Purchases
 ```

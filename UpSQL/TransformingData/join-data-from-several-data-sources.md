@@ -47,7 +47,7 @@ We will also assume we have the following events in _orders_ data source over ti
 
 **If we define a table as:**
 
-```SQL
+```
 SELECT user_id, campaign_id
 FROM clicks JOIN (SELECT COUNT_DISTINCT(*) as user_orders,
 			          User_id AS user_id
@@ -207,7 +207,7 @@ If `WAIT X MINUTES` (X is an Integer) is specified, Upsolver ensures that the st
 
 We will demonstrate this using the following UpSQL query:
 
-```SQL
+```
 SELECT id,
 	   value,
 	   Time
@@ -244,7 +244,7 @@ The alignment is done using unix epoch time, so `WAIT 1 DAY` will wait until 00:
 
 We will demonstrate this using the following UpSQL query:
 
-```SQL
+```
 SELECT id,
 	   value,
 	   Time
@@ -268,7 +268,7 @@ When running a query over historical data, Upsolver maintains the time relation 
 The `LATEST` keyword is intended to handle situations where initial data is dumped into a lookup table after the source stream started running. 
 This forces the query to use the state of the joined lookup table that exists when it is run for all historical data. Data that arrived after the query was run is not affected by `LATEST`.
 We will demonstrate this using the following UpSQL query:
-```SQL
+```
 SELECT id,
 	   value,
 	   Time
