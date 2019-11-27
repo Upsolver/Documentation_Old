@@ -1,8 +1,5 @@
 # **Query Hierarchical Data**
-
-Upsolver allows creating queries on top of raw data which may be hierarchical.
-
-UpSQL enables to query such data with an easy to use syntax.
+UpSQL enables to query hierarchical data. See [UpSQL syntax reference](https://docs.upsolver.com/UpSQL/upsql-syntax-reference.html) for syntax definition under "Hierarchical data" section.
 
 For the following examples, we will assume that three events stream into the data source `Purchases` over time:
 

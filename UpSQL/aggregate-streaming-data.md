@@ -4,7 +4,7 @@ An aggregation is the pre-calculated result of a query. Unlike a simple VIEW the
 
 Basically an aggregation can be refreshed immediately or deferred, it can be refreshed fully or to a certain point in time. 
 
-UpSql supports several aggregation functions. You can use these functions to build aggregations over streamed data. For the full list of aggregation functions, see [upsolver aggregation functions](https://docs.upsolver.com/Functions/aggregations.html).
+UpSQL supports several aggregation functions. You can use these functions to build aggregations over streamed data. For the full list of aggregation functions, see [upsolver aggregation functions](https://docs.upsolver.com/Functions/aggregations.html).
 
 For the following examples, we will assume _events_ stream contains several events, in the following format:
 
@@ -14,7 +14,7 @@ For the following examples, we will assume _events_ stream contains several even
 
 ## Aggregate Results in Upsolver Output using UpSql
 
-Aggregations are being performed using GROUP BY statement.
+Aggregations are being performed using the GROUP BY statement.
 
 Synopsis:
 
@@ -41,18 +41,17 @@ SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), COUNT_DISTINCT(*) events
  GROUP BY user_id, UNIX_EPOCH_TO_DATE(event_time)
 ```
 
-Note that when performing the above query (and any aggregation), Upsolver's default behavior is to replace an existing row in the table when its aggregation is updated.
+Note that when performing the above query (and any aggregation), Upsolver's default behavior is to replace an existing row in the table when it's aggregation is being updated.
 
 We can avoid such situation using UpSQL's APPEND ON DUPLICATE feature.
 
-
 ### **APPEND ON DUPLICATE**
 
-This allows queries to be defined the same as they would be in a non-streaming context. 
+This allows queries to be defined the same as they would have been defined in a non-streaming context. 
 
 By setting `APPEND ON DUPLICATE`, the table will instead be appended to, which will result in multiple rows with the same keys in the final table.
 
-The following query demonstrates this:
+The following query demonstrates how to use APPEND ON DUPLICATE:
 
 ```SQL
 SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), COUNT_DISTINCT(*) events
@@ -61,7 +60,7 @@ SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), COUNT_DISTINCT(*) events
  APPEND ON DUPLICATE
 ```
 
-Using the APPEND ON DUPLICATE will result in having several rows per user_id and event_time in the output table - each with a different amount of events.
+Using APPEND ON DUPLICATE will result in having several rows per user_id and event_time in the output table - each with a different amount of events.
 
 
 ### **Aggregate Records Over a Sliding Window**
@@ -70,7 +69,7 @@ The WINDOW clause optionally sets the amount of time until data is expired out o
 
 For example, if it is set to 30 days, data older than 30 days is removed from the output aggregations. This is a sliding window configuration that moves forwards every minute.
 
-Count all the events per user and event_time and aggregate over a 30 days:
+To demonstrate this we will use the following query which counts all the events per user and event_time and aggregate thosse over a 30 days window:
 
 ```SQL
 SELECT user_id, UNIX_EPOCH_TO_DATE(event_time), count(*) events
