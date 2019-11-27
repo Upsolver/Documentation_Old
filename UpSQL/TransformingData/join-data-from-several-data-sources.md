@@ -1,18 +1,10 @@
 # Join Data From Several Data Sources
 
-You can use UpSQL to combine data from the streaming data source with data arriving in other streams, historical aggregations or reference data files.
+You can use UpSQL to combine data from your streaming data source with data arriving in other streams, historical aggregations or reference data files.
 
-This can be done using SQL join syntax.
+This can be done using UpSQL join syntax. The result of the UpSQL join is a new table that’s populated with the column values that you specify in the SELECT statement.
 
-The result of the UpSQL join is a new table that’s populated with the column values that you specify in the SELECT statement.
-
-With UpSQL there is no need to write code in any programming language such as Java or Python to merge data from various data sources - all you need is use UpSQL join.
-
-Join event streams can be done in these ways:
-
-*   Join several streams 
-*   Join stream to historical aggregation(s).
-*   Join stream to Reference data
+With UpSQL there is no need to write code in any programming language such as Java or Python to join data from various data sources - all you need is use UpSQL join.
 
 # JOIN clause
 
@@ -102,9 +94,9 @@ _using either `=` or `IN` within the ON statement._
 
 Since Upsolver is a streaming system, all joins are applied in stream time. 
 
-To demonstrate the concepts in this document, we will assume having the following data sources:
+To demonstrate the concepts, we will assume having the following data sources:
 
-_Main data source_:
+_main data source_:
 
 <table>
   <tr>
@@ -145,7 +137,7 @@ _Main data source_:
   </tr>
 </table>
 
-_Lookup data source_:
+_lookup data source_:
 
 <table>
   <tr>
@@ -190,11 +182,11 @@ _Lookup data source_:
   </tr>
 </table>
 
-For the above data sources - id is an Integer and time is a time-stamp in DD/MM/YYYY HH:MM format which represents the time that event was created.
+For the above data sources - id is an Integer and time is a time-stamp in DD/MM/YYYY HH:MM format which represents the event's creation time.
 
 ## WAIT Interval
 
-In order to synchronize between streams, Upsolver supports the `WAIT integer { MINUTE[S] | HOUR[S] | DAY[S] } [ ALIGNED ]` syntax. 
+In order to synchronize between streams, UpSQL supports the `WAIT integer { MINUTE[S] | HOUR[S] | DAY[S] } [ ALIGNED ]` syntax. 
 
 If `WAIT X MINUTES` (X is an Integer) is specified, Upsolver ensures that the state of the joined lookup table is ready X minutes ahead of the data being processed. This will cause the output to be delayed by X minutes.
 
@@ -218,20 +210,20 @@ The result of this query will be the following:
 
 ![alt_text](images/Join-Data1.png)
 
-Note that while performing the JOIN, we wait 1 minute for each event in _main data source _before creating the output. 
-If we look at the first row in the above table, we can see that for time 14/10/2019 00:00 we take into consideration only the first event in _lookup table _data source which has the same time - that event arrived in 1 MINUTE delay. 
+Note that while performing the JOIN, we wait 1 minute for each event in _main data source_ before creating the output. 
+If we look at the first row in the above table, we can see that for time 14/10/2019 00:00 we take into consideration only the first event in _lookup data source_ which has the same time - that event arrived in 1 MINUTE delay. 
 This is the behaviour since per each event in _main data source_ we look at the matching events in _lookup data source_ with time less than 14/10/2019 00:00 plus 1 minute (due to WAIT 1 MINUTE statement) which results in 00:01 as a time comparator. 
 
-The only event which complies with this comparator is the first event in _lookup data source _which has 00:00 in it’s time field.
+The only event which complies with this comparator is the first event in _lookup data source_ which has 00:00 in it’s time field.
 Without using the WAIT 1 MINUTE the result will be:
 ![alt_text](images/Join-Data0.png)
-If we look again at the first row in the above table, we can see that for time 14/10/2019 00:00 we have no event with time prior to 14/10/2019 00:00 (not including this timestamp). 
+If we look again at the first row in the above table, we can see that for time 14/10/2019 00:00 we have no event with time prior to 14/10/2019 00:00 (excludinh this timestamp). 
 This is the behaviour since per each event in _main data source_ we look at the matching events in _lookup data source_ with time less than 14/10/2019 00:00 (since we did not use the WAIT statement). 
 
 
 ## ALIGNED
 
-If the keyword `ALIGNED` is used, it will wait for the next aligned window. For example, data arriving after 08:35 and before 08:40 will wait until 08:40. 
+If the keyword `ALIGNED` is being used, calculating the query's result will wait for the next aligned window. For example, data arriving after 08:35 and before 08:40 will wait until 08:40. 
 
 The alignment is done using unix epoch time, so `WAIT 1 DAY` will wait until 00:00 UTC of the following day.
 
@@ -255,11 +247,11 @@ The result of this query will be the following:
 
 ![alt_text](images/Join-Data2.png)
 
-Note that, while performing the join, we wait 5 minutes aligned before creating the output. This means that per each event in our _Main data source _we wait for the event on 14/19/2019 05:00 to create the output. That’s why the _value _column in the output has the value 4 for all of the events.
+Note that, while performing the join, we wait 5 minutes aligned before creating the output. This means that per each event in our _main data source_ we wait for the event on 14/19/2019 05:00 to create the output. That’s why the _value_ column in the output has the value 4 for all of the events.
 ## LATEST
 When running a query over historical data, Upsolver maintains the time relation between streams in the same way as it would when processing data that is up to date. 
 The `LATEST` keyword is intended to handle situations where initial data is dumped into a lookup table after the source stream started running. 
-This forces the query to use the state of the joined lookup table that exists when it is run for all historical data. Data that arrived after the query was run is not affected by `LATEST`.
+This forces the query to use the state of the joined lookup table that exists when it is being run for all historical data. Data that arrived after the query was run is not affected by `LATEST`.
 We will demonstrate this using the following UpSQL query:
 ```
 SELECT id,
@@ -274,12 +266,11 @@ LEFT JOIN LATEST
 	) l WAIT 1 MINUTE
 	ON i.id = id 
 ```
-The result of this query depends on the time you run it relative to the event time:
+The result of this query depends on the time you run it relative to the event's time:
 1. Query run time is less than the event’s creation time field (e.g: run the query on 13/10/2019 09:00) the result would be:
 
 ![alt_text](images/Join-Data3.png)
 
-2. Query run time is greater than the event’s creation time: in this situation, we relate to the query run time instead of the event creation time field.
 
-    If, for example, you run the query on 15/10/2019 09:00 the result would be:
-![alt_text](images/Join-Data4.png)
+2. Query run time is greater than the event’s creation time - in this situation, we relate to the query's run time instead of the event creation time field - if, for example, you run the query on 15/10/2019 09:00 the result would be:
+  ![alt_text](images/Join-Data4.png)

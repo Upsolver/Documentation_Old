@@ -196,7 +196,49 @@ SELECT customer_id, purchase_id, product_name,
       quantity:BIGINT * unit_price as total_cost:BIGINT
 FROM Purchases
 ```
-In the above query a calculated field is added to the table scheme.<br/><br/>
+The result of the query is the following table which contains the calculated field total_cost:
+<table>
+  <tr>
+   <td>customer_id
+   </td>
+   <td>purchase_id
+   </td>
+   <td>product_name
+   </td>
+   <td>total_cost
+   </td>
+  </tr>
+  <tr>
+   <td>“1”
+   </td>
+   <td>“1”
+   </td>
+   <td>“Orange”
+   </td>
+   <td>0.75
+   </td>
+  </tr>
+  <tr>
+   <td>“1”
+   </td>
+   <td>“2”
+   </td>
+   <td>“Apple”
+   </td>
+   <td>0.5
+   </td>
+  </tr>
+  <tr>
+   <td>“1”
+   </td>
+   <td>“3”
+   </td>
+   <td>“Banana”
+   </td>
+   <td>0.5
+   </td>
+  </tr>
+</table>
 **It is also possible to first calculate the field and then just use it in the query:**
  ```SQL
 SET total_cost = quantity:BIGINT * unit_price:BIGINT;

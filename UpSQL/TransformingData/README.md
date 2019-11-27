@@ -7,7 +7,6 @@ UpSQL enables the following stream transformations:
 3. **Perform calculations and conversions** - improve the quality of your data and ensure it follows standard conventions (e.g. convert time in Epoch to standard mm/dd/yyyy). Upsolver contains all the functions that exist in SQL, including special enrichment functions (e.g. IP2GEO, user agent parser) and you can add your own UDFs in Python.
 
 Stream transformations are configured when creating an Upsolver Output.
-
 # Topics:
 1. [Filter a Stream Using The WHERE Clause](https://docs.upsolver.com/UpSQL/TransformingData/filter-a-stream-using-the-where-clause.html)
 2. [Join Data From Several Data Sources](https://docs.upsolver.com/UpSQL/TransformingData/join-data-from-several-data-sources.html)

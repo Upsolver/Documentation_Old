@@ -1,28 +1,22 @@
 # Filter a Stream Using The WHERE Clause
 
-UpSQL enables filtering a stream using the WHERE clause as in the familiar ANSI SQL.
+UpSQL enables filtering a stream using the WHERE clause as in ANSI SQL.
 
 **For the following examples, we will assume that:**
 
-
-
 1.  Three events stream into the data source `heartbeat` over time:
-
 ```
 { "user_id": 1, “device_id”: 1234, “epoch” : 1520672112456, “heart_rate” : 81}
 { "user_id": 2, “device_id”: 5567, “epoch” : 1520672112456, “heart_rate” : 79}
 { "user_id": 1, “device_id”: 1234, “epoch” : 1520672113456, “heart_rate” : 102}
 ```
-
-
-
 2. Three events stream into data source `location` over time:
-
 ```
 {“user_id”: 1, “epoch” : 1573034761, “latitude” : 28.545926, “longitude” : 31.577451}
 {“user_id”: 2, “epoch” : 1573034761, “latitude” : 44.032321, “longitude” : 1.356295}
 {“user_id”: 1, “epoch” : 1573035761, “latitude” : 28.545926, “longitude” : 31.577451}
 ```
+
 **Example 1:**
 
 The following query:
@@ -67,6 +61,7 @@ Results in the following output:
   </tr>
 </table>
 
+We have filtered the data source ֿֿֿ`heartbeat` to get only the events WHERE heart_rate is bigger than 80.
 
 **Example 2:**
 
@@ -79,7 +74,6 @@ WHERE heart_rate > 79 AND heart_rate < 102
 ```
 
 Results in the following output:
-
 
 <table>
   <tr>
@@ -104,6 +98,7 @@ Results in the following output:
   </tr>
 </table>
 
+We have filtered the data source ֿֿֿ`heartbeat` to get only the events WHERE heart_rate is between 79 and 102.
 
 **Example 3:**
 
@@ -160,3 +155,5 @@ Results in the following output:
    </td>
   </tr>
 </table>
+
+We have filtered the data source ֿֿֿ`heartbeat` to get only the events WHERE heart_rate is greater than 79 OR has user_id equals to 2.
