@@ -1,6 +1,6 @@
-# Connect Redshift spectrum to Glue data catalog
+# Connect Redshift Spectrum To Glue Data Catalog
 
-# Create a role for Redshift Spectrum
+## Create a role for Redshift Spectrum
 
 1. Sign in to aws console
 2. Open the IAM console at [https://console.aws.amazon.com/iam](https://console.aws.amazon.com/iam)
@@ -72,7 +72,7 @@
     3. Locate the role name you’ve created in section #10 above and choose it
     4. Click on apply changes
 
-# Create external schema
+## Create external schema
 
 1. Run the following query in the cluster (this can be done either via “Query Editor” section under the Redshift Management Console or via your favorite SQL editor:
 ```sql
