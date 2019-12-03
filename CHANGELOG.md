@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019/12/03
+
+* Outputs: 
+  * Add support for Redshift Spectrum
+  * Update table schema in Qubole is optional (the default behavior would be to update)
+
 ## 2019/11/17
 
 * Outputs: 
