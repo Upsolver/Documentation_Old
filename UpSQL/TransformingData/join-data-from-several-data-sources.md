@@ -203,7 +203,7 @@ LEFT JOIN
 	  FROM “lookup data source”
 	  GROUP BY id
 	) l WAIT 1 MINUTE
-	ON i.id = id 
+	ON l.id = id 
 ```
 
 The result of this query will be the following:
@@ -240,7 +240,7 @@ LEFT JOIN
 	  FROM “lookup data source”
 	  GROUP BY id
 	) l WAIT 5 MINUTES ALIGNED
-	ON i.id = id 
+	ON l.id = id 
 ```
 
 The result of this query will be the following:
@@ -264,7 +264,7 @@ LEFT JOIN LATEST
 	  FROM “lookup data source”
 	  GROUP BY id
 	) l WAIT 1 MINUTE
-	ON i.id = id 
+	ON l.id = id 
 ```
 The result of this query depends on the time you run it relative to the event's time:
 1. Query run time is less than the event’s creation time field (e.g: run the query on 13/10/2019 09:00) the result would be:
