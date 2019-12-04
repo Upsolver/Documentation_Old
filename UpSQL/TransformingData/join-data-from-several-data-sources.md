@@ -211,13 +211,13 @@ The result of this query will be the following:
 ![alt_text](images/Join-Data1.png)
 
 Note that while performing the JOIN, we wait 1 minute for each event in _main data source_ before creating the output. 
-If we look at the first row in the above table, we can see that for time 14/10/2019 00:00 we take into consideration only the first event in _lookup data source_ which has the same time - that event arrived in 1 MINUTE delay. 
-This is the behaviour since per each event in _main data source_ we look at the matching events in _lookup data source_ with time less than 14/10/2019 00:00 plus 1 minute (due to WAIT 1 MINUTE statement) which results in 00:01 as a time comparator. 
+If we look at the first row in the above table, we can see that for time 14/10/2019 00:00 we take into consideration only the first event in _lookup data source_ which has the same value in it's time field - that event arrived in 1 MINUTE delay. 
+This is the behaviour since per each event in _main data source_ we look at the matching events in _lookup data source_ which has values in their time field which are less than 14/10/2019 00:00 plus 1 minute (due to WAIT 1 MINUTE statement) which results in 00:01 as a time comparator. 
 
 The only event which complies with this comparator is the first event in _lookup data source_ which has 00:00 in it’s time field.
 Without using the WAIT 1 MINUTE the result will be:
 ![alt_text](images/Join-Data0.png)
-If we look again at the first row in the above table, we can see that for time 14/10/2019 00:00 we have no event with time prior to 14/10/2019 00:00 (excludinh this timestamp). 
+If we look again at the first row in the above table, we can see that for time 14/10/2019 00:00 we have no event with time prior to 14/10/2019 00:00 (excluding this timestamp). 
 This is the behaviour since per each event in _main data source_ we look at the matching events in _lookup data source_ with time less than 14/10/2019 00:00 (since we did not use the WAIT statement). 
 
 
