@@ -20,7 +20,13 @@
 14. Configure your output schema and filters as described [here](/Outputs/configuring-schema-and-filters.md).
 15. When ready, [start running your output](/Outputs/running-and-stopping-outputs.md).
 
+## Compaction
 
+To provide better query performance Upsolver will compact the output files in s3 based on certain triggers. Those triggers are:
+
+1. There are more than 450 files and the averge file size is less than 128 MB
+2. There are more than 60 files and the average file size is less than 128 MB and the files are at least 2 hours old
+3. The files are older than 3 days and the average file size is less than 256 MB
 
 
 
