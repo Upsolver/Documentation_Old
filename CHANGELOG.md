@@ -1,5 +1,9 @@
 # Changelog
 
+## 2019/12/09
+
+* UI Improvements and bug fixes
+  
 ## 2019/12/03
 
 * Outputs: 
