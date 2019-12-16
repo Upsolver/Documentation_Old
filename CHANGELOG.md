@@ -11,7 +11,6 @@
   * Generate SQL for running Outputs
   * Refer to fields by index in the GROUP BY statement
 
-
 ## 2019/12/09
 
 * UI Improvements and bug fixes
