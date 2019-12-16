@@ -1,5 +1,17 @@
 # Changelog
 
+## 2019/12/16
+
+* Data Sources: 
+  * Support changing the number of shards using increments of one (instead of multiplies of two)
+* Outputs: 
+  * Athena - add support for excluding partitions from the table
+* UpSQL: 
+  * Support default field names instead of col_x
+  * Generate SQL for running Outputs
+  * Refer to fields by index in the GROUP BY statement
+
+
 ## 2019/12/09
 
 * UI Improvements and bug fixes
