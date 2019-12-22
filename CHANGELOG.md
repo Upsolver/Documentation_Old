@@ -1,5 +1,15 @@
 # Changelog
 
+## 2019/12/22
+
+* Outputs: 
+  * Elasticsearch - add option *not* to delete indices from Elasticsearch based on retention
+* UpSQL: 
+  * Support data source features
+* UI: 
+  * Outputs - add support for filtering the Preview when in SQL mode
+  * Performance improvements
+  
 ## 2019/12/16
 
 * Data Sources: 
