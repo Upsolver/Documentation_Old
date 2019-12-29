@@ -38,7 +38,7 @@ Custom Policy:
   `ec2:DescribeInstanceStatus`, `ec2:CreateTags`, `ec2:DescribeTags` - Allows monitoring Upsolver EC2 clusters
 * `ec2:DescribeSecurityGroups`, `ec2:DescribeImages`, 
   `ec2:DescribeImageAttribute` - Required for Spotinst for validation
- * `ec2:DescribeSpotPriceHistory` - Required for Spotinst to use spot instances
+* `ec2:DescribeSpotPriceHistory` - Required for Spotinst to use spot instances
 * `ec2:AssociateAddress`,
   `ec2:DisassociateAddress`,
   `ec2:AllocateAddress`,
@@ -74,7 +74,7 @@ Custom Policy:
                 "ec2:DescribeTags",
                 "ec2:DescribeImages",
                 "ec2:DescribeImageAttribute",
-	 	"ec2:DescribeSpotPriceHistory",
+	 	        "ec2:DescribeSpotPriceHistory",
                 "cloudwatch:PutMetricData",
                 "cloudwatch:GetMetricStatistics",
                 "cloudwatch:ListMetrics",
