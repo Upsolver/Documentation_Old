@@ -1,5 +1,9 @@
 # Changelog
 
+## 2020/01/06
+
+* Performance improvements and bug fixes
+
 ## 2019/12/22
 
 * Outputs: 
@@ -23,7 +27,7 @@
 
 ## 2019/12/09
 
-* UI Improvements and bug fixes
+* UI improvements and bug fixes
   
 ## 2019/12/03
 
