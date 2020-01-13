@@ -94,7 +94,7 @@
   * [Connections](Permissions/Actions/connections.md)
   * [Data-Sources](Permissions/Actions/data-source.md)
   * [IAM](Permissions/Actions/iam.md)
-  * [Materialized Views](Permissions/Actions/materialized-view.md)
+  * [Lookup Tables](Permissions/Actions/materialized-view.md)
   * [Notifications](Permissions/Actions/notifications.md)
   * [Organization](Permissions/Actions/organization.md)
   * [Outputs](Permissions/Actions/output.md)
