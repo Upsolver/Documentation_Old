@@ -1,5 +1,10 @@
 # Changelog
 
+## 2020/01/13
+
+* Data Sources: 
+  * Support XML as content type
+
 ## 2020/01/06
 
 * Performance improvements and bug fixes
