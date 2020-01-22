@@ -1,5 +1,21 @@
 # Changelog
 
+## 2020/01/22
+
+* IAM:
+  * Multi-organization support
+
+* Outputs:
+  * Support lazy load of lookup tables
+  * Support querying lookup table in SQL
+  * Support sharding of aggregated outputs
+
+* Data sources:
+  * Support S3 data source initial load configuration
+  * Support non-lexicographic date patterns in S3
+
+* UI & performance improvements
+
 ## 2020/01/13
 
 * Data Sources: 
