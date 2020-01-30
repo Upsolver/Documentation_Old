@@ -1,5 +1,15 @@
 # Changelog
 
+## 2020/01/30
+
+* Data Sources
+  * Parquet reader: support IN96 timestamps and non-canonical field names
+  * Added support for LZO decompression
+  * Added a JDBC connector
+* Outputs:
+  * Support correcting a specific time frame in an output
+  * Added UpdateSql programmatic API operation for creating outputs
+
 ## 2020/01/22
 
 * IAM:
