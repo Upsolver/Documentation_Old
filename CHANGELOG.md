@@ -3,7 +3,7 @@
 ## 2020/01/30
 
 * Data Sources
-  * Parquet reader: support IN96 timestamps and non-canonical field names
+  * Parquet reader: support INT96 timestamps and non-canonical field names
   * Added support for LZO decompression
   * Added a JDBC connector
 * Outputs:
