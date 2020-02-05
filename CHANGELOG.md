@@ -1,5 +1,17 @@
 # Changelog
 
+## 2020/02/05
+
+* Outputs:
+  * Added UUID Generator Calculated Function
+* Transform With SQL
+  * Added support for SQL comments (using --), for example:
+  ```sql
+  SELECT * -- your comment
+  FROM your_table -- another comment
+  ```
+  * Improved error messages
+
 ## 2020/01/30
 
 * Data Sources
