@@ -1,5 +1,10 @@
 # Changelog
 
+## 2020/02/10
+
+* Data Sources:
+  * JDBC Data Source - add support for PostgreSQL
+
 ## 2020/02/05
 
 * Outputs:
