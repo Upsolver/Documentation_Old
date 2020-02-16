@@ -12,7 +12,7 @@
 * Transform With SQL
   * Added support for SQL comments (using --), for example:
   ```sql
-  SELECT * -- your comment
+  SELECT your_Select_clause -- your comment
   FROM your_table -- another comment
   ```
   * Improved error messages
