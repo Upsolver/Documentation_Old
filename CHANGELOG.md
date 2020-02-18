@@ -1,5 +1,18 @@
 # Changelog
 
+## 2020/02/18
+
+* Transform With SQL:
+  * Added support for partitioning configuration
+  * Casting improvements
+* Outputs:
+  * Redshift: Addedd support for configuring fail on write error.
+    If enabled, any error while copying data to Redshift will cause the entire bulk to be skipped. 
+    The skipped manifest will be saved aside for manual re-processing once the copy error has been fixed. 
+    If disabled the same behavior will occur after 100K errors (The max allowed by Redshift)
+* Monitoring Reporting: 
+  * A bug caused false reported delay (in rare cases) was fixed
+
 ## 2020/02/10
 
 * Data Sources:
