@@ -60,6 +60,7 @@ Custom Policy:
   `iam:ListAttachedRolePolicies`,
   `iam:ListAccountAliases`,
   `iam:PassRole` - Required for Spotinst for policy validation
+* `sts:DecodeAuthorizationMessage` - Used for debugging permission errors from AWS
 
 ```json
 {
@@ -90,7 +91,8 @@ Custom Policy:
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListAttachedRolePolicies",
                 "iam:ListAccountAliases",
-                "iam:PassRole"
+                "iam:PassRole",
+                "sts:DecodeAuthorizationMessage"
             ],
             "Resource": [
                 "*"
