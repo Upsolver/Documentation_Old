@@ -1,5 +1,12 @@
 # Changelog
 
+## 2020/02/24
+
+* Outputs:
+  * Elasticsearch:
+    * Editing the connection string is now supported - as long as the new nodes belong to the same cluster
+    * Added support for setting the event to _doc
+
 ## 2020/02/18
 
 * Transform With SQL:
