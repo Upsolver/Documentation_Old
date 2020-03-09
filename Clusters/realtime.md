@@ -1,6 +1,6 @@
 # Real Time Cluster
 
-A Real Time Cluster enables you to update your Materialized Views that are served in
+A Real Time Cluster enables you to update your Lookup Tables that are served in
 your Query Environments with Real Time data from your streams.
 
 ## Data Sources
@@ -17,11 +17,11 @@ in Upsolver, this will cause the statistics that are shown in Data Discovery
 to be updated with Real Time data from the Stream.
 
 
-## Materialized Views
+## Lookup Tables (Based on Real-Time Data-Sources)
 
-Materialized Views that are based on Real Time Data Sources can be also updated in
+Lookup Tables that are based on Real Time Data Sources can be also updated in
 Real Time. To do so, check the "Real Time" option when you deploy the
-Materialized View.
+Lookup Table.
 
 ## How It Works
 

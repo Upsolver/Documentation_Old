@@ -1,5 +1,10 @@
 # Changelog
 
+## 2020/03/09
+
+* Clusters
+  * Compute cluster monitoring: Compute Units Graph was updated and now provides a breakdown of the compute units used by each task (Data Source / Output / Lookup Table)
+
 ## 2020/02/24
 
 * Outputs:
