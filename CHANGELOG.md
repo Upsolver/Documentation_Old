@@ -1,5 +1,16 @@
 # Changelog
 
+## 2020/03/16
+
+* Data Sources:
+  * Split meta-data by Event Type field - you are now able to split and view your data source by the desired field in your data source.
+* Outputs:
+  * SELECT * is supported for Upsolver and Elasticsearch outputs
+  * Added Amazon Kinesis connector
+  * Qubole connector now supports using an HTTPs proxy address to override the endpoint used to access Qubole
+* IAM:
+  * Added support for SAML with provisioning capabilities
+
 ## 2020/03/09
 
 * Clusters
